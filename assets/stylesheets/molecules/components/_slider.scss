@@ -1,0 +1,54 @@
+.bx-viewport {
+	border-radius: 5px;
+
+	&:before {
+		bottom: -1px;
+		box-shadow: 0 0 30px 2px #000;
+		content: '';
+		height: 1px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+	}
+
+	img {
+		display: block;
+	}
+}
+
+// wrapper
+.bx-wrapper {
+	position: relative;
+}
+
+.bx-pager,
+.bx-controls-direction {
+	position: absolute;
+	z-index: 3;
+}
+
+
+// pager
+.bx-pager {
+	bottom: 8px;
+	font-size: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.bx-pager-item {
+	display: inline-block;
+	margin: 0 3px;
+}
+
+.bx-pager-link {
+	background: #fff;
+	border-radius: 5px;
+	display: block;
+	height: 8px;
+	width: 8px;
+
+	&.active {
+	}
+}

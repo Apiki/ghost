@@ -1,0 +1,99 @@
+
+Refencias:
+	http://www.felipefialho.com/blog/2014/falando-em-organizacao-css/
+	https://speakerdeck.com/rafaelrinaldi/arquitetura-css ( styleguide 115 )
+	https://github.com/magnetis/styleguide/blob/master/Stylesheet.md
+
+
+STYLE GUIDE APIKI
+
+-------- 
+
+stylesheets
+
+	( Configuraçoes básicas do projeto )
+	-> base
+		- fonts
+		- functions
+		- helpers
+		- mixins
+		- grid
+		- reset
+		- variables
+
+
+	( Classes individuais e elementos pequenos e reutilizáveis )
+	-> atoms
+		> buttons
+			- buttonPrimary
+			- buttonSecondary
+
+		> text
+			- blockquote
+			- code
+			- hr
+			- theContent ( wp )
+
+		> list
+			- ordered
+			- unordored
+
+		> images
+			- branding
+			- icons
+			- img
+
+		> form
+			- label
+			- input
+			- input-file
+			- select
+			- radio
+			- checkbox
+
+		> tables
+			- tables
+
+
+	( Criar um elemento 'pai' para modificar os atomos )
+	-> molecules
+		> navigation
+			- navigation
+			- breadcrumbs
+			- tabs
+			- pagination
+
+		> form
+			- search
+			- form-group
+
+		> text
+			- author
+			- artitcle-text
+			- captions
+
+		> js
+			- carousel
+			- tooltip
+			- modal
+
+
+	( Estruturas maiores do projeto, que podem modificar átomos e móleculas )
+	-> organisms
+		- content
+		- comments
+		- footer
+		- header
+		- main
+		- wrap
+
+
+	( Sistemas de grids e alinhamentos de templates )
+	-> templates
+		- grids
+		- container
+		- thumbnails
+
+	( Estiliza páginas individualmente )
+	-> pages
+		- home

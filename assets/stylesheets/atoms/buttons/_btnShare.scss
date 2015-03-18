@@ -1,0 +1,28 @@
+.btn-share .btn {
+	padding: 10px 0;
+	max-height: 34px;
+
+	i {
+		min-width: 34px;
+		text-align: center;
+	}
+
+	span {
+		padding-right: 15px;
+	}
+}
+
+.count-share {
+	border: 1px solid #c4c4c4;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 5px;
+	line-height: 32px;
+	min-height: 34px;
+	padding: 0 10px;
+	vertical-align: top;
+}
+
+// share
+.btn-share-facebook { background: #3d57a2; }
+.btn-share-twitter  { background: #55ACEE; }

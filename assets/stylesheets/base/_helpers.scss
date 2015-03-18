@@ -1,0 +1,22 @@
+%clearFix {
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+		font-size: 0;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
+%ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+%imageReplacement {
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}

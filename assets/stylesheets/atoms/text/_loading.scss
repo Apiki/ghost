@@ -1,0 +1,19 @@
+@keyframes loading {
+	from {
+	}	
+
+	to {
+	}
+}
+
+.loading {
+	color: #666;
+	font-weight: bold;
+	text-align: center;
+
+	i {
+		animation: loading .4s linear infinite;
+		color: #3b8686;
+		margin: 0 10px;
+	}
+}

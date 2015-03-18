@@ -1,0 +1,6 @@
+input[type='submit'] {
+	@extend %btn;
+	background: #3b8686;
+	border: none;
+	cursor: pointer;
+}

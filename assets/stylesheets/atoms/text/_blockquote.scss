@@ -1,0 +1,40 @@
+blockquote {
+	border-bottom: 1px solid #ececec;
+	border-top: 1px solid #ececec;
+	color: #797979;
+	clear: both;
+	font-size: 22px;
+	font-style: italic;
+	line-height: 1.4;
+	position: relative;
+	padding: 40px 80px;
+	margin: 40px 0;
+
+	&:before,
+	&:after {
+		color: #ececec;
+		display: inline-block;
+		font: 100px/1 'Times New Roman';
+		height: 50px;
+		position: relative;
+	}
+
+	&:before {
+		content: '\201C';
+		left: 0;
+		margin-left: -48px;
+		margin-top: -50px;
+		top: 30px;
+	}
+
+	&:after {
+		content: '\201D';
+		margin-top: -60px;
+		right: -5px;
+		top: 60px;
+	}
+
+	p:last-child {
+		margin: 0;
+	}
+}

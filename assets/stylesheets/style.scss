@@ -1,0 +1,59 @@
+// BASE
+// Configurações basicas do projeto
+// --------------------------------------------------------------------
+
+	@import 'base/variables';
+	@import 'base/helpers';
+	@import 'base/mixins';
+	@import 'base/functions';
+	@import 'base/reset';
+
+
+// ATOMS
+// Classes individuais e elementos pequenos e reultilizáveis
+// --------------------------------------------------------------------
+
+	// _images
+	@import 'atoms/images/icons';
+
+	// _forms
+	@import 'atoms/forms/input';
+	@import 'atoms/forms/textarea';
+	@import 'atoms/forms/submit';
+	@import 'atoms/forms/select';
+	@import 'atoms/forms/selectChosen';
+
+	// _buttons
+	@import 'atoms/buttons/btn';
+	@import 'atoms/buttons/btnSecondary';
+	@import 'atoms/buttons/btnGroup';
+	@import 'atoms/buttons/btnShare';
+
+	// text
+	@import 'atoms/text/tooltip';
+	@import 'atoms/text/blockquote';
+	@import 'atoms/text/messages';
+	@import 'atoms/text/loading';
+
+
+// MOLECULES
+// Cria um elemento 'pai' para modificar os atomos
+// --------------------------------------------------------------------
+
+	// components
+	@import 'molecules/components/slider';
+
+	// text
+	@import 'molecules/text/theContent';
+
+	// navigation
+	@import 'molecules/navigation/pagination';
+	@import 'molecules/navigation/breadcrumb';
+	@import 'molecules/navigation/navigation';
+
+
+// TEMPLATES
+// Sistema de Grid e alinhamento de templates
+// --------------------------------------------------------------------
+
+	@import 'templates/container';

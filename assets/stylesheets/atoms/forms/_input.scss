@@ -1,0 +1,23 @@
+%elementsForm {
+	background: #fff;
+	border: 1px solid #c4c4c4;
+	border-radius: 5px;
+	color: #797979;
+	font-size: 14px;
+	padding: 10px;
+
+	&:focus {
+		box-shadow: 0 0 2px 0 #cff09e;
+	}
+
+	&.form-error {
+		background: #fcf0f0;
+		box-shadow: 0 0 2px 0 red;
+	}
+}
+
+input {
+	@extend %elementsForm;
+	padding: 0 10px;
+	height: 35px;
+}

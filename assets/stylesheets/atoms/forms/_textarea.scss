@@ -1,0 +1,6 @@
+textarea {
+	@extend %elementsForm;
+	height: 150px;
+	overflow: hidden;
+	resize: none;
+}
