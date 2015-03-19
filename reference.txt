@@ -12,88 +12,43 @@ STYLE GUIDE APIKI
 stylesheets
 
 	( Configuraçoes básicas do projeto )
-	-> base
-		- fonts
-		- functions
-		- helpers
-		- mixins
-		- grid
-		- reset
-		- variables
+	> base
+		_fonts
+		_functions
+		_helpers
+		_mixins
+		_reset
+		_variables
 
 
 	( Classes individuais e elementos pequenos e reutilizáveis )
-	-> atoms
-		> buttons
-			- buttonPrimary
-			- buttonSecondary
-
-		> text
-			- blockquote
-			- code
-			- hr
-			- theContent ( wp )
-
-		> list
-			- ordered
-			- unordored
-
-		> images
-			- branding
-			- icons
-			- img
-
-		> form
-			- label
-			- input
-			- input-file
-			- select
-			- radio
-			- checkbox
-
-		> tables
-			- tables
+	> elements
+		- buttons
 
 
-	( Criar um elemento 'pai' para modificar os atomos )
-	-> molecules
-		> navigation
-			- navigation
-			- breadcrumbs
-			- tabs
-			- pagination
+	( Criar um elemento 'pai' para modificar os elements )
+	> components
+		- text 
+			_author
+			_captions
 
-		> form
-			- search
-			- form-group
-
-		> text
-			- author
-			- artitcle-text
-			- captions
-
-		> js
-			- carousel
-			- tooltip
-			- modal
+		- forms
+			_search
 
 
-	( Estruturas maiores do projeto, que podem modificar átomos e móleculas )
-	-> organisms
-		- content
-		- comments
-		- footer
-		- header
-		- main
-		- wrap
+	( Estruturas maiores do projeto, que podem modificar element e components )
+	> template
+		_list
 
 
 	( Sistemas de grids e alinhamentos de templates )
-	-> templates
-		- grids
-		- container
-		- thumbnails
+	> layouts
+		_header
+		_footer
+		_sidebar
+
 
 	( Estiliza páginas individualmente )
-	-> pages
-		- home
+	> pages
+		_home
+		_contact
