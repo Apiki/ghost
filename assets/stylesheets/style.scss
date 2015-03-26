@@ -1,59 +1,83 @@
 // BASE
 // Configurações basicas do projeto
-// --------------------------------------------------------------------
-
-	@import 'base/variables';
-	@import 'base/helpers';
-	@import 'base/mixins';
-	@import 'base/functions';
-	@import 'base/reset';
-
-
-// ATOMS
-// Classes individuais e elementos pequenos e reultilizáveis
-// --------------------------------------------------------------------
-
-	// _images
-	@import 'atoms/images/icons';
-
-	// _forms
-	@import 'atoms/forms/input';
-	@import 'atoms/forms/textarea';
-	@import 'atoms/forms/submit';
-	@import 'atoms/forms/select';
-	@import 'atoms/forms/selectChosen';
-
-	// _buttons
-	@import 'atoms/buttons/btn';
-	@import 'atoms/buttons/btnSecondary';
-	@import 'atoms/buttons/btnGroup';
-	@import 'atoms/buttons/btnShare';
-
-	// text
-	@import 'atoms/text/tooltip';
-	@import 'atoms/text/blockquote';
-	@import 'atoms/text/messages';
-	@import 'atoms/text/loading';
+// ----------------------------------------------------------------------------
+@import "base/variables";
+@import "base/functions";
+@import "base/helpers";
+@import "base/mixins";
+@import "base/reset";
+@import "base/fonts";
 
 
-// MOLECULES
-// Cria um elemento 'pai' para modificar os atomos
-// --------------------------------------------------------------------
 
-	// components
-	@import 'molecules/components/slider';
 
-	// text
-	@import 'molecules/text/theContent';
+// ELEMENTS
+// Classes individuais e elementos pequenos e reutilizáveis
+// ----------------------------------------------------------------------------
 
-	// navigation
-	@import 'molecules/navigation/pagination';
-	@import 'molecules/navigation/breadcrumb';
-	@import 'molecules/navigation/navigation';
+// -- Buttons
+@import "elements/buttons/btn";
+@import "elements/buttons/btnGroup";
+@import "elements/buttons/btnSecondary";
+@import "elements/buttons/btnShare";
+
+// -- Forms
+@import "elements/forms/input";
+@import "elements/forms/select";
+@import "elements/forms/selectChosen";
+@import "elements/forms/submit";
+@import "elements/forms/textarea";
+
+// -- Images
+@import "elements/images/icons";
+
+// -- Text
+@import "elements/text/blockquote";
+@import "elements/text/loading";
+@import "elements/text/messages";
+@import "elements/text/tooltip";
+
+
+
+
+// COMPONENTS
+// Criar um elemento 'pai' para modificar os elements
+// ----------------------------------------------------------------------------
+
+// -- Js
+@import "components/js/slider";
+
+// -- Navigation
+@import "components/navigation/breadcrumb";
+@import "components/navigation/navigation";
+@import "components/navigation/pagination";
+
+// -- Text
+@import "components/text/theContent";
+
+
 
 
 // TEMPLATES
-// Sistema de Grid e alinhamento de templates
-// --------------------------------------------------------------------
+// Estruturas maiores do projeto, que podem modificar element e components
+// ----------------------------------------------------------------------------
+@import "templates/list";
 
-	@import 'templates/container';
+
+
+
+// LAYOUTS
+// Sistemas de grids e alinhamentos de templates
+// ----------------------------------------------------------------------------
+@import "layouts/container";
+// @import "layouts/header";
+// @import "layouts/footer";
+// @import "layouts/sidebar";
+
+
+
+// PAGES
+// Estiliza páginas individualmente
+// ----------------------------------------------------------------------------
+// @import "pages/home";
+// @import "pages/contact";
