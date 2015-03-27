@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .btn-group .btn-secondary {
   border-radius: 0;
   box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.2) inset;
-  margin-right: -5px; }
+  margin-right: -4px; }
   .btn-group .btn:first-child,
   .btn-group .btn-secondary:first-child {
     border-radius: 5px 0 0 5px;
@@ -221,12 +221,27 @@ blockquote {
   blockquote p:last-child {
     margin: 0; }
 
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes loading {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
 .loading {
   color: #666;
   font-weight: bold;
   text-align: center; }
   .loading i {
     animation: loading .4s linear infinite;
+    -webkit-animation: loading .4s linear infinite;
     color: #3b8686;
     margin: 0 10px; }
 
@@ -243,7 +258,11 @@ blockquote {
     content: '';
     left: -999em;
     opacity: 0;
-    position: absolute; }
+    position: absolute;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
   .tooltip:before {
     background: #797979;
     border-radius: 5px;

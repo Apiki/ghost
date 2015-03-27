@@ -1,8 +1,24 @@
 @keyframes loading {
 	from {
+		transform: rotate( 0deg );
+		-webkit-transform: rotate( 0deg );
 	}	
 
 	to {
+		transform: rotate( 360deg );
+		-webkit-transform: rotate( 360deg );
+	}
+}
+
+@-webkit-keyframes loading {
+	from {
+		transform: rotate( 0deg );
+		-webkit-transform: rotate( 0deg );
+	}	
+
+	to {
+		transform: rotate( 360deg );
+		-webkit-transform: rotate( 360deg );
 	}
 }
 
@@ -13,6 +29,7 @@
 
 	i {
 		animation: loading .4s linear infinite;
+		-webkit-animation: loading .4s linear infinite;
 		color: #3b8686;
 		margin: 0 10px;
 	}

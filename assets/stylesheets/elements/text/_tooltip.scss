@@ -8,6 +8,10 @@
 		left: -999em;
 		opacity: 0;
 		position: absolute;
+		-webkit-transition: opacity .3s;
+				transition: opacity .3s;
+		-webkit-transform: translateX( -50% );
+				transform: translateX( -50% );
 	}
 
 	&:before {
