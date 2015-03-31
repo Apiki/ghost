@@ -7,7 +7,7 @@
 @import "base/helpers";
 @import "base/mixins";
 @import "base/reset";
-
+@import "base/fonts";
 
 
 
@@ -23,6 +23,7 @@
 
 // -- Forms
 @import "elements/forms/input";
+@import "elements/forms/label";
 @import "elements/forms/select";
 @import "elements/forms/selectChosen";
 @import "elements/forms/submit";
@@ -77,48 +78,27 @@ body {
 	font-family: $g-font;
 }
 
-#g-navigation,
-.g-container {
-	bottom: 0;
-	position: absolute;
-	top: 0;
+
+
+.g-title {
+	border-bottom: 2px solid #f9f9f9;
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 
-#g-navigation {
-	background: #007674;
-	left: 0;
-	position: fixed;
-	width: 100px;
-}
 
-.g-container {
-	background: #fff;
-	left: 100px;
-	right: 0;
-
-	hr {
-		border: none;
-		border-top: 1px solid #f6f6f6;
-		margin: 30px 0;
-	}
-}
-
-#g-header {
-	background: #f6f6f6;
-	height: 100px;
-	margin-bottom: 100px;
-}
-
-.g-content {
+#g-content {
 	margin: 0 auto;
 	width: 60%;
 }
 
 .g-box-title {
 	color: #2b2b2b2;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin: 100px 0 15px;
 }
 
 .g-box-info,
@@ -128,8 +108,16 @@ body {
 
 .g-box-info {
 	color: #565656;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 1.4;
+}
+
+.g-box-example-title {
+	border-left: 5px solid #f9f9f9;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 20px;
+	padding-left: 10px;
 }
 
 .g-box-code {
@@ -139,5 +127,54 @@ body {
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+// g icons list
+.g-icons-list {
+	color: #555;
+	font-size: 12px;
+	overflow: hidden;
+	text-align: center;
+
+	i {
+		display: block;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	li {
+		background: #f9f9f9;
+		border: 1px solid #fff;
+		float: left;
+		height: 100px;
+		padding: 25px 0 0;
+		vertical-align: top;
+		width: 14.25%;
+	}
+}
+
+
+// btn share
+.g-box-example .btn-share {
+	margin-right: 20px;
+}
+
+
+// form
+.g-box-example .form {
+	max-width: 600px;
+}
+
+.g-box-example .form li {
+	margin-bottom: 10px;
+	width: 100%;
+
+	&:first-child {
+		margin-top: 0;
 	}
 }

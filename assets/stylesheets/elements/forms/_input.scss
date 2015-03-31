@@ -5,12 +5,13 @@
 	color: #797979;
 	font-size: 14px;
 	padding: 10px;
+	width: 100%;
 
 	&:focus {
 		box-shadow: 0 0 2px 0 #cff09e;
 	}
 
-	&.form-error {
+	.form-error & {
 		background: #fcf0f0;
 		box-shadow: 0 0 2px 0 red;
 	}
@@ -20,4 +21,16 @@ input {
 	@extend %elementsForm;
 	padding: 0 10px;
 	height: 35px;
+}
+
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+	height: auto;
+	width: auto;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	padding: 0;
 }
