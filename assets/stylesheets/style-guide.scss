@@ -76,6 +76,7 @@ $g-font : 'Droid Sans', sans-serif;
 
 body {
 	font-family: $g-font;
+	padding: 50px 0;
 }
 
 
@@ -162,6 +163,13 @@ body {
 // btn share
 .g-box-example .btn-share {
 	margin-right: 20px;
+}
+
+// loading
+.g-box-example .loading {
+	left: -10px;
+	position: relative;
+	text-align: left;
 }
 
 

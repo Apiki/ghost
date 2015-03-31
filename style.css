@@ -446,8 +446,14 @@ blockquote {
   .loading i {
     animation: loading .4s linear infinite;
     -webkit-animation: loading .4s linear infinite;
+    display: inline-block;
     color: #3b8686;
     margin: 0 10px; }
+
+.ms-error i,
+.ms-sucess i {
+  font-size: 12px;
+  margin-right: 5px; }
 
 .ms-error {
   color: #ff5656; }
@@ -593,6 +599,27 @@ blockquote {
 .the-content {
   color: #797979;
   font-size: 16px; }
+  .the-content h1,
+  .the-content h2,
+  .the-content h3,
+  .the-content h4,
+  .the-content h5,
+  .the-content h6 {
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px; }
+  .the-content h1 {
+    font-size: 1.75em; }
+  .the-content h2 {
+    font-size: 1.5em; }
+  .the-content h3 {
+    font-size: 1.375em; }
+  .the-content h4 {
+    font-size: 1.25em; }
+  .the-content h5 {
+    font-size: 1.125em; }
+  .the-content h6 {
+    font-size: 0.8125em; }
   .the-content p {
     line-height: 1.5;
     margin-bottom: 30px; }

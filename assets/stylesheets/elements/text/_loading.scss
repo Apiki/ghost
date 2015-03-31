@@ -30,6 +30,7 @@
 	i {
 		animation: loading .4s linear infinite;
 		-webkit-animation: loading .4s linear infinite;
+		display: inline-block;
 		color: #3b8686;
 		margin: 0 10px;
 	}
