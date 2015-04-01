@@ -1,14 +1,17 @@
-.navigation {
-
-	li {
-		position: relative;
-	}
+.navigation a,
+.navigation li {
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+	transition: .2s;
+	-webkit-transition: .2s;
 }
 
-.navigation .menu > li {
+.navigation > ul > li {
 	display: inline-block;
+	margin-right: -4px;
 
-	&:hover .sub-menu {
+	&:hover > .sub-menu {
 		left: 0;
 		opacity: 1;
 	}
@@ -17,13 +20,15 @@
 // sub-menu
 .navigation .sub-menu {
 	left: -999em;
+	opacity: 0;
 	position: absolute;
 	top: 100%;
+	transition: opacity .2s;
+	-webkit-transition: opacity .2s;
 
-	.sub-menu {
-		transition: opacity .2s;
-		left: 100%;
+	li:hover > .sub-menu {
 		opacity: 1;
+		left: 100%;
 		top: 0;
 	}
 }
