@@ -17,7 +17,7 @@
 	}
 }
 
-// wrapper
+
 .bx-wrapper {
 	position: relative;
 }
@@ -29,7 +29,9 @@
 }
 
 
-// pager
+// Pager
+// ----------------------------------------------------------------------------
+
 .bx-pager {
 	bottom: 8px;
 	font-size: 0;
@@ -48,7 +50,4 @@
 	display: block;
 	height: 8px;
 	width: 8px;
-
-	&.active {
-	}
 }
