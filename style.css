@@ -128,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .btn-share-plus {
   background: #DD4B39; }
 
-input, select, .chosen-single, textarea {
+input, select, textarea, .chosen-single {
   background: #fff;
   border: 1px solid #c4c4c4;
   border-radius: 5px;
@@ -136,9 +136,10 @@ input, select, .chosen-single, textarea {
   font-size: 14px;
   padding: 10px;
   width: 100%; }
-  input:focus, select:focus, .chosen-single:focus, textarea:focus {
-    box-shadow: 0 0 2px 0 #cff09e; }
-  .form-error input, .form-error select, .form-error .chosen-single, .form-error textarea {
+  input:focus, select:focus, textarea:focus, .chosen-single:focus {
+    box-shadow: 0 0 2px 0 #cff09e;
+    outline: none; }
+  .form-error input, .form-error select, .form-error textarea, .form-error .chosen-single {
     background: #fcf0f0;
     box-shadow: 0 0 2px 0 red; }
 
@@ -166,58 +167,6 @@ label {
 select {
   height: 35px;
   padding: 0 10px; }
-
-.chosen-container {
-  background: #fff;
-  color: #797979;
-  cursor: pointer;
-  position: relative;
-  width: auto !important; }
-
-.chosen-container-active {
-  box-shadow: 0 0 2px 0 #cff09e; }
-
-.chosen-single {
-  display: block;
-  height: 35px;
-  padding-right: 45px; }
-  .chosen-single > div {
-    border-left: 1px solid #c4c4c4;
-    height: 35px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 35px; }
-  .chosen-single > div:before {
-    border-color: #c4c4c4 transparent transparent transparent;
-    border-style: solid;
-    border-width: 5px;
-    content: '';
-    display: block;
-    left: 50%;
-    margin: -2px 0 0 -5px;
-    position: absolute;
-    top: 50%; }
-
-.chosen-drop {
-  background: #fff;
-  border: 1px solid #c4c4c4;
-  border-radius: 5px;
-  left: -999em;
-  margin-top: 5px;
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  width: 100%; }
-  .chosen-drop li {
-    padding: 5px 10px; }
-
-.chosen-with-drop .chosen-drop {
-  left: 0;
-  opacity: 1; }
-
-.chosen-search {
-  display: none; }
 
 input[type='submit'] {
   background: #3b8686;
@@ -530,6 +479,107 @@ blockquote {
   height: 8px;
   width: 8px; }
 
+.chosen-container {
+  background: #fff;
+  color: #797979;
+  cursor: pointer;
+  position: relative;
+  width: auto !important; }
+
+.chosen-container-active {
+  box-shadow: 0 0 2px 0 #cff09e; }
+
+.chosen-single {
+  display: block;
+  height: 35px;
+  padding-right: 45px; }
+  .chosen-single > div {
+    border-left: 1px solid #c4c4c4;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px; }
+  .chosen-single > div:before {
+    border-color: #c4c4c4 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    content: '';
+    display: block;
+    left: 50%;
+    margin: -2px 0 0 -5px;
+    position: absolute;
+    top: 50%; }
+
+.chosen-drop {
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  left: -999em;
+  margin-top: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%; }
+  .chosen-drop li {
+    padding: 5px 10px; }
+
+.chosen-with-drop .chosen-drop {
+  left: 0;
+  opacity: 1; }
+
+.chosen-search {
+  display: none; }
+
+.chosen-container-multi {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  min-height: 35px; }
+  .chosen-container-multi * {
+    display: inline-block;
+    vertical-align: middle; }
+
+.chosen-container-multi .chosen-choices {
+  margin: 0 0 5px 5px; }
+
+.chosen-container-multi .search-choice,
+.chosen-container-multi .search-field {
+  border-radius: 5px;
+  margin: 5px 5px 0 0;
+  min-height: 23px;
+  overflow: hidden; }
+
+.chosen-container-multi .search-choice {
+  background: #f0f0f0; }
+  .chosen-container-multi .search-choice span {
+    margin-left: 10px; }
+
+.chosen-container-multi .search-choice-close {
+  background: #c4c4c4;
+  min-height: inherit;
+  margin-left: 10px;
+  position: relative;
+  width: 25px; }
+  .chosen-container-multi .search-choice-close:before {
+    color: #fff;
+    content: "x";
+    display: block;
+    line-height: 22px;
+    text-align: center; }
+
+.chosen-container-multi .search-field input {
+  border: none;
+  height: auto;
+  min-height: inherit;
+  padding: 0; }
+  .chosen-container-multi .search-field input:focus {
+    box-shadow: none; }
+
+.chosen-container-multi .chosen-choices,
+.chosen-container-multi .chosen-results,
+.chosen-container-multi .chosen-drop li {
+  display: block; }
+
 .breadcrumb {
   border-bottom: 1px solid #c4c4c4;
   font-size: 0;
@@ -553,23 +603,31 @@ blockquote {
     .breadcrumb li:first-child:before {
       display: none; }
 
+.navigation a,
 .navigation li {
-  position: relative; }
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  transition: .2s;
+  -webkit-transition: .2s; }
 
-.navigation .menu > li {
-  display: inline-block; }
-  .navigation .menu > li:hover .sub-menu {
+.navigation > ul > li {
+  display: inline-block;
+  margin-right: -4px; }
+  .navigation > ul > li:hover > .sub-menu {
     left: 0;
     opacity: 1; }
 
 .navigation .sub-menu {
   left: -999em;
+  opacity: 0;
   position: absolute;
-  top: 100%; }
-  .navigation .sub-menu .sub-menu {
-    transition: opacity .2s;
-    left: 100%;
+  top: 100%;
+  transition: opacity .2s;
+  -webkit-transition: opacity .2s; }
+  .navigation .sub-menu li:hover > .sub-menu {
     opacity: 1;
+    left: 100%;
     top: 0; }
 
 .pagination {
@@ -670,6 +728,57 @@ blockquote {
   .the-content .thumbnail.thumbnail-right {
     float: right;
     margin: 5px 0 20px 20px; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.column,
+.columns {
+  float: left;
+  margin-left: 1.81667%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+.one.column,
+.one.columns {
+  width: 5%; }
+
+.two.columns {
+  width: 11.81667%; }
+
+.three.columns {
+  width: 18.63333%; }
+
+.four.columns {
+  width: 25.45%; }
+
+.five.columns {
+  width: 32.26667%; }
+
+.six.columns {
+  width: 39.08333%; }
+
+.seven.columns {
+  width: 45.9%; }
+
+.eight.columns {
+  width: 52.71667%; }
+
+.nine.columns {
+  width: 59.53333%; }
+
+.ten.columns {
+  width: 66.35%; }
+
+.eleven.columns {
+  width: 73.16667%; }
+
+.twelve.columns {
+  width: 79.98333%;
+  margin-left: 0; }
 
 .container {
   margin: 50px auto;
