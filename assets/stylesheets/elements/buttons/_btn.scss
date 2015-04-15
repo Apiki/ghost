@@ -14,7 +14,7 @@
 
 .btn {
 	@extend %btn;
-	background: #3b8686;
+	background: $colorPrimary;
 
 	i {
 		margin-left: 3px;

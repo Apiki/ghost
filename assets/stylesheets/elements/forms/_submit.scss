@@ -1,6 +1,6 @@
 input[type='submit'] {
 	@extend %btn;
-	background: #3b8686;
+	background: $colorPrimary;
 	border: none;
 	cursor: pointer;
 }

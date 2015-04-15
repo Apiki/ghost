@@ -14,7 +14,7 @@
 	a,
 	.current {
 		background: #fff;
-		border: 1px solid #c4c4c4;
+		border: 1px solid $colorDetail;
 		border-radius: 5px;
 		color: #797979;
 		font-size: 14px;
@@ -25,7 +25,7 @@
 	}
 
 	.current {
-		background: #c4c4c4;
+		background: $colorDetail;
 		color: #fff;
 		cursor: default;
 	}

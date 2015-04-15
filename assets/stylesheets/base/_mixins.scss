@@ -10,5 +10,5 @@
 // ----------------------------------------------------------------------------
 
 @mixin col($col) {
-	width: perc(($col-width * $col) + (($col - 1) * $col-margin), $container);
+	width: perc(($colWidth * $col) + (($col - 1) * $colMargin), $container);
 }

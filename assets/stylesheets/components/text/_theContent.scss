@@ -1,5 +1,5 @@
 .the-content {
-	color: #797979;
+	color: $colorText;
 	font-size: 16px;	
 
 	h1,
@@ -26,13 +26,13 @@
 	}
 
 	a {
-		color: #3b8686;
+		color: $colorPrimary;
 		text-decoration: underline;
 	}
 
 	mark {
 		color: inherit;
-		background: #cff09e;
+		background: $colorSecondary;
 	}
 }
 
