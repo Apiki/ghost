@@ -1,0 +1,285 @@
+// BASE
+// ----------------------------------------------------------------------------
+@import "../assets/stylesheets/base/variables";
+@import "../assets/stylesheets/base/functions";
+@import "../assets/stylesheets/base/helpers";
+@import "../assets/stylesheets/base/mixins";
+@import "../assets/stylesheets/base/reset";
+@import "../assets/stylesheets/base/fonts";
+
+
+// ELEMENTS
+// ----------------------------------------------------------------------------
+@import "../assets/stylesheets/elements/images/icons";
+
+
+// LAYOUTS
+// ----------------------------------------------------------------------------
+@import "../assets/stylesheets/layouts/grid";
+
+
+
+// ****************************************************************************
+// STYLE GHOST
+// ****************************************************************************
+
+// -- font
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+
+// -- variables
+$gColorPrimary		: #007674;
+$gColorText			: #535353;
+$gcolorSecondary	: #eee;
+
+// -- wrapper
+#g-wrapper {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+// -- navigation
+.g-navigation {
+	background: darken( $gColorPrimary, 8% );
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 100px;
+	top: 0;
+
+	a {
+		color: #fff;
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+	}
+}
+
+
+// -- navigation icon
+.g-icons {
+	float: right;
+	width: 100px;
+}
+
+
+.g-icons span,
+.g-icons a {
+	border-bottom: 1px solid darken( $gColorPrimary, 4% );
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 36px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: background .2s;
+			transition: background .2s;
+
+	&:hover {
+		background: darken( $gColorPrimary, 4% );
+	}
+}
+
+.active .g-icons span {
+	background: darken( $gColorPrimary, 8% );
+}
+
+
+// -- sidebar
+#g-sidebar {
+	bottom: 0;
+	background: $gColorPrimary;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 300px;
+	z-index: 10;
+	-webkit-transition: transform .5s;
+			transition: transform .5s;
+	-webkit-transform: translateX( -200px );
+			transform: translateX( -200px );
+
+	.active & {
+		-webkit-transform: translateX( 0 );
+				transform: translateX( 0 );
+	}
+}
+
+
+// -- content 
+#g-content {
+	margin: 100px 0 100px 100px;
+}
+
+
+// -- container 
+.g-container {
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: 800px;
+
+	> p {
+		color: $gColorText;
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	> hr {
+		background: #e5e5e5;
+		border: none;
+		height: 1px;
+	}
+}
+
+
+// -- box
+.g-box {
+	margin-top: 50px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+
+// -- example
+.g-example {
+	margin: 30px 0;
+}
+
+
+// -- title
+.g-title {
+	color: $gColorText;
+	font-size: 30px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+// -- tooltip
+%tooltip {
+	cursor: default;
+	position: relative;
+
+	&:after {
+		background: #797979;
+		border-radius: 5px;
+		color: #fff;
+		content: attr(data-tooltip);
+		display: block;
+		font-size: 12px;
+		left: -999em;
+		opacity: 0;
+		padding: 5px;
+		position: absolute;
+		top: 110%;
+		white-space: nowrap;
+
+		-webkit-transform: translateX( -50% );
+				transform: translateX( -50% );
+		-webkit-transition: opacity .2s;
+				transition: opacity .2s;
+	}
+
+	&:hover:after {
+		left: 50%;
+		opacity: 1;
+		z-index: 3;
+	}
+}
+
+
+// COLOR LIST
+// ----------------------------------------------------------------------------
+@mixin color( $class, $color ) {
+	&.#{$class}:before {
+		background: $color;
+		content: "#{$color}";
+	}
+}
+
+.g-color-listing li {
+	@extend %tooltip;
+	$sizeColor: 55px;
+
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	margin-left: 5px;
+	text-shadow: 0 0 10px #000;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:before {
+		border-radius: 100%;
+		display: block;
+		height: $sizeColor;
+		line-height: $sizeColor;
+		text-align: center;
+		width: $sizeColor;
+	}
+
+	@include color( color-primary, $colorPrimary );
+	@include color( color-secondary, $colorSecondary );
+	@include color( color-tertiary, $colorTertiary );
+	@include color( color-title, $colorTitle );
+	@include color( color-text, $colorText );
+	@include color( color-detail, $colorDetail );
+	@include color( color-alert, $colorAlert );
+	@include color( color-error, $colorError );
+	@include color( color-success, $colorSuccess );
+	@include color( color-disabled, $colorDisabled );
+}
+
+
+// ICON LIST
+// ----------------------------------------------------------------------------
+$gSizeIcon: 72px;
+
+.g-icon-listing {
+	@extend %clearFix;
+	position: relative;
+	right: 2px;
+}
+
+.g-icon-listing li {
+	@extend %tooltip;
+	background: $gcolorSecondary;
+	border-radius: 5px;
+	display: inline-block;
+	float: left;
+	height: $gSizeIcon;
+	margin: 2px;
+	text-align: center;
+	width: $gSizeIcon;
+}
+
+.g-icon-listing i {
+	display: inline-block;
+	color: $gColorText;
+	line-height: $gSizeIcon;
+	font-size: 30px;
+}
+
+
+// GRID
+// ----------------------------------------------------------------------------
+.g-grid .row {
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.g-grid .row div {
+	background: $gcolorSecondary;
+	border-radius: 5px;
+	color: $gColorText;
+	padding: 10px;
+	text-align: center;
+}
