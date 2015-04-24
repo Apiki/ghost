@@ -30,11 +30,13 @@
 // -- variables
 $gColorPrimary		: #007674;
 $gColorText			: #535353;
-$gcolorSecondary	: #eee;
+$gColorSecondary	: #eee;
+
+$gFontPrimary 		: 'Roboto Condensed', sans-serif;
 
 // -- wrapper
 #g-wrapper {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: $gFontPrimary;
 }
 
 
@@ -136,6 +138,7 @@ $gcolorSecondary	: #eee;
 
 // -- box
 .g-box {
+	color: $gColorText;
 	margin-top: 50px;
 
 	&:first-child {
@@ -147,6 +150,27 @@ $gcolorSecondary	: #eee;
 // -- example
 .g-example {
 	margin: 30px 0;
+}
+
+.g-example table {
+	width: 100%;
+
+	tr {
+		border-top: 1px solid $gColorSecondary;
+	}
+
+	td {
+		padding: 15px 0;
+	}
+}
+
+.g-example code {
+	background: #eee;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	color: $gColorText;
+	font-size: 14px;
+	padding: 1px 10px;
 }
 
 
@@ -248,7 +272,7 @@ $gSizeIcon: 72px;
 
 .g-icon-listing li {
 	@extend %tooltip;
-	background: $gcolorSecondary;
+	background: $gColorSecondary;
 	border-radius: 5px;
 	display: inline-block;
 	float: left;
@@ -277,9 +301,85 @@ $gSizeIcon: 72px;
 }
 
 .g-grid .row div {
-	background: $gcolorSecondary;
+	background: $gColorSecondary;
 	border-radius: 5px;
 	color: $gColorText;
 	padding: 10px;
 	text-align: center;
+}
+
+
+// FONT FAMILY
+// ----------------------------------------------------------------------------
+
+
+@mixin font( $class, $variable ) {
+
+	.#{$class} {
+		font-family: $variable;
+
+		.g-font:before {
+			content: "#{$variable}";
+		}
+	}
+}
+
+@include font( font-primary, $fontPrimary );
+@include font( font-primary-bold, $fontPrimaryBold );
+@include font( font-secondary, $fontSecondary );
+@include font( font-secondary-bold, $fontSecondaryBold );
+
+
+.g-font-listing strong {
+	display: inline-block;
+	width: 30%;
+}
+
+.g-box-font {
+	margin-top: 50px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.g-header-font {
+	border-bottom: 1px solid $gColorSecondary;
+	border-top: 3px solid $gColorSecondary;
+	font-family: $gFontPrimary;
+	margin-bottom: 10px;
+	padding: 20px 0;
+
+	div {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	div:first-child {
+		font-weight: bold;
+	}
+}
+
+.g-list-letters {
+	color: $gColorText;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+	right: 2px;
+
+	span {
+		background: $gColorSecondary;
+		border-radius: 5px;
+		display: inline-block;
+		float: left;
+		margin: 2px;
+		line-height: 30px;
+		height: 30px;
+		text-align: center;
+		width: 30px;
+	}
+}
+
+.g-example-text {
+	line-height: 1.2;
 }
