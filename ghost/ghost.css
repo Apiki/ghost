@@ -255,6 +255,68 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .icon-linkedin:before {
   content: "\eac8"; }
 
+.btn, .btn-secondary {
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 30px;
+  text-decoration: none; }
+  .disabled.btn, .disabled.btn-secondary {
+    background: #c4c4c4;
+    cursor: default; }
+
+.btn {
+  background: #3b8686; }
+  .btn i {
+    margin-left: 3px; }
+
+.btn-group .btn,
+.btn-group .btn-secondary {
+  border-radius: 0;
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.2) inset;
+  margin-right: -4px; }
+  .btn-group .btn:first-child,
+  .btn-group .btn-secondary:first-child {
+    border-radius: 5px 0 0 5px;
+    box-shadow: none; }
+  .btn-group .btn:last-child,
+  .btn-group .btn-secondary:last-child {
+    border-radius: 0 5px 5px 0; }
+
+.btn-secondary {
+  background: #226262; }
+
+.btn-share {
+  display: inline-block; }
+  .btn-share i {
+    display: inline-block;
+    min-width: 34px;
+    text-align: center; }
+  .btn-share span {
+    padding-right: 15px; }
+  .btn-share .btn {
+    padding: 9px 0;
+    max-height: 34px; }
+
+.count-share {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 32px;
+  min-height: 34px;
+  padding: 0 15px;
+  vertical-align: top; }
+
+.btn-share-facebook {
+  background: #3d57a2; }
+
+.btn-share-twitter {
+  background: #55ACEE; }
+
+.btn-share-plus {
+  background: #DD4B39; }
+
 @media (min-width: 480px) {
   .row:after {
     content: "";
@@ -571,5 +633,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .g-example-text {
   line-height: 1.2; }
+
+.g-example > * {
+  margin: 5px 10px 5px 0; }
 
 /*# sourceMappingURL=ghost.css.map */

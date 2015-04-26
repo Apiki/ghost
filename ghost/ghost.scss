@@ -1,5 +1,6 @@
 // BASE
 // ----------------------------------------------------------------------------
+
 @import "../assets/stylesheets/base/variables";
 @import "../assets/stylesheets/base/functions";
 @import "../assets/stylesheets/base/helpers";
@@ -10,11 +11,20 @@
 
 // ELEMENTS
 // ----------------------------------------------------------------------------
+
+// -- Images
 @import "../assets/stylesheets/elements/images/icons";
+
+// -- Buttons
+@import "../assets/stylesheets/elements/buttons/btn";
+@import "../assets/stylesheets/elements/buttons/btnGroup";
+@import "../assets/stylesheets/elements/buttons/btnSecondary";
+@import "../assets/stylesheets/elements/buttons/btnShare";
 
 
 // LAYOUTS
 // ----------------------------------------------------------------------------
+
 @import "../assets/stylesheets/layouts/grid";
 
 
@@ -311,8 +321,6 @@ $gSizeIcon: 72px;
 
 // FONT FAMILY
 // ----------------------------------------------------------------------------
-
-
 @mixin font( $class, $variable ) {
 
 	.#{$class} {
@@ -382,4 +390,11 @@ $gSizeIcon: 72px;
 
 .g-example-text {
 	line-height: 1.2;
+}
+
+
+// BUTTONS
+// ----------------------------------------------------------------------------
+.g-example > * {
+	margin: 5px 10px 5px 0;
 }
