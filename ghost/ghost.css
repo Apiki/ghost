@@ -291,6 +291,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: inline-block; }
   .btn-share i {
     display: inline-block;
+    margin-left: 0;
     min-width: 34px;
     text-align: center; }
   .btn-share span {
@@ -634,7 +635,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .g-example-text {
   line-height: 1.2; }
 
-.g-example > * {
+.g-example > [class^="btn"] {
   margin: 5px 10px 5px 0; }
 
 /*# sourceMappingURL=ghost.css.map */
