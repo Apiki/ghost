@@ -4,12 +4,10 @@
 
 @import "base/variables";
 @import "base/functions";
-@import "base/helpers";
 @import "base/mixins";
 @import "base/reset";
 @import "base/fonts";
-
-
+@import "base/helpers";
 
 
 // ELEMENTS
@@ -39,8 +37,6 @@
 @import "elements/text/tooltip";
 
 
-
-
 // COMPONENTS
 // Criar um elemento 'pai' para modificar os elements
 // ----------------------------------------------------------------------------
@@ -60,14 +56,10 @@
 @import "components/text/newsItem";
 
 
-
-
 // TEMPLATES
 // Estruturas maiores do projeto, que podem modificar element e components
 // ----------------------------------------------------------------------------
 @import "templates/list";
-
-
 
 
 // LAYOUTS
@@ -75,7 +67,6 @@
 // ----------------------------------------------------------------------------
 @import "layouts/grid";
 @import "layouts/container";
-
 
 
 // PAGES

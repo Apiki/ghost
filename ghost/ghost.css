@@ -1,12 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
-.g-icon-listing:after {
-  clear: both;
-  content: '';
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden; }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -74,6 +66,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.g-icon-listing:after {
+  clear: both;
+  content: '';
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
 
 .icon-newspaper:before {
   content: "\e904"; }
