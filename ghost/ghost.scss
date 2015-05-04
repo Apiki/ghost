@@ -9,10 +9,21 @@
 @import "../assets/stylesheets/base/helpers";
 
 
-// BASE
+// COMPONENTS
 // ----------------------------------------------------------------------------
+
+// -- Navigation
+@import "../assets/stylesheets/components/navigation/breadcrumb";
+@import "../assets/stylesheets/components/navigation/navigation";
+@import "../assets/stylesheets/components/navigation/pagination";
+
+// -- js
 @import "../assets/stylesheets/components/js/chosen";
 @import "../assets/stylesheets/components/js/icheck";
+@import "../assets/stylesheets/components/js/slider";
+
+// -- text
+@import "../assets/stylesheets/components/text/theContent";
 
 
 // ELEMENTS
@@ -33,7 +44,10 @@
 @import "../assets/stylesheets/elements/forms/textarea";
 
 // -- Text
+@import "../assets/stylesheets/elements/text/blockquote";
+@import "../assets/stylesheets/elements/text/loading";
 @import "../assets/stylesheets/elements/text/messages";
+@import "../assets/stylesheets/elements/text/tooltip";
 
 
 // LAYOUTS
@@ -176,7 +190,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	margin: 30px 0;
 }
 
-.g-example table {
+.g-example > table {
 	width: 100%;
 
 	tr {
@@ -426,4 +440,13 @@ $gSizeIcon: 72px;
 
 .g-form .g-group-icheck label {
 	margin-right: 40px;
+}
+
+
+// Tooltip
+// ----------------------------------------------------------------------------
+.g-example .tooltip:before,
+.g-example .tooltip:after {
+	opacity: 1;
+	left: 50%;
 }

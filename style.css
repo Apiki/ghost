@@ -120,7 +120,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     max-height: 34px; }
 
 .count-share {
-  border: 1px solid #c4c4c4;
+  border: 1px solid #eee;
   border-radius: 5px;
   display: inline-block;
   line-height: 32px;
@@ -139,7 +139,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 input, select, textarea, .chosen-single {
   background: #fff;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #eee;
   border-radius: 5px;
   color: #797979;
   font: 14px "Times New Roman", sans-serif;
@@ -398,28 +398,28 @@ blockquote {
 
 @keyframes loading {
   from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 @-webkit-keyframes loading {
   from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 .loading {
   color: #666;
-  font-weight: bold;
-  text-align: center; }
+  font-weight: bold; }
   .loading i {
-    animation: loading .4s linear infinite;
-    -webkit-animation: loading .4s linear infinite;
     display: inline-block;
     color: #3b8686;
-    margin: 0 10px; }
+    margin-right: 10px;
+    text-shadow: 0 0 2px #3b8686;
+    -webkit-animation: loading .3s linear infinite;
+    animation: loading .3s linear infinite; }
 
 .ms-error i,
 .ms-sucess i {
@@ -435,7 +435,7 @@ blockquote {
 .tooltip {
   position: relative; }
   .tooltip:before, .tooltip:after {
-    bottom: 100%;
+    bottom: 80%;
     content: '';
     left: -999em;
     opacity: 0;
@@ -462,9 +462,9 @@ blockquote {
     opacity: 1;
     left: 50%; }
 
-.bx-viewport {
+.slider-wrapper .bx-viewport {
   border-radius: 5px; }
-  .bx-viewport:before {
+  .slider-wrapper .bx-viewport:before {
     bottom: -1px;
     box-shadow: 0 0 30px 2px #000;
     content: '';
@@ -473,28 +473,28 @@ blockquote {
     position: absolute;
     width: 100%;
     z-index: 2; }
-  .bx-viewport img {
+  .slider-wrapper .bx-viewport img {
     display: block; }
 
-.bx-wrapper {
+.slider-wrapper .bx-wrapper {
   position: relative; }
 
-.bx-pager,
-.bx-controls-direction {
+.slider-wrapper .bx-pager,
+.slider-wrapper .bx-controls-direction {
   position: absolute;
   z-index: 3; }
 
-.bx-pager {
+.slider-wrapper .bx-pager {
   bottom: 8px;
   font-size: 0;
   text-align: center;
   width: 100%; }
 
-.bx-pager-item {
+.slider-wrapper .bx-pager-item {
   display: inline-block;
   margin: 0 3px; }
 
-.bx-pager-link {
+.slider-wrapper .bx-pager-link {
   background: #fff;
   border-radius: 5px;
   display: block;
@@ -608,7 +608,7 @@ blockquote {
 .icheckbox,
 .iradio {
   background: #fff;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #eee;
   cursor: pointer;
   display: inline-block;
   height: 20px;
@@ -652,7 +652,7 @@ blockquote {
     top: 3px; }
 
 .breadcrumb {
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #eee;
   font-size: 0;
   padding: 8px 0; }
   .breadcrumb a {
@@ -712,7 +712,7 @@ blockquote {
   .pagination a,
   .pagination .current {
     background: #fff;
-    border: 1px solid #c4c4c4;
+    border: 1px solid #eee;
     border-radius: 5px;
     color: #797979;
     font-size: 14px;
@@ -721,7 +721,7 @@ blockquote {
     padding: 10px;
     text-decoration: none; }
   .pagination .current {
-    background: #c4c4c4;
+    background: #eee;
     color: #fff;
     cursor: default; }
 
@@ -751,7 +751,7 @@ blockquote {
     font-size: 0.8125em; }
   .the-content p {
     line-height: 1.5;
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
   .the-content a {
     color: #3b8686;
     text-decoration: underline; }
@@ -763,15 +763,13 @@ blockquote {
   width: 100%; }
   .the-content table thead tr {
     border-width: 2px; }
-  .the-content table tbody tr:nth-child(odd) {
-    background: #f1f1f1; }
   .the-content table td,
   .the-content table th {
     padding: 15px 20px; }
   .the-content table th {
     font-weight: bold; }
   .the-content table tr {
-    border-bottom: 1px solid #c4c4c4; }
+    border-bottom: 1px solid #eee; }
 
 .the-content .thumbnail {
   display: inline-block;
@@ -801,7 +799,7 @@ blockquote {
     margin: 5px 0 20px 20px; }
 
 .news-item {
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #eee;
   overflow: hidden;
   padding-bottom: 30px; }
   .news-item img {

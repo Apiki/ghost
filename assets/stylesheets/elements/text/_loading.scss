@@ -1,37 +1,37 @@
 @keyframes loading {
-	from {
-		transform: rotate( 0deg );
+	from {		
 		-webkit-transform: rotate( 0deg );
+				transform: rotate( 0deg );
 	}	
 
 	to {
-		transform: rotate( 360deg );
 		-webkit-transform: rotate( 360deg );
+				transform: rotate( 360deg );
 	}
 }
 
 @-webkit-keyframes loading {
 	from {
-		transform: rotate( 0deg );
 		-webkit-transform: rotate( 0deg );
+				transform: rotate( 0deg );
 	}	
 
 	to {
-		transform: rotate( 360deg );
 		-webkit-transform: rotate( 360deg );
+				transform: rotate( 360deg );
 	}
 }
 
 .loading {
 	color: #666;
 	font-weight: bold;
-	text-align: center;
 
 	i {
-		animation: loading .4s linear infinite;
-		-webkit-animation: loading .4s linear infinite;
 		display: inline-block;
 		color: $colorPrimary;
-		margin: 0 10px;
+		margin-right: 10px;
+		text-shadow: 0 0 2px $colorPrimary;
+		-webkit-animation: loading .3s linear infinite;
+				animation: loading .3s linear infinite;
 	}
 }
