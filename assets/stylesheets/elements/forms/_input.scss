@@ -3,7 +3,7 @@
 	border: 1px solid $colorDetail;
 	border-radius: 5px;
 	color: #797979;
-	font-size: 14px;
+	font: 14px $fontPrimary;
 	padding: 10px;
 	width: 100%;
 
@@ -12,7 +12,7 @@
 		outline: none;
 	}
 
-	.form-error & {
+	.field-error & {
 		background: #fcf0f0;
 		box-shadow: 0 0 2px 0 red;
 	}

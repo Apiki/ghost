@@ -9,6 +9,12 @@
 @import "../assets/stylesheets/base/helpers";
 
 
+// BASE
+// ----------------------------------------------------------------------------
+@import "../assets/stylesheets/components/js/chosen";
+@import "../assets/stylesheets/components/js/icheck";
+
+
 // ELEMENTS
 // ----------------------------------------------------------------------------
 
@@ -20,6 +26,14 @@
 @import "../assets/stylesheets/elements/buttons/btnGroup";
 @import "../assets/stylesheets/elements/buttons/btnSecondary";
 @import "../assets/stylesheets/elements/buttons/btnShare";
+
+// -- Forms
+@import "../assets/stylesheets/elements/forms/input";
+@import "../assets/stylesheets/elements/forms/select";
+@import "../assets/stylesheets/elements/forms/textarea";
+
+// -- Text
+@import "../assets/stylesheets/elements/text/messages";
 
 
 // LAYOUTS
@@ -397,4 +411,19 @@ $gSizeIcon: 72px;
 // ----------------------------------------------------------------------------
 .g-example > [class^="btn"] {
 	margin: 5px 10px 5px 0;
+}
+
+
+// FORM
+// ----------------------------------------------------------------------------
+.g-form > li {
+	margin-top: 15px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.g-form .g-group-icheck label {
+	margin-right: 40px;
 }

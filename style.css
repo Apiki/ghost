@@ -142,13 +142,13 @@ input, select, textarea, .chosen-single {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
   color: #797979;
-  font-size: 14px;
+  font: 14px "Times New Roman", sans-serif;
   padding: 10px;
   width: 100%; }
   input:focus, select:focus, textarea:focus, .chosen-single:focus {
     box-shadow: 0 0 2px 0 #cff09e;
     outline: none; }
-  .form-error input, .form-error select, .form-error textarea, .form-error .chosen-single {
+  .field-error input, .field-error select, .field-error textarea, .field-error .chosen-single {
     background: #fcf0f0;
     box-shadow: 0 0 2px 0 red; }
 
@@ -538,6 +538,7 @@ blockquote {
   background: #fff;
   border: 1px solid #c4c4c4;
   border-radius: 5px;
+  font: 14px "Times New Roman", sans-serif;
   left: -999em;
   margin-top: 5px;
   opacity: 0;
