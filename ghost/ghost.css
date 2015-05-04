@@ -132,6 +132,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .chosen-container-multi {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
+  font: 14px "Times New Roman", sans-serif;
   min-height: 35px; }
   .chosen-container-multi * {
     display: inline-block;
