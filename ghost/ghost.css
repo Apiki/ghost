@@ -693,33 +693,13 @@ textarea {
   resize: none; }
 
 blockquote {
-  border-bottom: 1px solid #ececec;
-  border-top: 1px solid #ececec;
-  color: #797979;
+  border-left: 5px solid #f6f6f6;
   clear: both;
-  font-size: 22px;
+  color: #797979;
   font-style: italic;
   line-height: 1.4;
-  position: relative;
-  padding: 40px 80px;
-  margin: 40px 0; }
-  blockquote:before, blockquote:after {
-    color: #ececec;
-    display: inline-block;
-    font: 100px/1 'Times New Roman';
-    height: 50px;
-    position: relative; }
-  blockquote:before {
-    content: '\201C';
-    left: 0;
-    margin-left: -48px;
-    margin-top: -50px;
-    top: 30px; }
-  blockquote:after {
-    content: '\201D';
-    margin-top: -60px;
-    right: -5px;
-    top: 60px; }
+  margin-left: 30px;
+  padding: 10px 0 10px 30px; }
   blockquote p:last-child {
     margin: 0; }
 
