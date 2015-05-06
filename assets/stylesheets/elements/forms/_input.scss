@@ -1,14 +1,25 @@
+// -- Variables form
+$_formBorderColor 	: #bbb;
+$_formActiveColor 	: $colorPrimary;
+$_formTextColor 	: $colorText;
+$_formFieldHeight 	: 35px;
+$_formArrowSize 	: 7px;
+
+
+// -- elements form
 %elementsForm {
 	background: #fff;
-	border: 1px solid $colorDetail;
+	border: 1px solid $_formBorderColor;
 	border-radius: 5px;
-	color: #797979;
+	color: $_formTextColor;
 	font: 14px $fontPrimary;
 	padding: 10px;
 	width: 100%;
+	-webkit-transition: box-shadow .2s;
+			transition: box-shadow .2s;
 
 	&:focus {
-		box-shadow: 0 0 2px 0 #cff09e;
+		box-shadow: 0 0 2px 0 $_formActiveColor;
 		outline: none;
 	}
 
@@ -21,7 +32,7 @@
 input {
 	@extend %elementsForm;
 	padding: 0 10px;
-	height: 35px;
+	height: $_formFieldHeight;
 }
 
 input[type="submit"],
