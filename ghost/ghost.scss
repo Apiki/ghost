@@ -84,6 +84,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	bottom: 0;
 	left: 0;
 	overflow: hidden;
+	overflow-y: auto;
 	position: absolute;
 	right: 100px;
 	top: 0;	
@@ -103,7 +104,8 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	ul ul a {
 		border: none;
 		color: rgba( #fff, .6 );
-		padding: 12px 20px;
+		font-size: 14px;
+		padding: 10px 20px;
 	}
 
 	&:before {
@@ -486,4 +488,11 @@ $gSizeIcon: 72px;
 .g-example .tooltip:after {
 	opacity: 1;
 	left: 50%;
+}
+
+
+// Thumbnail
+// ----------------------------------------------------------------------------
+.g-example .thumbnail {
+	display: block;
 }

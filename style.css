@@ -63,6 +63,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 0;
   visibility: hidden; }
 
+.the-content img {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: "icomoon";
   speak: none;
@@ -140,7 +145,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 input, select, textarea, .chosen-single {
   background: #fff;
   border: 1px solid #bbb;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #797979;
   font: 14px "Times New Roman", sans-serif;
   padding: 10px;
@@ -156,7 +161,7 @@ input, select, textarea, .chosen-single {
 
 input {
   padding: 0 10px;
-  height: 35px; }
+  height: 38px; }
 
 input[type="submit"],
 input[type="radio"],
@@ -492,7 +497,7 @@ blockquote {
 
 .chosen-single {
   display: block;
-  height: 35px;
+  height: 38px;
   padding: 0 45px 0 10px; }
   .chosen-single span {
     display: table-cell;
@@ -500,11 +505,11 @@ blockquote {
     vertical-align: middle; }
   .chosen-single > div {
     border-left: 1px solid #bbb;
-    height: 35px;
+    height: 38px;
     position: absolute;
     right: 0;
     top: 0;
-    width: 35px; }
+    width: 38px; }
   .chosen-single > div:before {
     border-color: #bbb transparent transparent transparent;
     border-style: solid;
@@ -562,7 +567,7 @@ blockquote {
   border: 1px solid #bbb;
   border-radius: 5px;
   font: 14px "Times New Roman", sans-serif;
-  min-height: 35px;
+  min-height: 38px;
   -webkit-transition: box-shadow .2s;
   transition: box-shadow .2s; }
   .chosen-container-multi * {
@@ -576,7 +581,7 @@ blockquote {
 .chosen-container-multi .search-field {
   border-radius: 5px;
   margin: 5px 5px 0 0;
-  min-height: 23px;
+  min-height: 26px;
   overflow: hidden; }
 
 .chosen-container-multi .search-choice {
@@ -594,7 +599,7 @@ blockquote {
     color: #fff;
     content: "x";
     display: block;
-    line-height: 23px;
+    line-height: 26px;
     text-align: center; }
 
 .chosen-container-multi .search-field input {
@@ -779,8 +784,6 @@ blockquote {
 .the-content .thumbnail {
   display: inline-block;
   position: relative; }
-  .the-content .thumbnail img {
-    display: block; }
   .the-content .thumbnail a {
     display: block; }
   .the-content .thumbnail figcaption {

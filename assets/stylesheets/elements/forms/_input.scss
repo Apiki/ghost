@@ -2,15 +2,16 @@
 $_formBorderColor 	: #bbb;
 $_formActiveColor 	: $colorPrimary;
 $_formTextColor 	: $colorText;
-$_formFieldHeight 	: 35px;
+$_formFieldHeight 	: 38px;
 $_formArrowSize 	: 7px;
+$_formRadius 		: 3px;
 
 
 // -- elements form
 %elementsForm {
 	background: #fff;
 	border: 1px solid $_formBorderColor;
-	border-radius: 5px;
+	border-radius: $_formRadius;
 	color: $_formTextColor;
 	font: 14px $fontPrimary;
 	padding: 10px;

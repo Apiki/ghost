@@ -34,6 +34,10 @@
 		color: inherit;
 		background: $colorSecondary;
 	}
+
+	img {
+		@extend %img;		
+	}
 }
 
 // Table
@@ -66,10 +70,6 @@
 .the-content .thumbnail {
 	display: inline-block;
 	position: relative;
-
-	img {
-		display: block;
-	}
 
 	a {
 		display: block;
