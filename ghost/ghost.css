@@ -52,8 +52,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: "icomoon";
-  src: url("../assets/fonts/icomoon.eot?-gboeeu");
-  src: url("../assets/fonts/icomoon.eot?#iefix-gboeeu") format("embedded-opentype"), url("../assets/fonts/icomoon.woff?-gboeeu") format("woff"), url("../assets/fonts/icomoon.ttf?-gboeeu") format("truetype"), url("../assets/fonts/icomoon.svg?-gboeeu#icomoon") format("svg");
+  src: url("../assets/fonts/icomoon.eot");
+  src: url("../assets/fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon.woff") format("woff"), url("../assets/fonts/icomoon.ttf") format("truetype"), url("../assets/fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 .g-icon-listing:after {
@@ -260,6 +260,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .icon-linkedin:before {
   content: "\eac8"; }
 
+.icon-forward:before {
+  content: "\e969"; }
+
+.icon-reply:before {
+  content: "\e96a"; }
+
+.icon-google-plus-s:before {
+  content: "\ea88"; }
+
+.icon-facebook-s:before {
+  content: "\ea8c"; }
+
+.icon-twitter-s:before {
+  content: "\ea91"; }
+
+.icon-vimeo-s:before {
+  content: "\ea9c"; }
+
+.icon-linkedin-s:before {
+  content: "\eac9"; }
+
 .btn, .btn-secondary {
   border-radius: 5px;
   color: #fff;
@@ -331,7 +352,8 @@ input, select, textarea, .chosen-single {
   padding: 10px;
   width: 100%;
   -webkit-transition: box-shadow .2s;
-  transition: box-shadow .2s; }
+  transition: box-shadow .2s;
+  border-radius: 3px; }
   input:focus, select:focus, textarea:focus, .chosen-single:focus {
     box-shadow: 0 0 2px 0 #3b8686;
     outline: none; }
@@ -549,7 +571,7 @@ blockquote {
 .chosen-drop {
   background: #fff;
   border: 1px solid #bbb;
-  border-radius: 0;
+  border-radius: 3px;
   font: 14px "Times New Roman", sans-serif;
   left: -999em;
   margin-top: 5px;
@@ -589,7 +611,7 @@ blockquote {
 
 .chosen-container-multi {
   border: 1px solid #bbb;
-  border-radius: 0;
+  border-radius: 3px;
   font: 14px "Times New Roman", sans-serif;
   min-height: 38px;
   -webkit-transition: box-shadow .2s;
@@ -603,7 +625,7 @@ blockquote {
 
 .chosen-container-multi .search-choice,
 .chosen-container-multi .search-field {
-  border-radius: 0;
+  border-radius: 3px;
   margin: 5px 5px 0 0;
   min-height: 26px;
   overflow: hidden; }
