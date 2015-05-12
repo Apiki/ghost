@@ -301,7 +301,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .btn-group .btn-secondary {
   border-radius: 0;
   box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.2) inset;
-  margin-right: -4px; }
+  display: table-cell; }
   .btn-group .btn:first-child,
   .btn-group .btn-secondary:first-child {
     border-radius: 5px 0 0 5px;

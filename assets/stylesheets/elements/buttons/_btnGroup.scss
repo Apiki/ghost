@@ -2,7 +2,7 @@
 .btn-group .btn-secondary {
 	border-radius: 0;
 	box-shadow: 1px 0 0 0 rgba(#000, .2) inset;
-	margin-right: -4px;
+	display: table-cell;
 
 	&:first-child {
 		border-radius: 5px 0 0 5px;
