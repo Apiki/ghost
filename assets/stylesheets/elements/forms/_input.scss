@@ -1,23 +1,35 @@
-// -- Variables form
+// -- colors
 $_formBorderColor 	: #bbb;
 $_formActiveColor 	: $colorPrimary;
 $_formTextColor 	: $colorText;
+$_formButtonColor 	: $colorPrimary;
+
+// -- sizes
 $_formFieldHeight 	: 38px;
 $_formArrowSize 	: 7px;
-$_formRadius 		: 3px;
+$_formRadius 		: 0;
+
+// -- font
+$_formFont 			: $fontPrimary;
+$_formFontSize 		: 14px;
 
 
-// -- elements form
+// Elements Form
+// ----------------------------------------------------------------------------
+
 %elementsForm {
 	background: #fff;
 	border: 1px solid $_formBorderColor;
-	border-radius: $_formRadius;
 	color: $_formTextColor;
-	font: 14px $fontPrimary;
+	font: $_formFontSize $_formFont;
 	padding: 10px;
 	width: 100%;
 	-webkit-transition: box-shadow .2s;
 			transition: box-shadow .2s;
+
+	@if $_formRadius > 0 {
+		border-radius: $_formRadius;
+	}
 
 	&:focus {
 		box-shadow: 0 0 2px 0 $_formActiveColor;
@@ -32,7 +44,6 @@ $_formRadius 		: 3px;
 
 input {
 	@extend %elementsForm;
-	padding: 0 10px;
 	height: $_formFieldHeight;
 }
 

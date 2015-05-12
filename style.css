@@ -145,7 +145,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 input, select, textarea, .chosen-single {
   background: #fff;
   border: 1px solid #bbb;
-  border-radius: 3px;
   color: #797979;
   font: 14px "Times New Roman", sans-serif;
   padding: 10px;
@@ -160,7 +159,6 @@ input, select, textarea, .chosen-single {
     box-shadow: 0 0 2px 0 red; }
 
 input {
-  padding: 0 10px;
   height: 38px; }
 
 input[type="submit"],
@@ -525,7 +523,7 @@ blockquote {
 .chosen-drop {
   background: #fff;
   border: 1px solid #bbb;
-  border-radius: 5px;
+  border-radius: 0;
   font: 14px "Times New Roman", sans-serif;
   left: -999em;
   margin-top: 5px;
@@ -565,7 +563,7 @@ blockquote {
 
 .chosen-container-multi {
   border: 1px solid #bbb;
-  border-radius: 5px;
+  border-radius: 0;
   font: 14px "Times New Roman", sans-serif;
   min-height: 38px;
   -webkit-transition: box-shadow .2s;
@@ -579,7 +577,7 @@ blockquote {
 
 .chosen-container-multi .search-choice,
 .chosen-container-multi .search-field {
-  border-radius: 5px;
+  border-radius: 0;
   margin: 5px 5px 0 0;
   min-height: 26px;
   overflow: hidden; }

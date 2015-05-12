@@ -6,7 +6,6 @@
 	width: auto !important;
 }
 
-
 // Single
 // ----------------------------------------------------------------------------
 
@@ -49,8 +48,8 @@
 .chosen-drop {
 	background: #fff;	
 	border: 1px solid $_formBorderColor;
-	border-radius: 5px;
-	font: 14px $fontPrimary;
+	border-radius: $_formRadius;
+	font: $_formFontSize $_formFont;
 	left: -999em;
 	margin-top: 5px;
 	opacity: 0;
@@ -115,8 +114,8 @@
 
 .chosen-container-multi {
 	border: 1px solid $_formBorderColor;
-	border-radius: 5px;
-	font: 14px $fontPrimary;
+	border-radius: $_formRadius;
+	font: $_formFontSize $_formFont;
 	min-height: $_formFieldHeight;
 	-webkit-transition: box-shadow .2s;
 			transition: box-shadow .2s;
@@ -134,7 +133,7 @@
 // -- search
 .chosen-container-multi .search-choice,
 .chosen-container-multi .search-field {
-	border-radius: 5px;
+	border-radius: $_formRadius;
 	margin: 5px 5px 0 0;
 	min-height: $_formFieldHeight - 12px;
 	overflow: hidden;
