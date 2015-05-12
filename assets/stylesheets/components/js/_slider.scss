@@ -1,26 +1,34 @@
-.slider-wrapper .bx-viewport {
-	border-radius: 5px;
+$_sliderShadow : true; // booleano
 
-	&:before {
+@if $_sliderShadow != false {
+	.slider-wrapper .bx-viewport:before {
 		bottom: -1px;
 		box-shadow: 0 0 30px 2px #000;
-		content: '';
+		content: "";
 		height: 1px;
 		left: 0;
 		position: absolute;
 		width: 100%;
 		z-index: 2;
 	}
-
-	img {
-		display: block;
-	}
 }
 
+.slider-wrapper img,
+.slider-wrapper a {
+	display: block;
+}
 
+// -- bx wrapper
 .slider-wrapper .bx-wrapper {
 	position: relative;
 }
+
+.slider-wrapper .slider {
+	height: inherit;
+}
+
+// Pager
+// ----------------------------------------------------------------------------
 
 .slider-wrapper .bx-pager,
 .slider-wrapper .bx-controls-direction {
@@ -28,12 +36,8 @@
 	z-index: 3;
 }
 
-
-// Pager
-// ----------------------------------------------------------------------------
-
 .slider-wrapper .bx-pager {
-	bottom: 8px;
+	bottom: 10px;
 	font-size: 0;
 	text-align: center;
 	width: 100%;
@@ -41,7 +45,7 @@
 
 .slider-wrapper .bx-pager-item {
 	display: inline-block;
-	margin: 0 3px;
+	margin: 0 5px;
 }
 
 .slider-wrapper .bx-pager-link {
@@ -50,4 +54,57 @@
 	display: block;
 	height: 8px;
 	width: 8px;
+	-webkit-transition: .2s;
+			transition: .2s;
+
+	&.active {
+		background: $colorPrimary;
+	}
+}
+
+// -- Controls direction
+.bx-controls-direction {
+	top: 50%;
+	width: 100%;
+}
+
+.bx-prev,
+.bx-next {
+	color: $colorPrimary;
+	cursor: pointer;
+	font-size: 0;
+	position: absolute;	
+	text-decoration: none;
+	-webkit-transform: translateY( -50% );
+		transform: translateY( -50% );
+
+	&:before {
+		@extend %icon;
+		font-size: 30px;
+	}
+}
+
+.bx-prev {
+	left: 20px;
+
+	&:before {
+		@extend .icon-circle-left;
+	}
+}
+
+.bx-next {
+	right: 20px;
+
+	&:before {
+		@extend .icon-circle-right;
+	}	
+}
+
+// -- no js
+.slider-wrapper > .slider > li {
+	display: none;
+
+	&:first-child {
+		display: block;
+	}
 }
