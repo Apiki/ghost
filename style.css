@@ -114,23 +114,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .btn-share {
   display: inline-block; }
   .btn-share i {
-    display: inline-block;
-    margin-left: 0;
-    min-width: 34px;
-    text-align: center; }
-  .btn-share span {
-    padding-right: 15px; }
-  .btn-share .btn {
-    padding: 9px 0;
-    max-height: 34px; }
+    margin: 0; }
+  .btn-share .btn span {
+    margin-left: 10px; }
 
 .count-share {
   border: 1px solid #eee;
+  color: #797979; }
+
+.btn-share .btn,
+.count-share {
   border-radius: 5px;
   display: inline-block;
-  line-height: 32px;
-  min-height: 34px;
-  padding: 0 15px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 10px;
   vertical-align: top; }
 
 .btn-share-facebook {

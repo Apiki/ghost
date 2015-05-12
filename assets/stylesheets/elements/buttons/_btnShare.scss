@@ -1,34 +1,42 @@
-.btn-share {
+// -- colors
+$_shareColor 	: $colorText;
+$_shareBorder 	: 1px solid $colorDetail;
+
+// -- sizes
+$_shareHeight 	: 34px;
+$_sharePadding 	: 10px;
+$_shareRadius 	: 5px;
+
+
+.btn-share  {
 	display: inline-block;
 
 	i {
-		display: inline-block;
-		margin-left: 0;
-		min-width: 34px;
-		text-align: center;
-	}
+		margin: 0;
+	}	
 
-	span {
-		padding-right: 15px;
-	}
-
-	.btn {
-		padding: 9px 0;
-		max-height: 34px;
+	.btn span {
+		margin-left: $_sharePadding;
 	}
 }
 
+// -- count share
 .count-share {
-	border: 1px solid $colorDetail;
-	border-radius: 5px;
+	border: $_shareBorder;
+	color: $_shareColor;
+}
+
+.btn-share .btn,
+.count-share {
+	border-radius: $_shareRadius;
 	display: inline-block;
-	line-height: 32px;
-	min-height: 34px;
-	padding: 0 15px;
+	height: $_shareHeight;
+	line-height: $_shareHeight;
+	padding: 0 $_sharePadding;
 	vertical-align: top;
 }
 
-// share
+// -- share
 .btn-share-facebook { background: #3d57a2; }
 .btn-share-twitter  { background: #55ACEE; }
 .btn-share-plus  	{ background: #DD4B39; }
