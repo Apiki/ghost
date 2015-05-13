@@ -488,6 +488,23 @@
 					</div>
 				</div><!-- box - slider -->
 
+				<div class="g-box" id="components-lightbox">
+					<div class="g-container">
+						<h2 class="g-title">Lightbox</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio saepe tenetur optio, repudiandae rerum harum sint. Ducimus veniam, provident natus.</p>
+
+						<div class="g-example">
+							<div class="gallery-wrapp">
+								<a class="gallery" href="http://lorempixel.com/800/400/sports/1" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/1" alt=""></a>
+								<a class="gallery" href="http://lorempixel.com/800/400/sports/2" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/2" alt=""></a>
+								<a class="gallery" href="http://lorempixel.com/800/400/sports/3" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/3" alt=""></a>
+								<a class="gallery" href="http://lorempixel.com/800/400/sports/4" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/4" alt=""></a>								
+							</div>
+						</div>
+						<hr>
+					</div>
+				</div><!-- box - lightbox -->				
+
 				<div class="g-box" id="components-breadcrumb">
 					<div class="g-container">
 						<h2 class="g-title">Breadcrumb</h2>
@@ -650,7 +667,7 @@
 						</div>
 						<hr>
 					</div>
-				</div><!-- box - thumbnail -->				
+				</div><!-- box - thumbnail -->
 			</div><!-- section - components -->
 		</div>
 	</div>
@@ -660,6 +677,10 @@
 	<script src="../assets/javascripts/chosen.js"></script>
 	<script src="../assets/javascripts/icheck.js"></script>
 	<script src="../assets/javascripts/bxslider.js"></script>
+	<script src="../assets/javascripts/featherlight.js"></script>
+	<script src="../assets/javascripts/featherlightgallery.js"></script>
+
+	
 	<script>
 		jQuery( '.btn-menu' ).on( 'click', function(){
 			jQuery( '#g-wrapper' ).toggleClass( 'active' );
@@ -668,6 +689,15 @@
 		jQuery( 'select' ).chosen();
 		jQuery( 'input' ).iCheck();
 		jQuery( '.slider' ).bxSlider();
+
+		jQuery( '.gallery' ).featherlightGallery({
+			gallery: {
+				fadeIn: 300,
+				fadeOut: 300
+			},
+			openSpeed:    300,
+			closeSpeed:   300
+		});
 	</script>
 </body>
 </html>

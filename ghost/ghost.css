@@ -70,7 +70,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   max-width: 100%; }
 
 [class^="icon-"], [class*=" icon-"], .bx-prev:before,
-.bx-next:before {
+.bx-next:before, .featherlight-previous:before,
+.featherlight-next:before {
   font-family: "icomoon";
   speak: none;
   font-style: normal;
@@ -225,13 +226,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .icon-circle-up:before {
   content: "\ea41"; }
 
-.icon-circle-right:before, .bx-next:before {
+.icon-circle-right:before, .bx-next:before, .featherlight-next:before {
   content: "\ea42"; }
 
 .icon-circle-down:before {
   content: "\ea43"; }
 
-.icon-circle-left:before, .bx-prev:before {
+.icon-circle-left:before, .bx-prev:before, .featherlight-previous:before {
   content: "\ea44"; }
 
 .icon-embed:before {
@@ -779,6 +780,80 @@ blockquote {
   display: none; }
   .slider-wrapper > .slider > li:first-child {
     display: block; }
+
+.featherlight {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 1000; }
+  .featherlight:before {
+    content: "";
+    height: 100%; }
+  .featherlight img,
+  .featherlight .featherlight-content {
+    border-radius: 5px; }
+  .featherlight img {
+    display: block; }
+
+.featherlight:before,
+.featherlight-content {
+  display: inline-block;
+  vertical-align: middle; }
+
+.featherlight-content {
+  background: #fff;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+  max-width: 100%;
+  position: relative; }
+
+.featherlight-close,
+.featherlight-previous,
+.featherlight-next {
+  position: absolute; }
+
+.featherlight-close {
+  background: #fff;
+  border-radius: 100%;
+  bottom: 100%;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  height: 30px;
+  margin: 0 -15px -15px 0;
+  right: 0;
+  width: 30px;
+  z-index: 1003; }
+
+.featherlight-previous,
+.featherlight-next {
+  color: #fff;
+  cursor: pointer;
+  font-size: 0;
+  top: 50%;
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .featherlight-previous:before,
+  .featherlight-next:before {
+    font-size: 30px; }
+  .featherlight-content:hover .featherlight-previous, .featherlight-content:hover
+  .featherlight-next {
+    opacity: 1;
+    margin: 0 20px; }
+
+.featherlight-previous {
+  left: 0; }
+
+.featherlight-next {
+  right: 0; }
 
 .the-content {
   color: #797979;
