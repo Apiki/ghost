@@ -1,0 +1,60 @@
+// -- colors
+$_formBorderColor 	: #bbb;
+$_formActiveColor 	: $colorPrimary;
+$_formTextColor 	: $colorText;
+$_formButtonColor 	: $colorPrimary;
+
+// -- sizes
+$_formFieldHeight 	: 38px;
+$_formArrowSize 	: 7px;
+$_formRadius 		: 3px;
+
+// -- font
+$_formFont 			: $fontPrimary;
+$_formFontSize 		: 14px;
+
+
+// Elements Form
+// ----------------------------------------------------------------------------
+
+%elementsForm {
+	background: #fff;
+	border: 1px solid $_formBorderColor;
+	color: $_formTextColor;
+	font: $_formFontSize $_formFont;
+	padding: 10px;
+	width: 100%;
+	-webkit-transition: box-shadow .2s;
+			transition: box-shadow .2s;
+
+	@if $_formRadius > 0 {
+		border-radius: $_formRadius;
+	}
+
+	&:focus {
+		box-shadow: 0 0 2px 0 $_formActiveColor;
+		outline: none;
+	}
+
+	.field-error & {
+		background: #fcf0f0;
+		box-shadow: 0 0 2px 0 red;
+	}
+}
+
+input {
+	@extend %elementsForm;
+	height: $_formFieldHeight;
+}
+
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+	height: auto;
+	width: auto;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	padding: 0;
+}

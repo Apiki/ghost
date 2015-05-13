@@ -1,0 +1,15 @@
+.btn-group .btn,
+.btn-group .btn-secondary {
+	border-radius: 0;
+	box-shadow: 1px 0 0 0 rgba(#000, .2) inset;
+	display: table-cell;
+
+	&:first-child {
+		border-radius: 5px 0 0 5px;
+		box-shadow: none;
+	}
+
+	&:last-child {
+		border-radius: 0 5px 5px 0;
+	}
+}

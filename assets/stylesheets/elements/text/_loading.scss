@@ -1,0 +1,37 @@
+@keyframes loading {
+	from {		
+		-webkit-transform: rotate( 0deg );
+				transform: rotate( 0deg );
+	}	
+
+	to {
+		-webkit-transform: rotate( 360deg );
+				transform: rotate( 360deg );
+	}
+}
+
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate( 0deg );
+				transform: rotate( 0deg );
+	}	
+
+	to {
+		-webkit-transform: rotate( 360deg );
+				transform: rotate( 360deg );
+	}
+}
+
+.loading {
+	color: #666;
+	font-weight: bold;
+
+	i {
+		display: inline-block;
+		color: $colorPrimary;
+		margin-right: 10px;
+		text-shadow: 0 0 2px $colorPrimary;
+		-webkit-animation: loading .3s linear infinite;
+				animation: loading .3s linear infinite;
+	}
+}

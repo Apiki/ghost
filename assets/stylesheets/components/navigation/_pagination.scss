@@ -1,0 +1,32 @@
+.pagination {
+	font-size: 0;
+
+	li {
+		display: inline-block;
+		margin-left: 5px;
+		text-align: center;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	a,
+	.current {
+		background: #fff;
+		border: 1px solid $colorDetail;
+		border-radius: 5px;
+		color: #797979;
+		font-size: 14px;
+		display: block;
+		min-width: 36px;
+		padding: 10px;
+		text-decoration: none;
+	}
+
+	.current {
+		background: $colorDetail;
+		color: #fff;
+		cursor: default;
+	}
+}

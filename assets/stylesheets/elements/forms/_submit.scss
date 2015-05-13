@@ -1,0 +1,6 @@
+input[type='submit'] {
+	@extend %btn;
+	background: $_formButtonColor;
+	border: none;
+	cursor: pointer;
+}

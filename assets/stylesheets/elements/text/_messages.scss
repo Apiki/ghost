@@ -1,0 +1,13 @@
+.ms-error i,
+.ms-sucess i {
+	font-size: 12px;
+	margin-right: 5px;
+}
+
+.ms-error {
+	color: $colorError;
+}
+
+.ms-success {
+	color: $colorSuccess;
+}

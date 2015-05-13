@@ -1,0 +1,22 @@
+%btn {
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	padding: 10px 30px;
+	text-decoration: none;
+
+	&.disabled {
+		background: #c4c4c4;
+		cursor: default;
+	}
+}
+
+.btn {
+	@extend %btn;
+	background: $colorPrimary;
+
+	i {
+		margin-left: 3px;
+	}
+}

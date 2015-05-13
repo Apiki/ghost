@@ -1,0 +1,42 @@
+// -- colors
+$_shareColor 	: $colorText;
+$_shareBorder 	: 1px solid $colorDetail;
+
+// -- sizes
+$_shareHeight 	: 34px;
+$_sharePadding 	: 10px;
+$_shareRadius 	: 5px;
+
+
+.btn-share  {
+	display: inline-block;
+
+	i {
+		margin: 0;
+	}	
+
+	.btn span {
+		margin-left: $_sharePadding;
+	}
+}
+
+// -- count share
+.count-share {
+	border: $_shareBorder;
+	color: $_shareColor;
+}
+
+.btn-share .btn,
+.count-share {
+	border-radius: $_shareRadius;
+	display: inline-block;
+	height: $_shareHeight;
+	line-height: $_shareHeight;
+	padding: 0 $_sharePadding;
+	vertical-align: top;
+}
+
+// -- share
+.btn-share-facebook { background: #3d57a2; }
+.btn-share-twitter  { background: #55ACEE; }
+.btn-share-plus  	{ background: #DD4B39; }

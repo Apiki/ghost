@@ -1,0 +1,183 @@
+.chosen-container {
+	background: #fff;
+	color: #797979;
+	cursor: pointer;
+	position: relative;
+	width: auto !important;
+}
+
+// Single
+// ----------------------------------------------------------------------------
+
+.chosen-single {
+	@extend %elementsForm;
+	display: block;
+	height: $_formFieldHeight;
+	padding: 0 45px 0 10px;
+
+	span {
+		display: table-cell;
+		height: inherit;
+		vertical-align: middle;
+	}
+
+	> div {
+		border-left: 1px solid $_formBorderColor;
+		height: $_formFieldHeight;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: $_formFieldHeight;
+	}
+
+	> div:before {
+		border-color: $_formBorderColor transparent transparent transparent;
+		border-style: solid;
+		border-width: $_formArrowSize;
+		content: '';
+		display: block;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translate3d( -50%, -22%, 0 );
+				transform: translate3d( -50%, -22%, 0 );
+	}
+}
+
+// -- chosen drop
+.chosen-drop {
+	background: #fff;	
+	border: 1px solid $_formBorderColor;
+	border-radius: $_formRadius;
+	font: $_formFontSize $_formFont;
+	left: -999em;
+	margin-top: 5px;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	-webkit-transition: opacity .2s;
+			transition: opacity .2s;
+
+	.chosen-results {
+		max-height: 193px;
+		overflow-y: auto;
+	}
+
+	li {
+		padding: 5px 10px;
+		-webkit-transition: background .2s;
+				transition: background .2s;		
+
+		&:hover {
+			background: lighten( $_formBorderColor, 20% );
+		}
+	}
+
+	.result-selected,
+	.result-selected:hover {
+		cursor: default;
+		background: lighten( $_formBorderColor, 10% );
+	}
+}
+
+
+// -- with drop
+.chosen-with-drop {
+	z-index: 2;
+
+	.chosen-drop {
+		left: 0;
+		opacity: 1;
+	}
+
+	&.chosen-container-multi .chosen-drop {
+		box-sizing: content-box;
+		left: -1px;
+	}
+
+	.chosen-single,
+	&.chosen-container-multi {
+		box-shadow: 0 0 2px 0 $_formActiveColor;
+	}
+}
+
+
+// -- chosen search
+.chosen-search {
+	display: none;
+}
+
+
+// Multi
+// ----------------------------------------------------------------------------
+
+.chosen-container-multi {
+	border: 1px solid $_formBorderColor;
+	border-radius: $_formRadius;
+	font: $_formFontSize $_formFont;
+	min-height: $_formFieldHeight;
+	-webkit-transition: box-shadow .2s;
+			transition: box-shadow .2s;
+
+	* {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.chosen-container-multi .chosen-choices {
+	margin: 0 0 5px 5px;
+}
+
+// -- search
+.chosen-container-multi .search-choice,
+.chosen-container-multi .search-field {
+	border-radius: $_formRadius;
+	margin: 5px 5px 0 0;
+	min-height: $_formFieldHeight - 12px;
+	overflow: hidden;
+}
+
+.chosen-container-multi .search-choice {
+	background: #f0f0f0;
+
+	span {
+		margin-left: 10px;
+	}
+}
+
+.chosen-container-multi .search-choice-close {
+	background: #c4c4c4;
+	min-height: inherit;
+	margin-left: 10px;
+	position: relative;
+	width: 25px;
+
+	&:before {
+		color: #fff;
+		content: "x";
+		display: block;
+		line-height: $_formFieldHeight - 12px;
+		text-align: center;
+	}
+}
+
+.chosen-container-multi .search-field input {
+	border: none;
+	height: auto;
+	min-height: inherit;
+	padding: 0;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+
+// -- drop
+.chosen-container-multi .chosen-choices,
+.chosen-container-multi .chosen-results,
+.chosen-container-multi .chosen-drop li {
+	display: block;
+}

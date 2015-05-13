@@ -1,0 +1,25 @@
+.news-item {
+	border-bottom: 1px solid $colorDetail;
+	overflow: hidden;
+	padding-bottom: 30px;
+
+	img {
+		display: block;
+		border-radius: 100%;
+	}
+
+	.thumbnail {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.news-info {
+		overflow: hidden;
+	}
+}
