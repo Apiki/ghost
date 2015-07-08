@@ -1,0 +1,12 @@
+#sidebar {
+
+    @media ( min-width: $mobile ) {
+        @include col(5);
+        float: left;
+        margin-right: perc( $colMargin, $container );
+    }
+
+    @media ( min-width: $tablet ) {
+        @include col(3);
+    }
+}
