@@ -1,17 +1,18 @@
-// Grid
 // ----------------------------------------------------------------------------
-
+// Variables > Grid
+// ----------------------------------------------------------------------------
 $container 			: 1170px;
 $mobile 			: 480px;
 $tablet 			: 768px;
 $desktop 			: 1024px;
+$content            : 600px;
+$sidebar            : 200px;
 $colWidth 			: 70px;
 $colMargin 			: 30px;
 
-
-// Colors
 // ----------------------------------------------------------------------------
-
+// Variables > Colors
+// ----------------------------------------------------------------------------
 $colorPrimary		: #3b8686;
 $colorSecondary		: #226262;
 $colorTertiary		: #3e9684;
@@ -23,18 +24,16 @@ $colorError			: #ff5656;
 $colorSuccess		: #48ab54;
 $colorDisabled		: #eee;
 
-
-// Fonts
 // ----------------------------------------------------------------------------
-
+// Variables > Fonts
+// ----------------------------------------------------------------------------
 $fontPrimary		: "Times New Roman", sans-serif;
 $fontPrimaryBold	: Tahoma, sans-serif;
 $fontSecondary		: Arial, sans-serif;
 $fontSecondaryBold	: Arial, sans-serif;
 $fontIcon 			: "icomoon";
 
-
-// Font size
 // ----------------------------------------------------------------------------
-
+// Variables > Font Size
+// ----------------------------------------------------------------------------
 $fontSizeDefault 	: 16px;
