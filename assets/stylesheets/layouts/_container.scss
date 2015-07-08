@@ -1,13 +1,23 @@
+// ----------------------------------------------------------------------------
+// Variables > Container
+// ----------------------------------------------------------------------------
+$_containerMargin : 15px;
+
 .container {
 	@extend %clearFix;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-left: $_containerMargin;
+	margin-right: $_containerMargin;
 	max-width: $container;
 
-	@media ( min-width: $container ) {
-		padding-left: 0;
-		padding-right: 0;
+	@media ( min-width: $container + ( $_containerMargin * 2 ) ) {
+		margin-left: auto;
+		margin-right: auto;
 	}
+}
+
+// ----------------------------------------------------------------------------
+// Wrapper Content
+// ----------------------------------------------------------------------------
+#wrapper-content {
+	@extend %clearFix;
 }
