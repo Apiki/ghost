@@ -1,0 +1,108 @@
+// ----------------------------------------------------------------------------
+// Variables > Pagination
+// ----------------------------------------------------------------------------
+$_pPrevBg             : #242424;
+$_pPrevColor          : #fff;
+$_pPrevHeight         : 75px;
+$_pPrevPadding        : 10px;
+$_pPrevWidth          : 300px;
+
+// -- arrow
+$_pPrevBoxArrowBg     : #000;
+$_pPrevBoxArrowSize   : 40px;
+
+// -- icon
+$_pPrevIconFont       : "FontAwesome";
+$_pPrevIconLeft       : "\f104";
+$_pPrevIconRight      : "\f105";
+$_pPrevIconColor      : $_pPrevColor;
+$_pPrevIconSize       : 50px;
+
+#pagination-prev {
+    display: none;
+    left: 0;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    z-index: 100;
+
+    .next-post,
+    .prev-post a:before {
+        left: 100%;
+    }
+
+    .prev-post,
+    .next-post a:before {
+        right: 100%;
+    }
+
+    .next-post:hover {
+        transform: translateX( -100% ) translateY( -50% );
+    }
+
+    .prev-post:hover {
+        transform: translateX( 100% ) translateY( -50% );
+    }
+}
+
+// -- pagination prev > pagination wrap
+#pagination-prev .pagination-wrap {
+    position: absolute;
+    -webkit-transition: transform .4s;
+            transition: transform .4s;
+
+    a {
+        background: $_pPrevBg;
+        color: $_pPrevColor;
+        display: table-cell;
+        height: $_pPrevHeight;
+        min-width: $_pPrevWidth;
+        padding: $_pPrevPadding;
+        position: relative;
+        vertical-align: middle;
+    }
+
+    a:before,
+    a:after {
+        position: absolute;
+        width: $_pPrevIconSize;
+    }
+
+    a:before {
+        background: $_pPrevBoxArrowBg;
+        bottom: 0;
+        content: "";
+        line-height: $_pPrevHeight;
+        top: 0;
+    }
+
+    a:after {
+        color: $_pPrevIconColor;
+        content: $_pPrevIconLeft;
+        font: $_pPrevBoxArrowSize $_pPrevIconFont;
+        left: 100%;
+        text-align: center;
+        top: 50%;
+    }
+
+    &.next-post a:after {
+        content: $_pPrevIconRight;
+        left: auto;
+        right: 100%;
+    }
+}
+
+#pagination-prev,
+#pagination-prev .pagination-wrap,
+#pagination-prev .pagination-wrap a:after {
+    -webkit-transform: translateY( -50% );
+        -ms-transform: translateY( -50% );
+            transform: translateY( -50% );
+}
+
+@media ( min-width: 900px ) {
+
+    #pagination-prev {
+        display: block;
+    }
+}
