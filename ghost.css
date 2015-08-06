@@ -284,14 +284,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .icon-linkedin-s:before {
   content: "\eac9"; }
 
-.btn, .btn-secondary {
+.btn, .btn-secondary, input[type='submit'] {
   border-radius: 5px;
   color: #fff;
   display: inline-block;
   font-size: 14px;
   padding: 10px 30px;
   text-decoration: none; }
-  .disabled.btn, .disabled.btn-secondary {
+  .disabled.btn, .disabled.btn-secondary, input.disabled[type='submit'] {
     background: #c4c4c4;
     cursor: default; }
 
@@ -349,7 +349,7 @@ input, select, textarea, .chosen-single {
   background: #fff;
   border: 1px solid #bbb;
   color: #797979;
-  font: 14px "Times New Roman", sans-serif;
+  font: 14px arial, sans-serif;
   padding: 10px;
   width: 100%;
   -webkit-transition: box-shadow .2s;
@@ -375,9 +375,19 @@ input[type="radio"],
 input[type="checkbox"] {
   padding: 0; }
 
+label {
+  color: #777;
+  display: inline-block;
+  font-size: 14px; }
+
 select {
   height: 35px;
   padding: 0 10px; }
+
+input[type='submit'] {
+  background: #3b8686;
+  border: none;
+  cursor: pointer; }
 
 textarea {
   height: 150px;
@@ -461,100 +471,6 @@ blockquote {
     opacity: 1;
     left: 50%; }
 
-.breadcrumb {
-  border-bottom: 1px solid #eee;
-  font-size: 0;
-  padding: 8px 0; }
-  .breadcrumb a {
-    color: inherit;
-    text-decoration: none; }
-  .breadcrumb .current {
-    font-weight: bold; }
-
-.breadcrumb li {
-  display: inline-block;
-  font-size: 12px; }
-  .breadcrumb li:before {
-    content: '>';
-    margin: 0 5px;
-    position: relative;
-    top: 1px; }
-  .breadcrumb li:first-child {
-    margin-left: 0; }
-    .breadcrumb li:first-child:before {
-      display: none; }
-
-/*-----------------------------------------------------------------------------
-
-	- Esqueleto para navega├º├úo horizontal
-	- Componente mobile first
-	* Ultiliza JS para mobile
-
------------------------------------------------------------------------------*/
-.navigation {
-  width: 100%; }
-  .navigation a {
-    color: inherit;
-    display: block; }
-  .navigation .btn-sub-menu {
-    right: 5px;
-    top: 5px; }
-
-.navigation .sub-menu {
-  display: none;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s; }
-
-.navigation .menu-item {
-  position: relative; }
-  .navigation .menu-item.sub-menu-active > .sub-menu {
-    display: block; }
-
-@media (min-width: 768px) {
-  .navigation {
-    width: auto; }
-    .navigation .btn-sub-menu {
-      display: none; }
-
-  .navigation .sub-menu {
-    display: block;
-    left: -999em;
-    opacity: 0;
-    position: absolute;
-    top: 100%; }
-
-  .navigation .menu-item {
-    display: inline-block; }
-    .navigation .menu-item:hover > .sub-menu {
-      left: 0;
-      opacity: 1; }
-    .navigation .menu-item:hover .sub-menu .sub-menu {
-      left: 100%;
-      top: 0; } }
-.pagination {
-  font-size: 0; }
-  .pagination li {
-    display: inline-block;
-    margin-left: 5px;
-    text-align: center; }
-    .pagination li:first-child {
-      margin-left: 0; }
-  .pagination a,
-  .pagination .current {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    color: #797979;
-    font-size: 14px;
-    display: block;
-    min-width: 36px;
-    padding: 10px;
-    text-decoration: none; }
-  .pagination .current {
-    background: #eee;
-    color: #fff;
-    cursor: default; }
-
 .chosen-container {
   background: #fff;
   color: #797979;
@@ -593,7 +509,7 @@ blockquote {
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 3px;
-  font: 14px "Times New Roman", sans-serif;
+  font: 14px arial, sans-serif;
   left: -999em;
   margin-top: 5px;
   opacity: 0;
@@ -633,7 +549,7 @@ blockquote {
 .chosen-container-multi {
   border: 1px solid #bbb;
   border-radius: 3px;
-  font: 14px "Times New Roman", sans-serif;
+  font: 14px arial, sans-serif;
   min-height: 38px;
   -webkit-transition: box-shadow .2s;
   transition: box-shadow .2s; }
@@ -876,6 +792,100 @@ blockquote {
 .featherlight-next {
   right: 0; }
 
+.breadcrumb {
+  border-bottom: 1px solid #eee;
+  font-size: 0;
+  padding: 8px 0; }
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none; }
+  .breadcrumb .current {
+    font-weight: bold; }
+
+.breadcrumb li {
+  display: inline-block;
+  font-size: 12px; }
+  .breadcrumb li:before {
+    content: '>';
+    margin: 0 5px;
+    position: relative;
+    top: 1px; }
+  .breadcrumb li:first-child {
+    margin-left: 0; }
+    .breadcrumb li:first-child:before {
+      display: none; }
+
+/*-----------------------------------------------------------------------------
+
+	- Esqueleto para navega├º├úo horizontal
+	- Componente mobile first
+	* Ultiliza JS para mobile
+
+-----------------------------------------------------------------------------*/
+.navigation {
+  width: 100%; }
+  .navigation a {
+    color: inherit;
+    display: block; }
+  .navigation .btn-sub-menu {
+    right: 5px;
+    top: 5px; }
+
+.navigation .sub-menu {
+  display: none;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s; }
+
+.navigation .menu-item {
+  position: relative; }
+  .navigation .menu-item.sub-menu-active > .sub-menu {
+    display: block; }
+
+@media (min-width: 768px) {
+  .navigation {
+    width: auto; }
+    .navigation .btn-sub-menu {
+      display: none; }
+
+  .navigation .sub-menu {
+    display: block;
+    left: -999em;
+    opacity: 0;
+    position: absolute;
+    top: 100%; }
+
+  .navigation .menu-item {
+    display: inline-block; }
+    .navigation .menu-item:hover > .sub-menu {
+      left: 0;
+      opacity: 1; }
+    .navigation .menu-item:hover .sub-menu .sub-menu {
+      left: 100%;
+      top: 0; } }
+.pagination {
+  font-size: 0; }
+  .pagination li {
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center; }
+    .pagination li:first-child {
+      margin-left: 0; }
+  .pagination a,
+  .pagination .current {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    color: #797979;
+    font-size: 14px;
+    display: block;
+    min-width: 36px;
+    padding: 10px;
+    text-decoration: none; }
+  .pagination .current {
+    background: #eee;
+    color: #fff;
+    cursor: default; }
+
 .the-content {
   color: #797979;
   font-size: 16px; }
@@ -946,6 +956,23 @@ blockquote {
   .the-content .thumbnail.thumbnail-right {
     float: right;
     margin: 5px 0 20px 20px; }
+
+.news-item {
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  padding-bottom: 30px; }
+  .news-item img {
+    display: block;
+    border-radius: 100%; }
+  .news-item .thumbnail {
+    float: left;
+    margin-right: 20px; }
+  .news-item .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .news-item .news-info {
+    overflow: hidden; }
 
 @media (min-width: 480px) {
   .row:after {
@@ -1181,8 +1208,10 @@ blockquote {
     background: #226262;
     content: "#226262"; }
   .g-color-listing li.color-tertiary:before {
-    background: #3e9684;
-    content: "#3e9684"; }
+    background: false;
+    content: "false"; }
+  .g-color-listing li.color-tertiary {
+    display: none; }
   .g-color-listing li.color-title:before {
     background: #2b2b2b;
     content: "#2b2b2b"; }
@@ -1238,24 +1267,33 @@ blockquote {
   text-align: center; }
 
 .font-primary {
-  font-family: "Times New Roman", sans-serif; }
+  font-family: arial, sans-serif; }
   .font-primary .g-font:before {
-    content: "Times New Roman, sans-serif"; }
+    content: "arial, sans-serif"; }
 
 .font-primary-bold {
-  font-family: Tahoma, sans-serif; }
+  font-family: false; }
   .font-primary-bold .g-font:before {
-    content: "Tahoma, sans-serif"; }
+    content: "false"; }
+
+.font-primary-bold {
+  display: none; }
 
 .font-secondary {
-  font-family: Arial, sans-serif; }
+  font-family: false; }
   .font-secondary .g-font:before {
-    content: "Arial, sans-serif"; }
+    content: "false"; }
+
+.font-secondary {
+  display: none; }
 
 .font-secondary-bold {
-  font-family: Arial, sans-serif; }
+  font-family: false; }
   .font-secondary-bold .g-font:before {
-    content: "Arial, sans-serif"; }
+    content: "false"; }
+
+.font-secondary-bold {
+  display: none; }
 
 .g-font-listing strong {
   display: inline-block;

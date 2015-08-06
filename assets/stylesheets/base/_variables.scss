@@ -15,7 +15,7 @@ $colMargin 			: 30px;
 // ----------------------------------------------------------------------------
 $colorPrimary		: #3b8686;
 $colorSecondary		: #226262;
-$colorTertiary		: #3e9684;
+$colorTertiary		: false;
 $colorTitle 		: #2b2b2b;
 $colorText 			: #797979;
 $colorDetail		: #eee;
@@ -27,10 +27,10 @@ $colorDisabled		: #eee;
 // ----------------------------------------------------------------------------
 // Variables > Fonts
 // ----------------------------------------------------------------------------
-$fontPrimary		: "Times New Roman", sans-serif;
-$fontPrimaryBold	: Tahoma, sans-serif;
-$fontSecondary		: Arial, sans-serif;
-$fontSecondaryBold	: Arial, sans-serif;
+$fontPrimary		: arial, sans-serif;
+$fontPrimaryBold	: false;
+$fontSecondary		: false;
+$fontSecondaryBold	: false;
 $fontIcon 			: "icomoon";
 
 // ----------------------------------------------------------------------------
