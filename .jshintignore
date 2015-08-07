@@ -1,0 +1,3 @@
+ghost/assets/javascripts/libs/*
+ghost/assets/javascripts/templates/*
+ghost/assets/javascripts/vendor/*
