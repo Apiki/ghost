@@ -1,0 +1,24 @@
+{
+	"curly": true,
+	"eqnull": true,
+	"undef": true,
+	"browser": true,
+	"laxcomma": true,
+	"noarg": true,
+	"expr": true,
+	"latedef": true,
+	"immed": true,
+	"sub": true,
+	"globals": {
+		"jQuery": true,
+		"Module": true,
+		"Dispatcher": true,
+		"MONKEY": true,
+		"Handlebars" : true,
+		"console" : true,
+		"Toastr" : true,
+		"wp" : true,
+		"google" : true,
+		"ga" : true
+	}
+}
