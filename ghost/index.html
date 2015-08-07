@@ -7,10 +7,10 @@
 </head>
 <body>
 
-	<div id="g-wrapper">
+	<div id="g-wrapper" data-component="wrapper">
 		<div id="g-sidebar">
 			<div class="g-icons">
-				<span class="btn-menu">m</span>
+				<span class="btn-menu" data-action="open-menu">m</span>
 				<a href="" class="icon-github"></a>
 			</div>
 
@@ -22,7 +22,7 @@
 						<ul>
 							<li><a href="#configurations-colors" title="">Colors</a></li>
 							<li><a href="#configurations-fonts" title="">Fonts</a></li>
-							<li><a href="#configurations-grid" title="">Grid</a></li>							
+							<li><a href="#configurations-grid" title="">Grid</a></li>
 						</ul>
 					</li>
 					<li>
@@ -49,7 +49,7 @@
 							<li><a href="#components-table" title="">Table</a></li>
 							<li><a href="#components-thumbnail" title="">Thumbnail</a></li>
 						</ul>
-					</li>					
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -64,7 +64,7 @@
 						<h2 class="g-title">Colors</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio saepe tenetur optio, repudiandae rerum harum sint. Ducimus veniam, provident natus.</p>
 
-				
+
 						<div class="g-example">
 							<ul class="g-color-listing">
 								<li class="color-primary" data-tooltip="$colorPrimary"></li>
@@ -82,7 +82,7 @@
 						<hr>
 					</div>
 				</div><!-- box - colors -->
-				
+
 				<div class="g-box" id="configurations-fonts">
 					<div class="g-container">
 						<h2 class="g-title">Fonts</h2>
@@ -113,7 +113,7 @@
 									<div class="g-example-text">
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio incidunt repudiandae a, fugiat accusamus totam officiis blanditiis magnam aliquam similique voluptas quos odit voluptate. Temporibus sint eligendi, ratione mollitia dolore!
 									</div>
-								</div>														
+								</div>
 
 								<div class="g-box-font font-secondary">
 									<div class="g-header-font">
@@ -137,12 +137,12 @@
 									<div class="g-example-text">
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio incidunt repudiandae a, fugiat accusamus totam officiis blanditiis magnam aliquam similique voluptas quos odit voluptate. Temporibus sint eligendi, ratione mollitia dolore!
 									</div>
-								</div>														
+								</div>
 							</div>
-						</div>					
+						</div>
 						<hr>
 					</div>
-				</div><!-- box - fonts -->			
+				</div><!-- box - fonts -->
 
 				<div class="g-box" id="configurations-grid">
 					<div class="g-container">
@@ -179,11 +179,11 @@
 								<div class="row">
 									<div class="six columns">Six</div>
 									<div class="six columns">Six</div>
-								</div>							
+								</div>
 							</div>
 						</div>
 						<hr>
-					</div>				
+					</div>
 				</div><!-- box - grid -->
 			</div><!-- section - configurations -->
 
@@ -217,16 +217,16 @@
 							<div class="btn-share">
 								<a href="#" class="btn btn-share-plus"><i class="icon-google-plus-s"></i><span>Plus</span></a>
 								<span class="count-share">...</span>
-							</div>					
+							</div>
 
 							<div class="btn-share">
-								<a href="#" class="btn btn-share-twitter"><i class="icon-twitter-s"></i></a>			
+								<a href="#" class="btn btn-share-twitter"><i class="icon-twitter-s"></i></a>
 								<span class="count-share">...</span>
-							</div>							
+							</div>
 						</div>
 						<hr>
 					</div>
-				</div><!-- box - buttons -->				
+				</div><!-- box - buttons -->
 
 				<div class="g-box" id="elements-form">
 					<div class="g-container">
@@ -242,11 +242,11 @@
 									</li>
 									<li class="field-error">
 										<label for="text-error">Text Error</label>
-										<input id="text-error" type="text">									
+										<input id="text-error" type="text">
 									</li>
 									<li>
 										<label for="select">Select</label>
-										<select name="" id="select">
+										<select name="" id="select" data-component="chosen">
 											<option value="1">Lorem ipsum.</option>
 											<option value="2">Mollitia, veritatis.</option>
 											<option value="3">Placeat, maiores.</option>
@@ -256,7 +256,7 @@
 									</li>
 									<li>
 										<label for="select">Multiple Select</label>
-										<select multiple="multiple" name="" id="select">
+										<select multiple="multiple" name="" id="select" data-component="chosen">
 											<option value="1">Lorem ipsum.</option>
 											<option value="2">Mollitia, veritatis.</option>
 											<option value="3">Placeat, maiores.</option>
@@ -266,7 +266,7 @@
 											<option value="7">Mollitia, veritatis.</option>
 											<option value="8">Placeat, maiores.</option>
 											<option value="9">Eum, ipsa.</option>
-											<option value="10">Delectus, quos.</option>	
+											<option value="10">Delectus, quos.</option>
 											<option value="11">Lorem ipsum.</option>
 											<option value="12">Mollitia, veritatis.</option>
 											<option value="13">Placeat, maiores.</option>
@@ -276,9 +276,9 @@
 											<option value="17">Mollitia, veritatis.</option>
 											<option value="18">Placeat, maiores.</option>
 											<option value="19">Eum, ipsa.</option>
-											<option value="20">Delectus, quos.</option>																						
+											<option value="20">Delectus, quos.</option>
 										</select>
-									</li>								
+									</li>
 									<li>
 										<label for="textarea">Textarea</label>
 										<textarea name="" id="texarea" cols="30" rows="10"></textarea>
@@ -286,31 +286,31 @@
 									<li class="g-group-icheck">
 										<label for="one">
 											Example
-											<input name="gradio" id="one" type="radio">
+											<input name="gradio" id="one" type="radio" data-component="icheck">
 										</label>
 										<label for="two">
 											Example
-											<input name="gradio" id="two" type="radio">
+											<input name="gradio" id="two" type="radio" data-component="icheck">
 										</label>
 										<label for="three">
 											Example
-											<input name="gradio" id="three" type="radio">
+											<input name="gradio" id="three" type="radio" data-component="icheck">
 										</label>
 									</li>
 									<li class="g-group-icheck">
 										<label for="cone">
 											Example
-											<input name="gcheck" id="cone" type="checkbox">
+											<input name="gcheck" id="cone" type="checkbox" data-component="icheck">
 										</label>
 										<label for="ctwo">
 											Example
-											<input name="gcheck" id="ctwo" type="checkbox">
+											<input name="gcheck" id="ctwo" type="checkbox" data-component="icheck">
 										</label>
 										<label for="cthree">
 											Example
-											<input name="gcheck" id="cthree" type="checkbox">
+											<input name="gcheck" id="cthree" type="checkbox" data-component="icheck">
 										</label>
-									</li>								
+									</li>
 								</ul>
 							</form>
 						</div>
@@ -318,83 +318,17 @@
 					</div>
 				</div><!-- box - form -->
 
-				<div class="g-box" id="elements-icons">
+				<div class="g-box" id="elements-icons" data-component="icons">
 					<div class="g-container">
 						<h2 class="g-title">Icons</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio saepe tenetur optio, repudiandae rerum harum sint. Ducimus veniam, provident natus.</p>
 
 						<div class="g-example">
-							<ul class="g-icon-listing">
-								<li data-tooltip="icon-newspaper"><i class="icon-newspaper"></i></li>
-								<li data-tooltip="icon-pencil"><i class="icon-pencil"></i></li>
-								<li data-tooltip="icon-image"><i class="icon-image"></i></li>
-								<li data-tooltip="icon-camera"><i class="icon-camera"></i></li>
-								<li data-tooltip="icon-music"><i class="icon-music"></i></li>
-								<li data-tooltip="icon-video-camera"><i class="icon-video-camera"></i></li>
-								<li data-tooltip="icon-bullhorn"><i class="icon-bullhorn"></i></li>
-								<li data-tooltip="icon-mic"><i class="icon-mic"></i></li>
-								<li data-tooltip="icon-files-empty"><i class="icon-files-empty"></i></li>
-								<li data-tooltip="icon-file-text"><i class="icon-file-text"></i></li>
-								<li data-tooltip="icon-folder"><i class="icon-folder"></i></li>
-								<li data-tooltip="icon-price-tag"><i class="icon-price-tag"></i></li>
-								<li data-tooltip="icon-cart"><i class="icon-cart"></i></li>
-								<li data-tooltip="icon-credit-card"><i class="icon-credit-card"></i></li>
-								<li data-tooltip="icon-phone"><i class="icon-phone"></i></li>
-								<li data-tooltip="icon-location"><i class="icon-location"></i></li>
-								<li data-tooltip="icon-map"><i class="icon-map"></i></li>
-								<li data-tooltip="icon-clock"><i class="icon-clock"></i></li>
-								<li data-tooltip="icon-printer"><i class="icon-printer"></i></li>
-								<li data-tooltip="icon-bubbles"><i class="icon-bubbles"></i></li>
-								<li data-tooltip="icon-user"><i class="icon-user"></i></li>
-								<li data-tooltip="icon-quotes-left"><i class="icon-quotes-left"></i></li>
-								<li data-tooltip="icon-quotes-right"><i class="icon-quotes-right"></i></li>
-								<li data-tooltip="icon-spinner"><i class="icon-spinner"></i></li>
-								<li data-tooltip="icon-search"><i class="icon-search"></i></li>
-								<li data-tooltip="icon-key"><i class="icon-key"></i></li>
-								<li data-tooltip="icon-lock"><i class="icon-lock"></i></li>
-								<li data-tooltip="icon-unlocked"><i class="icon-unlocked"></i></li>
-								<li data-tooltip="icon-cog"><i class="icon-cog"></i></li>
-								<li data-tooltip="icon-trophy"><i class="icon-trophy"></i></li>
-								<li data-tooltip="icon-bin"><i class="icon-bin"></i></li>
-								<li data-tooltip="icon-truck"><i class="icon-truck"></i></li>
-								<li data-tooltip="icon-clipboard"><i class="icon-clipboard"></i></li>
-								<li data-tooltip="icon-download"><i class="icon-download"></i></li>
-								<li data-tooltip="icon-link"><i class="icon-link"></i></li>
-								<li data-tooltip="icon-attachment"><i class="icon-attachment"></i></li>
-								<li data-tooltip="icon-bookmark"><i class="icon-bookmark"></i></li>
-								<li data-tooltip="icon-star-empty"><i class="icon-star-empty"></i></li>
-								<li data-tooltip="icon-star-half"><i class="icon-star-half"></i></li>
-								<li data-tooltip="icon-star-full"><i class="icon-star-full"></i></li>
-								<li data-tooltip="icon-plus"><i class="icon-plus"></i></li>
-								<li data-tooltip="icon-minus"><i class="icon-minus"></i></li>
-								<li data-tooltip="icon-cross"><i class="icon-cross"></i></li>
-								<li data-tooltip="icon-checkmark"><i class="icon-checkmark"></i></li>
-								<li data-tooltip="icon-info"><i class="icon-info"></i></li>
-								<li data-tooltip="icon-cancel-circle"><i class="icon-cancel-circle"></i></li>
-								<li data-tooltip="icon-circle-up"><i class="icon-circle-up"></i></li>
-								<li data-tooltip="icon-circle-right"><i class="icon-circle-right"></i></li>
-								<li data-tooltip="icon-circle-down"><i class="icon-circle-down"></i></li>
-								<li data-tooltip="icon-circle-left"><i class="icon-circle-left"></i></li>
-								<li data-tooltip="icon-heart"><i class="icon-heart"></i></li>
-								<li data-tooltip="icon-embed"><i class="icon-embed"></i></li>
-								<li data-tooltip="icon-google-plus"><i class="icon-google-plus"></i></li>
-								<li data-tooltip="icon-facebook"><i class="icon-facebook"></i></li>
-								<li data-tooltip="icon-twitter"><i class="icon-twitter"></i></li>
-								<li data-tooltip="icon-feed"><i class="icon-feed"></i></li>
-								<li data-tooltip="icon-vimeo"><i class="icon-vimeo"></i></li>
-								<li data-tooltip="icon-flickr"><i class="icon-flickr"></i></li>
-								<li data-tooltip="icon-linkedin"><i class="icon-linkedin"></i></li>
-								<li data-tooltip="icon-github"><i class="icon-github"></i></li>
-								<li data-tooltip="icon-facebook-s"><i class="icon-facebook-s"></i></li>
-								<li data-tooltip="icon-twitter-s"><i class="icon-twitter-s"></i></li>
-								<li data-tooltip="icon-google-plus-s"><i class="icon-google-plus-s"></i></li>
-								<li data-tooltip="icon-linkedin-s"><i class="icon-linkedin-s"></i></li>
-								<li data-tooltip="icon-reply"><i class="icon-reply"></i></li>
-								<li data-tooltip="icon-forward"><i class="icon-forward"></i></li>
+							<ul class="g-icon-listing" data-element="list">
 							</ul>
 						</div>
 						<hr>
-					</div>				
+					</div>
 				</div><!-- box - icons -->
 
 				<div class="g-box" id="elements-blockquote">
@@ -461,7 +395,7 @@
 
 						<div class="g-example">
 							<div class="slider-wrapper">
-								<ul class="slider">
+								<ul class="slider" data-component="bxslider">
 									<li><a href="#"><img src="http://placehold.it/760x300" alt=""></a></li>
 									<li><img src="http://placehold.it/760x300" alt=""></li>
 									<li><img src="http://placehold.it/760x300" alt=""></li>
@@ -482,12 +416,12 @@
 								<a class="gallery" href="http://lorempixel.com/800/400/sports/1" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/1" alt=""></a>
 								<a class="gallery" href="http://lorempixel.com/800/400/sports/2" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/2" alt=""></a>
 								<a class="gallery" href="http://lorempixel.com/800/400/sports/3" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/3" alt=""></a>
-								<a class="gallery" href="http://lorempixel.com/800/400/sports/4" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/4" alt=""></a>								
+								<a class="gallery" href="http://lorempixel.com/800/400/sports/4" data-featherlight="image"><img src="http://lorempixel.com/100/100/sports/4" alt=""></a>
 							</div>
 						</div>
 						<hr>
 					</div>
-				</div><!-- box - lightbox -->				
+				</div><!-- box - lightbox -->
 
 				<div class="g-box" id="components-breadcrumb">
 					<div class="g-container">
@@ -524,7 +458,7 @@
 													<li><a href="" title="">Product</a></li>
 													<li><a href="" title="">Product one</a></li>
 													<li><a href="" title="">Product two</a></li>
-												</ul>							
+												</ul>
 											</li>
 											<li><a href="" title="">Product two</a></li>
 										</ul>
@@ -532,7 +466,7 @@
 									<li><a href="" title="">Blog</a></li>
 									<li><a href="" title="">Contact</a></li>
 								</ul>
-							</nav>	
+							</nav>
 						</div>
 						<hr>
 					</div>
@@ -554,8 +488,8 @@
 						</div>
 						<hr>
 					</div>
-				</div><!-- box - pagination -->	
-				
+				</div><!-- box - pagination -->
+
 				<div class="g-box" id="components-titles">
 					<div class="g-container">
 						<h2 class="g-title">Titles</h2>
@@ -572,7 +506,7 @@
 						</div>
 						<hr>
 					</div>
-				</div><!-- box - titles -->	
+				</div><!-- box - titles -->
 
 				<div class="g-box" id="components-paragraph">
 					<div class="g-container">
@@ -582,7 +516,7 @@
 						<div class="g-example">
 							<div class="the-content">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi reprehenderit ratione tenetur. Itaque natus iusto possimus expedita est quisquam sit, suscipit ipsam dicta aperiam fuga eaque corrupti repellat quos minus.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempore saepe quisquam id eaque, magnam nulla dolorum et repellat animi. Illo blanditiis cumque commodi placeat aliquid autem neque voluptatum sequi excepturi eum, inventore totam veniam dignissimos voluptate delectus omnis obcaecati vero magnam ipsam perferendis tenetur velit quasi beatae. Placeat, voluptatum.</p>	
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempore saepe quisquam id eaque, magnam nulla dolorum et repellat animi. Illo blanditiis cumque commodi placeat aliquid autem neque voluptatum sequi excepturi eum, inventore totam veniam dignissimos voluptate delectus omnis obcaecati vero magnam ipsam perferendis tenetur velit quasi beatae. Placeat, voluptatum.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ab odio suscipit consequatur molestiae sed ut fugit eum earum fugiat!</p>
 							</div>
 						</div>
@@ -625,7 +559,7 @@
 											<td>Lorem ipsum dolor sit amet.</td>
 											<td>Lorem ipsum dolor sit amet.</td>
 											<td>Lorem ipsum dolor sit amet.</td>
-										</tr>									
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -646,7 +580,7 @@
 										<img src="http://placehold.it/760x400" alt="">
 									</a>
 									<figcaption>Image Thumbnail</figcaption>
-								</figure>							
+								</figure>
 							</div>
 						</div>
 						<hr>
@@ -657,31 +591,6 @@
 	</div>
 
 	<!-- js -->
-	<script src="../assets/javascripts/jquery.js"></script>	
-	<script src="../assets/javascripts/chosen.js"></script>
-	<script src="../assets/javascripts/icheck.js"></script>
-	<script src="../assets/javascripts/bxslider.js"></script>
-	<script src="../assets/javascripts/featherlight.js"></script>
-	<script src="../assets/javascripts/featherlightgallery.js"></script>
-
-	
-	<script>
-		jQuery( '.btn-menu' ).on( 'click', function(){
-			jQuery( '#g-wrapper' ).toggleClass( 'active' );
-		});
-
-		jQuery( 'select' ).chosen();
-		jQuery( 'input' ).iCheck();
-		jQuery( '.slider' ).bxSlider();
-
-		jQuery( '.gallery' ).featherlightGallery({
-			gallery: {
-				fadeIn: 300,
-				fadeOut: 300
-			},
-			openSpeed:    300,
-			closeSpeed:   300
-		});
-	</script>
+	<script src="assets/javascripts/built.js"></script>
 </body>
 </html>
