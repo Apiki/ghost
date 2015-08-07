@@ -1,0 +1,26 @@
+{
+  "name": "wp-ghost",
+  "version": "2.0.0",
+  "description": "Config for task runner grunt for the project",
+  "webroot" :"assets",
+  "devroot": "ghost/assets",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apiki",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.4.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-handlebars" : "^0.10.2"
+  }
+}

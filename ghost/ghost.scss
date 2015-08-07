@@ -95,7 +95,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	overflow-y: auto;
 	position: absolute;
 	right: 100px;
-	top: 0;	
+	top: 0;
 
 	a {
 		border-top: 1px solid lighten( #555, 10% );
@@ -124,7 +124,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 		right: 0;
 		top: 0;
 		width: 1px;
-	}	
+	}
 }
 
 
@@ -182,13 +182,13 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 }
 
 
-// -- content 
+// -- content
 #g-content {
 	margin: 100px 0 100px 100px;
 }
 
 
-// -- container 
+// -- container
 .g-container,
 .g-title-section {
 	margin: 0 auto;
@@ -312,7 +312,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 		&.#{$class} {
 			display: none;
 		}
-	}	
+	}
 }
 
 .g-color-listing li {
