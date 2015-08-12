@@ -1857,6 +1857,7 @@ this["MONKEY"]["Templates"]["templates/tooltip"] = Handlebars.template({"compile
 })(jQuery);;Module( 'Application', function(Application) {
 
     Application.init = function(container) {
+        MONKEY.Helpers.create();
         Module.factory.create( container );
     };
 
@@ -1894,10 +1895,6 @@ this["MONKEY"]["Templates"]["templates/tooltip"] = Handlebars.template({"compile
         Handlebars.registerHelper('getContent', function(template, data, element) {
             return this.renderData( template, data, element );
         }.bind( this ));
-
-        Handlebars.registerHelper('toLowerCase', function(str) {
-          return str.toLowerCase();
-        });
     };
 
     Components.fn.renderData = function(template, data, element) {
@@ -1946,7 +1943,19 @@ this["MONKEY"]["Templates"]["templates/tooltip"] = Handlebars.template({"compile
     };
 
 });
-;jQuery(function() {
+;Module( 'Helpers', function(Helpers) {
+
+	Helpers.create = function() {
+        this.registerHelpers();
+	};
+
+    Helpers.registerHelpers = function() {
+        Handlebars.registerHelper('toLowerCase', function(str) {
+            return str.toLowerCase();
+        });
+    };
+
+}, {} );;jQuery(function() {
     var context = jQuery( 'body' )
       , route   = context.data( 'route' )
     ;

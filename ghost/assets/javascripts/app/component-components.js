@@ -17,10 +17,6 @@ Module.ComponentWrapper( 'Components', function(Components, Utils, $) {
         Handlebars.registerHelper('getContent', function(template, data, element) {
             return this.renderData( template, data, element );
         }.bind( this ));
-
-        Handlebars.registerHelper('toLowerCase', function(str) {
-          return str.toLowerCase();
-        });
     };
 
     Components.fn.renderData = function(template, data, element) {
