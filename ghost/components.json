@@ -1,0 +1,130 @@
+{
+    "sections": {
+        "configurations": {
+            "name": "Configurations",
+            "components": [
+                {
+                    "name": "Colors",
+                    "description": "Sets colour palette to all site elements.",
+                    "template": "templates/colors"
+                },
+                {
+                    "name": "Fonts",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/fonts",
+                    "data": {
+                        "lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        "fonts": [
+                            {
+                                "class": "font-primary",
+                                "title": "Font Primary",
+                                "variable": "$fontPrimary"
+                            },
+                            {
+                                "class": "font-primary-bold",
+                                "title": "Font Primary Bold",
+                                "variable": "$fontPrimaryBold"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Grid",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/grid"
+                }
+            ]
+        },
+        "elements": {
+            "name": "Elements",
+            "components": [
+                {
+                    "name": "Icons",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/icons",
+                    "data": "../assets/fonts/selection.json"
+                },
+                {
+                    "name": "Buttons",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/buttons"
+                },
+                {
+                    "name": "Form",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/form"
+                },
+                {
+                    "name": "Blockquote",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/blockquote"
+                },
+                {
+                    "name": "Loading",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/loading"
+                },
+                {
+                    "name": "Messages",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/messages"
+                },
+                {
+                    "name": "Tooltip",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/tooltip"
+                }
+            ]
+        },
+        "components": {
+            "name": "Components",
+            "components": [
+                {
+                    "name": "Slider",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/slider"
+                },
+                {
+                    "name": "Lightbox",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/lightbox"
+                },
+                {
+                    "name": "Breadcrumb",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/breadcrumb"
+                },
+                {
+                    "name": "Navigation",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/navigation"
+                },
+                {
+                    "name": "Pagination",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/pagination"
+                },
+                {
+                    "name": "Titles",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/titles"
+                },
+                {
+                    "name": "Paragraph",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/paragraph"
+                },
+                {
+                    "name": "Table",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/table"
+                },
+                {
+                    "name": "Thumbnail",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/thumbnail"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<ul>
+    {{#each sections}}
+        <li>
+            <a href="#{{toLowerCase name}}" title="">{{name}}</a>
+            <ul>
+                {{#each components}}
+                    <li><a href="#{{toLowerCase ../name}}-{{toLowerCase name}}" title="{{name}}">{{name}}</a></li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,18 @@
+{{#each sections}}
+    <div class="g-section" id="{{name}}">
+        <h2 class="g-title-section">{{name}}</h2>
+        {{#each components}}
+            <div class="g-box" id="{{@../key}}-{{toLowerCase name}}">
+                <div class="g-container">
+                    <h2 class="g-title">{{name}}</h2>
+                    <p>{{description}}</p>
+
+                    <div class="g-example" id="{{toLowerCase name}}">
+                        {{getContent template data name}}
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}
