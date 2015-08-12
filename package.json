@@ -1,6 +1,6 @@
 {
   "name": "wp-ghost",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Config for task runner grunt for the project",
   "webroot" :"assets",
   "devroot": "ghost/assets",
