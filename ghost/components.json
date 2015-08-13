@@ -1,6 +1,6 @@
 {
-    "sections": {
-        "configurations": {
+    "sections": [
+        {
             "name": "Configurations",
             "components": [
                 {
@@ -35,7 +35,7 @@
                 }
             ]
         },
-        "elements": {
+        {
             "name": "Elements",
             "components": [
                 {
@@ -76,7 +76,7 @@
                 }
             ]
         },
-        "components": {
+        {
             "name": "Components",
             "components": [
                 {
@@ -126,5 +126,5 @@
                 }
             ]
         }
-    }
+    ]
 }
