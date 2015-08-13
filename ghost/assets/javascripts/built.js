@@ -1228,20 +1228,20 @@ this["MONKEY"]["Templates"]["components"] = Handlebars.template({"1":function(de
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.components : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\n";
 },"2":function(depth0,helpers,partials,data,blockParams,depths) {
-    var helper, alias1=this.escapeExpression, alias2=helpers.helperMissing, alias3="function";
+    var helper, alias1=helpers.helperMissing, alias2=this.escapeExpression, alias3="function";
 
   return "            <div class=\"g-box\" id=\""
-    + alias1(this.lambda((this.data(data, 1) && this.data(data, 1).key), depth0))
+    + alias2((helpers.toLowerCase || (depth0 && depth0.toLowerCase) || alias1).call(depth0,(depths[1] != null ? depths[1].name : depths[1]),{"name":"toLowerCase","hash":{},"data":data}))
     + "-"
-    + alias1((helpers.toLowerCase || (depth0 && depth0.toLowerCase) || alias2).call(depth0,(depth0 != null ? depth0.name : depth0),{"name":"toLowerCase","hash":{},"data":data}))
+    + alias2((helpers.toLowerCase || (depth0 && depth0.toLowerCase) || alias1).call(depth0,(depth0 != null ? depth0.name : depth0),{"name":"toLowerCase","hash":{},"data":data}))
     + "\">\n                <div class=\"g-container\">\n                    <h2 class=\"g-title\">"
-    + alias1(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + alias2(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
     + "</h2>\n                    <p>"
-    + alias1(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
+    + alias2(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
     + "</p>\n\n                    <div class=\"g-example\" id=\""
-    + alias1((helpers.toLowerCase || (depth0 && depth0.toLowerCase) || alias2).call(depth0,(depth0 != null ? depth0.name : depth0),{"name":"toLowerCase","hash":{},"data":data}))
+    + alias2((helpers.toLowerCase || (depth0 && depth0.toLowerCase) || alias1).call(depth0,(depth0 != null ? depth0.name : depth0),{"name":"toLowerCase","hash":{},"data":data}))
     + "\">\n                        "
-    + alias1((helpers.getContent || (depth0 && depth0.getContent) || alias2).call(depth0,(depth0 != null ? depth0.template : depth0),(depth0 != null ? depth0.data : depth0),(depth0 != null ? depth0.name : depth0),{"name":"getContent","hash":{},"data":data}))
+    + alias2((helpers.getContent || (depth0 && depth0.getContent) || alias1).call(depth0,(depth0 != null ? depth0.template : depth0),(depth0 != null ? depth0.data : depth0),(depth0 != null ? depth0.name : depth0),{"name":"getContent","hash":{},"data":data}))
     + "\n                    </div>\n                    <hr>\n                </div>\n            </div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data,blockParams,depths) {
     var stack1;
