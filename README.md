@@ -12,8 +12,11 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 
 ## Como criar um componente
 
-1. Pelo terminal acesso o diretório do wp-ghost e execute o seguinte comando:
+1. Pelo terminal acesso o diretório do wp-ghost e execute os seguintes comandos:
 
+    ```shell
+    $ sudo npm install
+    ```
     ```shell
     $ grunt watch
     ```
