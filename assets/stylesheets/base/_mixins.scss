@@ -2,13 +2,5 @@
 	::-webkit-input-placeholder { @content; }
 	:-moz-placeholder 			{ @content; }
 	::-moz-placeholder 			{ @content; }
-	:-ms-input-placeholder 		{ @content; }	
-}
-
-
-// Grid
-// ----------------------------------------------------------------------------
-
-@mixin col($col) {
-	width: perc(($colWidth * $col) + (($col - 1) * $colMargin), $container);
+	:-ms-input-placeholder 		{ @content; }
 }

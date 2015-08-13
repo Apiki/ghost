@@ -1,0 +1,11 @@
+#content {
+
+    @media ( min-width: $mobile ) {
+        float: left;
+        @include col(7);
+    }
+
+    @media ( min-width: $tablet ) {
+        @include col(9);
+    }
+}

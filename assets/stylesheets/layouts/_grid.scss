@@ -1,12 +1,18 @@
+// ----------------------------------------------------------------------------
+// Mixin > Col
+// ----------------------------------------------------------------------------
+@mixin col($col) {
+	width: perc(($colWidth * $col) + (($col - 1) * $colMargin), $container);
+}
+
 @media ( min-width: $mobile ) {
 
 	.row:after {
 		content: "";
 		display: table;
-		clear: both;	
+		clear: both;
 	}
 
-	
 	[class*="-column"],
 	.column,
 	.columns {

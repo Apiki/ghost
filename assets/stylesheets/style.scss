@@ -14,6 +14,9 @@
 // Classes individuais e elementos pequenos e reutilizáveis
 // ----------------------------------------------------------------------------
 
+// -- Images
+@import "elements/images/icons";
+
 // -- Buttons
 @import "elements/buttons/btn";
 @import "elements/buttons/btnGroup";
@@ -26,9 +29,6 @@
 @import "elements/forms/select";
 @import "elements/forms/submit";
 @import "elements/forms/textarea";
-
-// -- Images
-@import "elements/images/icons";
 
 // -- Text
 @import "elements/text/blockquote";

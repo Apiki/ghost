@@ -1,36 +1,72 @@
-.navigation a,
-.navigation li {
-	color: inherit;
-	text-decoration: none;
-	position: relative;
-	transition: .2s;
-	-webkit-transition: .2s;
-}
+/*-----------------------------------------------------------------------------
 
-.navigation > ul > li {
-	display: inline-block;
-	margin-right: -4px;
+	- Esqueleto para navegação horizontal
+	- Componente mobile first
+	* Ultiliza JS para mobile
 
-	&:hover > .sub-menu {
-		left: 0;
-		opacity: 1;
+-----------------------------------------------------------------------------*/
+
+.navigation {
+	width: 100%;
+
+	a {
+		color: inherit;
+		display: block;
+	}
+
+	.btn-sub-menu {
+		right: 5px;
+		top: 5px;
 	}
 }
 
-// Sub menu
-// ----------------------------------------------------------------------------
-
+// -- navigation > sub menu
 .navigation .sub-menu {
-	left: -999em;
-	opacity: 0;
-	position: absolute;
-	top: 100%;
-	transition: opacity .2s;
-	-webkit-transition: opacity .2s;
+	display: none;
+	-webkit-transition: opacity .3s;
+			transition: opacity .3s;
+}
 
-	li:hover > .sub-menu {
-		opacity: 1;
-		left: 100%;
-		top: 0;
+// -- navigation > menu item
+.navigation .menu-item {
+	position: relative;
+
+	&.sub-menu-active > .sub-menu {
+		display: block;
+	}
+}
+
+@media ( min-width: $tablet ) {
+
+	.navigation {
+		width: auto;
+
+		.btn-sub-menu {
+			display: none;
+		}
+	}
+
+	// -- navigation > sub menu
+	.navigation .sub-menu {
+		display: block;
+		left: -999em;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+	}
+
+	// -- navigation > menu item
+	.navigation .menu-item {
+		display: inline-block;
+
+		&:hover > .sub-menu {
+			left: 0;
+			opacity: 1;
+		}
+
+		&:hover .sub-menu .sub-menu {
+			left: 100%;
+			top: 0;
+		}
 	}
 }
