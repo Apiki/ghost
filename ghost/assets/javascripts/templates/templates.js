@@ -75,8 +75,20 @@ this["MONKEY"]["Templates"]["templates/buttons"] = Handlebars.template({"compile
     return "<div class=\"btn-group g-content\">\n    <a href=\"index.html\" class=\"btn\">Home</a>\n    <a href=\"elements.html\" class=\"btn\">Elements</a>\n    <a href=\"components.html\" class=\"btn\">Components</a>\n</div>\n\n<a href=\"#\" class=\"btn\">Button</a>\n<a href=\"#\" class=\"btn-secondary\">Button Secondary</a>\n<a href=\"#\" class=\"btn disabled\">Button Disabled</a>\n<a href=\"#\" class=\"btn\">Button <i class=\"icon-checkmark\"></i></a>\n\n<br>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-facebook\"><i class=\"icon-facebook-s\"></i><span>Facebook</span></a>\n    <span class=\"count-share\">...</span>\n</div>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-plus\"><i class=\"icon-google-plus-s\"></i><span>Plus</span></a>\n    <span class=\"count-share\">...</span>\n</div>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-twitter\"><i class=\"icon-twitter-s\"></i></a>\n    <span class=\"count-share\">...</span>\n</div>";
 },"useData":true});
 
-this["MONKEY"]["Templates"]["templates/colors"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<ul class=\"g-color-listing\">\n    <li class=\"color-primary\" data-tooltip=\"$colorPrimary\"></li>\n    <li class=\"color-secondary\" data-tooltip=\"$colorSecondary\"></li>\n    <li class=\"color-tertiary\" data-tooltip=\"$colorTertiary\"></li>\n    <li class=\"color-title\" data-tooltip=\"$colorTitle\"></li>\n    <li class=\"color-text\" data-tooltip=\"$colorText\"></li>\n    <li class=\"color-detail\" data-tooltip=\"$colorDetail\"></li>\n    <li class=\"color-alert\" data-tooltip=\"$colorAlert\"></li>\n    <li class=\"color-error\" data-tooltip=\"$colorError\"></li>\n    <li class=\"color-success\" data-tooltip=\"$colorSuccess\"></li>\n    <li class=\"color-disabled\" data-tooltip=\"$colorDisabled\"></li>\n</ul>";
+this["MONKEY"]["Templates"]["templates/colors"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "        <li class=\""
+    + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
+    + "\" data-tooltip=\""
+    + alias3(((helper = (helper = helpers.tooltip || (depth0 != null ? depth0.tooltip : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"tooltip","hash":{},"data":data}) : helper)))
+    + "\"></li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<ul class=\"g-color-listing\">\n"
+    + ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</ul>";
 },"useData":true});
 
 this["MONKEY"]["Templates"]["templates/fonts"] = Handlebars.template({"1":function(depth0,helpers,partials,data,blockParams,depths) {

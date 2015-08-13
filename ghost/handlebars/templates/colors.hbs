@@ -1,12 +1,5 @@
 <ul class="g-color-listing">
-    <li class="color-primary" data-tooltip="$colorPrimary"></li>
-    <li class="color-secondary" data-tooltip="$colorSecondary"></li>
-    <li class="color-tertiary" data-tooltip="$colorTertiary"></li>
-    <li class="color-title" data-tooltip="$colorTitle"></li>
-    <li class="color-text" data-tooltip="$colorText"></li>
-    <li class="color-detail" data-tooltip="$colorDetail"></li>
-    <li class="color-alert" data-tooltip="$colorAlert"></li>
-    <li class="color-error" data-tooltip="$colorError"></li>
-    <li class="color-success" data-tooltip="$colorSuccess"></li>
-    <li class="color-disabled" data-tooltip="$colorDisabled"></li>
+    {{#each this}}
+        <li class="{{class}}" data-tooltip="{{tooltip}}"></li>
+    {{/each}}
 </ul>
