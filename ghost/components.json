@@ -24,6 +24,16 @@
                                 "class": "font-primary-bold",
                                 "title": "Font Primary Bold",
                                 "variable": "$fontPrimaryBold"
+                            },
+                            {
+                                "class": "font-secondary",
+                                "title": "Font Secondary",
+                                "variable": "$fontSecondary"
+                            },
+                            {
+                                "class": "font-secondary-bold",
+                                "title": "Font Secondary Bold",
+                                "variable": "$fontSecondaryBold"
                             }
                         ]
                     }

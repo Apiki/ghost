@@ -11,31 +11,33 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 * [sass](http://sass-lang.com/install)
 
 ## Como criar um componente
+
 1. Pelo terminal acesso o diretório do wp-ghost e execute o seguinte comando:
 
-```shell
-$ grunt watch
-```
+    ```shell
+    $ grunt watch
+    ```
 
 2. Crie a marcação html do seu componente e salve na pasta ghost/handlebars/templates com a extensão ".hbs", lembre-se que você poderá usurfluir de todas as funcionalidades do [handlebars](http://handlebarsjs.com/).
 
 3. Abra o arquivo ghost/components.json, e coloque os dados de seu novo componente. Utilize a seguinte estrutura:
-```json
-{
-    "sections": [
-        {
-            "name": "Nome da seção",
-            "components": [
-                {
-                    "name": "Nome do componente",
-                    "description": "Descrição do componente",
-                    "template": "templates/nome-do-template"
-                }
-            ]
-        }
-    ]
-}
-```
+
+    ```json
+    {
+        "sections": [
+            {
+                "name": "Nome da seção",
+                "components": [
+                    {
+                        "name": "Nome do componente",
+                        "description": "Descrição do componente",
+                        "template": "templates/nome-do-template"
+                    }
+                ]
+            }
+        ]
+    }
+    ```
 
 ## Exemplos de componentes
 
@@ -148,4 +150,4 @@ components.json
 
 ## Licença
 
-[GNU Licence](http://www.gnu.org/licenses/gpl-3.0.en.html)
+[GNU Licence](https://github.com/Apiki/wp-ghost/blob/master/LICENSE)
