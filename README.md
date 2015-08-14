@@ -12,15 +12,18 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 
 ## Como criar um componente
 
-1. Pelo terminal acesso o diretório do wp-ghost e execute o seguinte comando:
+1. Pelo terminal acesso o diretório do wp-ghost e execute os seguintes comandos:
 
+    ```shell
+    $ sudo npm install
+    ```
     ```shell
     $ grunt watch
     ```
 
-2. Crie a marcação html do seu componente e salve na pasta ghost/handlebars/templates com a extensão ".hbs", lembre-se que você poderá usurfluir de todas as funcionalidades do [handlebars](http://handlebarsjs.com/).
+2. Crie a marcação html do seu componente e salve na pasta **ghost/handlebars/templates** com a extensão **".hbs"**, lembre-se que você poderá usurfluir de todas as funcionalidades do [handlebars](http://handlebarsjs.com/).
 
-3. Abra o arquivo ghost/components.json, e coloque os dados de seu novo componente. Utilize a seguinte estrutura:
+3. Abra o arquivo **ghost/components.json**, e coloque os dados de seu novo componente. Utilize a seguinte estrutura:
 
     ```json
     {
@@ -43,7 +46,7 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 
 ### Sem o uso do data:
 
-buttons.hbs
+**buttons.hbs**
 
 ```html
 <div class="btn-group g-content">
@@ -52,7 +55,7 @@ buttons.hbs
     <a href="components.html" class="btn">Components</a>
 </div>
 ```
-component.json
+**component.json**
 
 ```json
 {
@@ -72,7 +75,8 @@ component.json
 ```
 ### Com uso de data:
 
-fonts.hbs
+**fonts.hbs**
+
 ```html
 <div class="g-font-listing">
     {{#each fonts}}
@@ -91,7 +95,7 @@ fonts.hbs
 </div>
 ```
 
-components.json
+**components.json**
 
 ```json
 {
@@ -118,7 +122,7 @@ components.json
 
 ### Com uso de data externo:
 
-icons.hbs
+**icons.hbs**
 
 ```html
 <ul class="g-icon-listing">
@@ -128,7 +132,7 @@ icons.hbs
 </ul>
 ```
 
-components.json
+**components.json**
 
 ```json
 {

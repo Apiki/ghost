@@ -2,12 +2,12 @@ this["MONKEY"] = this["MONKEY"] || {};
 this["MONKEY"]["Templates"] = this["MONKEY"]["Templates"] || {};
 
 this["MONKEY"]["Templates"]["components"] = Handlebars.template({"1":function(depth0,helpers,partials,data,blockParams,depths) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+    var stack1, helper, alias1=helpers.helperMissing, alias2=this.escapeExpression;
 
   return "    <div class=\"g-section\" id=\""
-    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + alias2((helpers.toLowerCase || (depth0 && depth0.toLowerCase) || alias1).call(depth0,(depth0 != null ? depth0.name : depth0),{"name":"toLowerCase","hash":{},"data":data}))
     + "\">\n        <h2 class=\"g-title-section\">"
-    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + alias2(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === "function" ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
     + "</h2>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.components : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\n";
@@ -75,8 +75,20 @@ this["MONKEY"]["Templates"]["templates/buttons"] = Handlebars.template({"compile
     return "<div class=\"btn-group g-content\">\n    <a href=\"index.html\" class=\"btn\">Home</a>\n    <a href=\"elements.html\" class=\"btn\">Elements</a>\n    <a href=\"components.html\" class=\"btn\">Components</a>\n</div>\n\n<a href=\"#\" class=\"btn\">Button</a>\n<a href=\"#\" class=\"btn-secondary\">Button Secondary</a>\n<a href=\"#\" class=\"btn disabled\">Button Disabled</a>\n<a href=\"#\" class=\"btn\">Button <i class=\"icon-checkmark\"></i></a>\n\n<br>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-facebook\"><i class=\"icon-facebook-s\"></i><span>Facebook</span></a>\n    <span class=\"count-share\">...</span>\n</div>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-plus\"><i class=\"icon-google-plus-s\"></i><span>Plus</span></a>\n    <span class=\"count-share\">...</span>\n</div>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-twitter\"><i class=\"icon-twitter-s\"></i></a>\n    <span class=\"count-share\">...</span>\n</div>";
 },"useData":true});
 
-this["MONKEY"]["Templates"]["templates/colors"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<ul class=\"g-color-listing\">\n    <li class=\"color-primary\" data-tooltip=\"$colorPrimary\"></li>\n    <li class=\"color-secondary\" data-tooltip=\"$colorSecondary\"></li>\n    <li class=\"color-tertiary\" data-tooltip=\"$colorTertiary\"></li>\n    <li class=\"color-title\" data-tooltip=\"$colorTitle\"></li>\n    <li class=\"color-text\" data-tooltip=\"$colorText\"></li>\n    <li class=\"color-detail\" data-tooltip=\"$colorDetail\"></li>\n    <li class=\"color-alert\" data-tooltip=\"$colorAlert\"></li>\n    <li class=\"color-error\" data-tooltip=\"$colorError\"></li>\n    <li class=\"color-success\" data-tooltip=\"$colorSuccess\"></li>\n    <li class=\"color-disabled\" data-tooltip=\"$colorDisabled\"></li>\n</ul>";
+this["MONKEY"]["Templates"]["templates/colors"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "        <li class=\""
+    + alias3(((helper = (helper = helpers['class'] || (depth0 != null ? depth0['class'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"class","hash":{},"data":data}) : helper)))
+    + "\" data-tooltip=\""
+    + alias3(((helper = (helper = helpers.tooltip || (depth0 != null ? depth0.tooltip : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"tooltip","hash":{},"data":data}) : helper)))
+    + "\"></li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<ul class=\"g-color-listing\">\n"
+    + ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</ul>";
 },"useData":true});
 
 this["MONKEY"]["Templates"]["templates/fonts"] = Handlebars.template({"1":function(depth0,helpers,partials,data,blockParams,depths) {
@@ -126,7 +138,7 @@ this["MONKEY"]["Templates"]["templates/icons"] = Handlebars.template({"1":functi
 },"useData":true});
 
 this["MONKEY"]["Templates"]["templates/lightbox"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"gallery-wrapp\">\n    <a class=\"gallery\" href=\"http://lorempixel.com/800/400/sports/1\" data-featherlight=\"image\"><img src=\"http://lorempixel.com/100/100/sports/1\" alt=\"\"></a>\n    <a class=\"gallery\" href=\"http://lorempixel.com/800/400/sports/2\" data-featherlight=\"image\"><img src=\"http://lorempixel.com/100/100/sports/2\" alt=\"\"></a>\n    <a class=\"gallery\" href=\"http://lorempixel.com/800/400/sports/3\" data-featherlight=\"image\"><img src=\"http://lorempixel.com/100/100/sports/3\" alt=\"\"></a>\n    <a class=\"gallery\" href=\"http://lorempixel.com/800/400/sports/4\" data-featherlight=\"image\"><img src=\"http://lorempixel.com/100/100/sports/4\" alt=\"\"></a>\n</div>";
+    return "<div class=\"gallery-wrapp\" data-component=\"gallery\">\n    <a class=\"gallery\" href=\"assets/images/sport1.jpg\" data-element=\"image\"><img src=\"assets/images/sport1.jpg\" width=\"150\" height=\"75\"></a>\n    <a class=\"gallery\" href=\"assets/images/natureza1.jpg\" data-element=\"image\"><img src=\"assets/images/natureza1.jpg\" width=\"150\" height=\"75\"></a>\n    <a class=\"gallery\" href=\"assets/images/natureza2.jpg\" data-element=\"image\"><img src=\"assets/images/natureza2.jpg\" width=\"150\" height=\"75\"></a>\n    <a class=\"gallery\" href=\"assets/images/natureza3.jpg\" data-element=\"image\"><img src=\"assets/images/natureza3.jpg\" width=\"150\" height=\"75\"></a>\n</div>";
 },"useData":true});
 
 this["MONKEY"]["Templates"]["templates/loading"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
