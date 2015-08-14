@@ -26,20 +26,18 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 3. Abra o arquivo **ghost/components.json**, e coloque os dados de seu novo componente. Utilize a seguinte estrutura:
 
     ```json
-    {
-        "sections": [
-            {
-                "name": "Nome da seção",
-                "components": [
-                    {
-                        "name": "Nome do componente",
-                        "description": "Descrição do componente",
-                        "template": "templates/nome-do-template"
-                    }
-                ]
-            }
-        ]
-    }
+    [
+        {
+            "name": "Nome da seção",
+            "components": [
+                {
+                    "name": "Nome do componente",
+                    "description": "Descrição do componente",
+                    "template": "templates/nome-do-template"
+                }
+            ]
+        }
+    ]
     ```
 
 ## Exemplos de componentes
@@ -58,20 +56,18 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 **component.json**
 
 ```json
-{
-    "sections": [
-        {
-            "name": "Elements",
-            "components": [
-                {
-                    "name": "Buttons",
-                    "description": "Lorem ipsum dolor sit",
-                    "template": "templates/buttons"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "name": "Elements",
+        "components": [
+            {
+                "name": "Buttons",
+                "description": "Lorem ipsum dolor sit",
+                "template": "templates/buttons"
+            }
+        ]
+    }
+]
 ```
 ### Com uso de data:
 
@@ -98,26 +94,33 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 **components.json**
 
 ```json
-{
-    "name": "Fonts",
-    "description": "Lorem ipsum dolor sit amet.",
-    "template": "templates/fonts",
-    "data": {
-        "lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        "fonts": [
+[
+    {
+        "name": "Elements",
+        "components": [
             {
-                "class": "font-primary",
-                "title": "Font Primary",
-                "variable": "$fontPrimary"
-            },
-            {
-                "class": "font-primary-bold",
-                "title": "Font Primary Bold",
-                "variable": "$fontPrimaryBold"
+                "name": "Fonts",
+                "description": "Lorem ipsum dolor sit amet.",
+                "template": "templates/fonts",
+                "data": {
+                    "lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "fonts": [
+                        {
+                            "class": "font-primary",
+                            "title": "Font Primary",
+                            "variable": "$fontPrimary"
+                        },
+                        {
+                            "class": "font-primary-bold",
+                            "title": "Font Primary Bold",
+                            "variable": "$fontPrimaryBold"
+                        }
+                    ]
+                }
             }
         ]
     }
-}
+]
 ```
 
 ### Com uso de data externo:
@@ -135,21 +138,19 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
 **components.json**
 
 ```json
-{
-    "sections": [
-        {
-            "name": "Elements",
-            "components": [
-                {
-                    "name": "Icons",
-                    "description": "Lorem ipsum dolor sit.",
-                    "template": "templates/icons",
-                    "data": "../assets/fonts/selection.json"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "name": "Elements",
+        "components": [
+            {
+                "name": "Icons",
+                "description": "Lorem ipsum dolor sit.",
+                "template": "templates/icons",
+                "data": "../assets/fonts/selection.json"
+            }
+        ]
+    }
+]
 ```
 
 ## Licença
