@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 				src : [
 					'<%= package.devroot %>/javascripts/libs/*.js',
 					'<%= package.devroot %>/javascripts/templates/*.js',
+					'<%= package.devroot %>/javascripts/dependencies/*.js',
 					'<%= package.devroot %>/javascripts/vendor/*.js',
 					'<%= package.devroot %>/javascripts/app/*.js',
 					'<%= package.devroot %>/javascripts/boot.js'
