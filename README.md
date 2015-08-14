@@ -53,7 +53,7 @@ Projeto destinado a construção de componentes html + css, de uma forma fácil 
     <a href="components.html" class="btn">Components</a>
 </div>
 ```
-**component.json**
+**components.json**
 
 ```json
 [
