@@ -1,0 +1,124 @@
+// -- colors
+$_commentTitleColor  : $colorTitle;
+$_commentTextColor   : $colorText;
+$_commentButtonBg    : $colorPrimary;
+$_commentColorBg     : $colorPrimary;
+
+
+.comment,
+.comment-respond,
+.comment-form {
+    margin-top: $colMargin;
+}
+
+// -- Comment
+.comment {
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    // -- Comment Reply Link
+    .comment-reply-link {
+        background: $colorPrimary;
+        border-radius: 3px;
+        font-size: 11px;
+        color: #fff;
+        display: inline-block;
+        padding: 5px;
+        text-transform: uppercase;
+
+        &:before {
+            @extend %icon;
+            @extend .icon-forward:before;
+            margin-right: 5px;
+        }
+    }
+}
+
+// -- Comment Body
+.comment-body {
+    color: $_commentTextColor;
+    margin-left: 80px;
+    position: relative;
+
+    img {
+        border-radius: 100%;
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .says {
+        display: none;
+    }
+
+    .avatar {
+        margin-right: 20px;
+        position: absolute;
+        right: 100%;
+        top: 0;
+    }
+
+    .comment-metadata,
+    .comment-content,
+    .reply {
+        margin-top: 8px;
+    }
+}
+
+// -- Comment Metadata
+.comment-metadata {
+    color: lighten( $_commentTextColor, 25% );
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+// -- Comment Author
+.comment-author {
+    color: $_commentTitleColor;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+// -- Comment Content
+.comment-content {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+
+// ----------------------------------------------------------------------------
+// -- Comment > Children
+// ----------------------------------------------------------------------------
+.comment .children img {
+    -webkit-transform: scale( .8 );
+        -ms-transform: scale( .8 );
+            transform: scale( .8 );
+}
+
+
+// ----------------------------------------------------------------------------
+// -- Comment > comment form
+// ----------------------------------------------------------------------------
+.comment-form {
+
+    .required {
+        color: $colorError;
+    }
+
+    code,
+    > p {
+        margin-top: 10px;
+    }
+
+    code {
+        display: block;
+        padding: 10px;
+    }
+
+    > p:first-child {
+        margin-top: 0;
+    }
+}

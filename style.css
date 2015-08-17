@@ -753,7 +753,7 @@ blockquote p:last-child {
 .chosen-drop .result-selected,
 .chosen-drop .result-selected:hover {
   cursor: default;
-  background: #d4d4d4;
+  background: #d5d5d5;
 }
 
 .chosen-with-drop {
