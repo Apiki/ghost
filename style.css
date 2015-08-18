@@ -595,6 +595,16 @@ blockquote p:last-child {
   left: 50%;
 }
 
+code {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #797979;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+}
+
 .slider-wrapper .bx-viewport:before {
   bottom: -1px;
   box-shadow: 0 0 30px 2px #000;

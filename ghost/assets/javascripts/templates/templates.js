@@ -75,6 +75,10 @@ this["MONKEY"]["Templates"]["templates/buttons"] = Handlebars.template({"compile
     return "<div class=\"btn-group g-content\">\n    <a href=\"index.html\" class=\"btn\">Home</a>\n    <a href=\"elements.html\" class=\"btn\">Elements</a>\n    <a href=\"components.html\" class=\"btn\">Components</a>\n</div>\n\n<a href=\"#\" class=\"btn\">Button</a>\n<a href=\"#\" class=\"btn-secondary\">Button Secondary</a>\n<a href=\"#\" class=\"btn disabled\">Button Disabled</a>\n<a href=\"#\" class=\"btn\">Button <i class=\"icon-checkmark\"></i></a>\n\n<br>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-facebook\"><i class=\"icon-facebook-s\"></i><span>Facebook</span></a>\n    <span class=\"count-share\">...</span>\n</div>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-plus\"><i class=\"icon-google-plus-s\"></i><span>Plus</span></a>\n    <span class=\"count-share\">...</span>\n</div>\n\n<div class=\"btn-share\">\n    <a href=\"#\" class=\"btn btn-share-twitter\"><i class=\"icon-twitter-s\"></i></a>\n    <span class=\"count-share\">...</span>\n</div>";
 },"useData":true});
 
+this["MONKEY"]["Templates"]["templates/code"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<code>&lt;a href=\"\" title=\"\"&gt; &lt;abbr title=\"\"&gt; &lt;acronym title=\"\"&gt; &lt;b&gt; &lt;blockquote cite=\"\"&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=\"\"&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=\"\"&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>";
+},"useData":true});
+
 this["MONKEY"]["Templates"]["templates/colors"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 

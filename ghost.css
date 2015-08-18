@@ -596,6 +596,16 @@ blockquote p:last-child {
   left: 50%;
 }
 
+code {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #797979;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+}
+
 .chosen-container {
   background: #fff;
   color: #797979;
@@ -1573,12 +1583,7 @@ blockquote p:last-child {
   padding: 15px 0;
 }
 
-.g-example code {
-  background: #eee;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  color: #535353;
-  font-size: 14px;
+.g-header-font code {
   padding: 1px 10px;
 }
 

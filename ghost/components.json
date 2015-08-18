@@ -59,6 +59,11 @@
                     "name": "Tooltip",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
                     "template": "templates/tooltip"
+                },
+                {
+                    "name": "Code",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    "template": "templates/code"
                 }
             ]
         },

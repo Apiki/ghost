@@ -35,6 +35,7 @@
 @import "../assets/stylesheets/elements/text/loading";
 @import "../assets/stylesheets/elements/text/messages";
 @import "../assets/stylesheets/elements/text/tooltip";
+@import "../assets/stylesheets/elements/text/code";
 
 
 // COMPONENTS
@@ -238,12 +239,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	}
 }
 
-.g-example code {
-	background: #eee;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	color: $gColorText;
-	font-size: 14px;
+.g-header-font code {
 	padding: 1px 10px;
 }
 
