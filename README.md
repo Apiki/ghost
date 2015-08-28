@@ -2,7 +2,12 @@
 
 ## Descrição
 
-Projeto destinado a construção de componentes html + css, de uma forma fácil e intuitiva.
+Projeto destinado a construção de componentes html + css, de uma forma fácil e intuitiva e com intuito de padronizar o código Front-End.
+
+## Styleguides
+
+* <big>**[Stylesheet](/Stylesheet.md)**</big>
+
 
 ## Dependências
 
