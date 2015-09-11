@@ -13,18 +13,23 @@ $_sliderShadow : true; // booleano
 	}
 }
 
-.slider-wrapper img,
-.slider-wrapper a {
-	display: block;
-}
+.slider-wrapper {
 
-// -- bx wrapper
-.slider-wrapper .bx-wrapper {
-	position: relative;
-}
+	img {
+		@extend %img;
+	}
 
-.slider-wrapper .slider {
-	height: inherit;
+	a {
+		display: block;
+	}
+
+	.slider {
+		height: inherit;
+	}
+
+	.bx-wrapper {
+		position: relative;
+	}
 }
 
 // Pager
@@ -73,7 +78,7 @@ $_sliderShadow : true; // booleano
 	color: $colorPrimary;
 	cursor: pointer;
 	font-size: 0;
-	position: absolute;	
+	position: absolute;
 	text-decoration: none;
 	-webkit-transform: translateY( -50% );
 		transform: translateY( -50% );
@@ -97,7 +102,7 @@ $_sliderShadow : true; // booleano
 
 	&:before {
 		@extend .icon-circle-right;
-	}	
+	}
 }
 
 // -- no js

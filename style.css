@@ -75,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   visibility: hidden;
 }
 
-.the-content img {
+.slider-wrapper img, .the-content img {
   display: block;
   height: auto;
   max-width: 100%;
@@ -703,17 +703,14 @@ code {
   z-index: 2;
 }
 
-.slider-wrapper img,
 .slider-wrapper a {
   display: block;
 }
-
-.slider-wrapper .bx-wrapper {
-  position: relative;
-}
-
 .slider-wrapper .slider {
   height: inherit;
+}
+.slider-wrapper .bx-wrapper {
+  position: relative;
 }
 
 .slider-wrapper .bx-pager,
