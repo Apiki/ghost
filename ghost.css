@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1108,64 +1107,89 @@ code {
   display: none;
 }
 
-/*-----------------------------------------------------------------------------
-
-	- Esqueleto para navegação horizontal
-	- Componente mobile first
-	* Ultiliza JS para mobile
-
------------------------------------------------------------------------------*/
-.navigation {
-  width: 100%;
+.navigation,
+.navigation .sub-menu {
+  background: #3b8686;
 }
+
+.navigation li {
+  border-top: 1px solid #337474;
+  position: relative;
+}
+
 .navigation a {
-  color: inherit;
+  color: #fff;
   display: block;
-}
-.navigation .btn-sub-menu {
-  right: 5px;
-  top: 5px;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .navigation .sub-menu {
   display: none;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
 }
 
-.navigation .menu-item {
-  position: relative;
+.btn-more-menu {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 36px;
+  right: 0;
+  position: absolute;
+  width: 36px;
 }
-.navigation .menu-item.sub-menu-active > .sub-menu {
-  display: block;
+.btn-more-menu:before, .btn-more-menu:after {
+  background: #fff;
+  border-radius: 3px;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.btn-more-menu:after {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(90deg);
+  transform: translate3d(-50%, -50%, 0) rotate(90deg);
+}
+.btn-more-menu.btn-more-menu-active:after {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
-  .navigation {
-    width: auto;
-  }
-  .navigation .btn-sub-menu {
+  .btn-more-menu {
     display: none;
   }
 
+  .navigation li {
+    border-top: none;
+    display: inline-block;
+  }
+  .navigation li:hover > .sub-menu {
+    left: 0;
+    opacity: 1;
+  }
+
   .navigation .sub-menu {
-    display: block;
+    display: block !important;
     left: -999em;
     opacity: 0;
     position: absolute;
     top: 100%;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
   }
-
-  .navigation .menu-item {
-    display: inline-block;
+  .navigation .sub-menu li {
+    display: block;
   }
-  .navigation .menu-item:hover > .sub-menu {
-    left: 0;
-    opacity: 1;
-  }
-  .navigation .menu-item:hover .sub-menu .sub-menu {
+  .navigation .sub-menu li:hover > .sub-menu {
     left: 100%;
     top: 0;
+  }
+  .navigation .sub-menu a {
+    min-width: 180px;
   }
 }
 .pagination {

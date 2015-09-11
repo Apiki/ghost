@@ -1374,7 +1374,7 @@ this["MONKEY"]["Templates"]["templates/messages"] = Handlebars.template({"compil
 },"useData":true});
 
 this["MONKEY"]["Templates"]["templates/navigation"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<nav class=\"navigation\">\n    <ul class=\"menu\">\n        <li><a href=\"\" title=\"\">Home</a></li>\n        <li>\n            <a href=\"\" title=\"\">About</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"\" title=\"\">Product</a></li>\n                <li>\n                    <a href=\"\" title=\"\">Product one</a>\n                    <ul class=\"sub-menu\">\n                        <li><a href=\"\" title=\"\">Product</a></li>\n                        <li><a href=\"\" title=\"\">Product one</a></li>\n                        <li><a href=\"\" title=\"\">Product two</a></li>\n                    </ul>\n                </li>\n                <li><a href=\"\" title=\"\">Product two</a></li>\n            </ul>\n        </li>\n        <li><a href=\"\" title=\"\">Blog</a></li>\n        <li><a href=\"\" title=\"\">Contact</a></li>\n    </ul>\n</nav>";
+    return "<nav class=\"navigation navigation-main\" data-component=\"navigation\">\n    <ul class=\"menu\">\n        <li><a href=\"\" title=\"\">Home</a></li>\n        <li class=\"menu-item-has-children\">\n            <a href=\"\" title=\"\">About</a>\n            <ul class=\"sub-menu\">\n                <li><a href=\"\" title=\"\">Product</a></li>\n                <li class=\"menu-item-has-children\">\n                    <a href=\"\" title=\"\">Product one</a>\n                    <ul class=\"sub-menu\">\n                        <li><a href=\"\" title=\"\">Product</a></li>\n                        <li><a href=\"\" title=\"\">Product one</a></li>\n                        <li><a href=\"\" title=\"\">Product two</a></li>\n                    </ul>\n                </li>\n                <li><a href=\"\" title=\"\">Product two</a></li>\n            </ul>\n        </li>\n        <li class=\"current-menu-item\"><a href=\"\" title=\"\">Blog</a></li>\n        <li><a href=\"\" title=\"\">Contact</a></li>\n    </ul>\n</nav>";
 },"useData":true});
 
 this["MONKEY"]["Templates"]["templates/pagination"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -2651,6 +2651,19 @@ this["MONKEY"]["Templates"]["templates/tooltip"] = Handlebars.template({"compile
         this.$el.html( MONKEY.Templates.menu( data ) );
     };
 
+});;Module.ComponentWrapper( 'Navigation', function(Navigation) {
+
+    Navigation.fn.init = function() {
+        this.$el.find( '.menu-item-has-children' )
+                .prepend( '<span class="btn-more-menu"></span>' )
+        ;
+
+        this.$el.find( '.btn-more-menu' ).on( 'click', function() {
+
+            jQuery( this ).toggleClass( 'btn-more-menu-active' );
+            jQuery( this ).siblings( '.sub-menu' ).slideToggle();
+        });
+    };
 });;Module.ComponentWrapper( 'Wrapper', function(Wrapper) {
 
     Wrapper.fn.init = function() {
