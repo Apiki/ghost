@@ -355,6 +355,34 @@ $gSizeIcon: 72px;
 @include font( font-secondary, $fontSecondary );
 @include font( font-secondary-bold, $fontSecondaryBold );
 
+// Essential Box
+// ----------------------------------------------------------------------------
+.essetial-box {
+	@extend %clearFix;
+
+	img {
+		@extend %img;
+	}
+
+	> * {
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+
+	strong {
+		background: #eee;
+		border-radius: 5px;
+		display: inline-block;
+		font-size: 13px;
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+
+	.screenshot {
+		max-width: 400px;
+	}
+}
 
 .g-font-listing strong {
 	display: inline-block;

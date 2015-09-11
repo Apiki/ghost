@@ -1,5 +1,14 @@
 [
     {
+            "name": "Essential",
+            "components": [
+                {
+                    "name": "Images Site",
+                    "template": "templates/branding"
+                }
+            ]
+        },
+    {
             "name": "Configurations",
             "components": [
                 {

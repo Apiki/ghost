@@ -67,6 +67,10 @@ this["MONKEY"]["Templates"]["templates/blockquote"] = Handlebars.template({"comp
     return "<blockquote>\n    Aorem ipsum dolor sit amet, consectetur adipisicing elit. Non accusantium aliquid, minima facilis dolore tenetur quia! Quidem laudantium distinctio magni!\n</blockquote>";
 },"useData":true});
 
+this["MONKEY"]["Templates"]["templates/branding"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<div class=\"essetial-box\">\n    <div class=\"screenshot\">\n        <strong>Screenshot</strong>\n        <img src=\"../screenshot.png\" alt=\"\" />\n    </div>\n\n    <div class=\"branding\">\n        <strong>Branding</strong>\n        <img src=\"../assets/images/branding.png\" alt=\"\" />\n    </div>\n\n    <div class=\"favicon\">\n        <strong>Favicon</strong>\n        <img src=\"../assets/images/favicon.ico\" alt=\"\" />\n    </div>\n\n    <div class=\"favicon-apple\">\n        <strong>Favicon Apple</strong>\n        <img src=\"../assets/images/favicon-apple.png\" alt=\"\" />\n    </div>\n</div>";
+},"useData":true});
+
 this["MONKEY"]["Templates"]["templates/breadcrumb"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<ul class=\"breadcrumb\">\n    <li><a href=\"\" title=\"\">Home</a></li>\n    <li><a href=\"\" title=\"\">Product</a></li>\n    <li><span class=\"current\">link Product</span></li>\n</ul>";
 },"useData":true});
