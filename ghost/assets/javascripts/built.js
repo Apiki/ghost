@@ -2679,7 +2679,7 @@ this["MONKEY"]["Templates"]["templates/tooltip"] = Handlebars.template({"compile
     };
 
     Wrapper.fn._onClickOpenMenu = function() {
-        this.$el.toggleClass( 'active' );
+        this.$el.toggleClass( 'active-menu' );
     };
 
 });

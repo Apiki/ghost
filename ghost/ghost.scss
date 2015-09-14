@@ -64,6 +64,26 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 }
 
 
+#g-sidebar .btn-menu .btn-hamburger {
+	background: none;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: background .2s;
+			transition: background .2s;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+			transform: translate3d(-50%, -50%, 0);
+
+	.line,
+	&:before,
+	&:after {
+		background: #555;
+		-webkit-transition: background .2s;
+				transition: background .2s;
+	}
+}
+
+
 // -- navigation icon
 .g-icons {
 	float: right;
@@ -71,7 +91,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 }
 
 
-.g-icons span,
+.g-icons .btn-menu,
 .g-icons a {
 	border-bottom: 1px solid #e5e5e5;
 	color: #555;
@@ -80,13 +100,14 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	font-size: 36px;
 	height: 100px;
 	line-height: 100px;
+	position: relative;
 	text-align: center;
 	text-decoration: none;
 	-webkit-transition: color .2s;
 			transition: color .2s;
 
 	&:hover {
-		color: #e5e5e5;
+		color: #ff2841;
 	}
 }
 
@@ -111,7 +132,7 @@ $gFontPrimary 		: 'Roboto Condensed', sans-serif;
 	-webkit-transform: translateX( -200px );
 			transform: translateX( -200px );
 
-	.active & {
+	.active-menu & {
 		-webkit-transform: translateX( 0 );
 				transform: translateX( 0 );
 	}

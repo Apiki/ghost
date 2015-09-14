@@ -9,7 +9,7 @@ Module.ComponentWrapper( 'Wrapper', function(Wrapper) {
     };
 
     Wrapper.fn._onClickOpenMenu = function() {
-        this.$el.toggleClass( 'active' );
+        this.$el.toggleClass( 'active-menu' );
     };
 
 });
