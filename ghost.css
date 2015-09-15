@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-.list:after, .container:after, #wrapper-content:after, .g-icon-listing:after, .essetial-box:after {
+.list:after, .container:after, #wrapper-content:after, .g-icon-listing:after, .essetial-box:after, .g-widgets:after {
   clear: both;
   content: '';
   display: block;
@@ -1490,6 +1490,116 @@ code {
   margin-top: 0;
 }
 
+.widget {
+  color: #797979;
+}
+.widget a {
+  color: #ff0033;
+  text-decoration: none;
+}
+.widget li {
+  margin-top: 10px;
+}
+.widget li:first-child {
+  margin-top: 0;
+}
+
+.widget-title {
+  border-bottom: 1px solid #eee;
+  color: #2b2b2b;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.tagcloud a {
+  background: #ff0033;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+#calendar_wrap {
+  background: #eee;
+  font-size: 13px;
+  border-bottom: 2px solid #e1e1e1;
+  padding: 15px;
+}
+
+#wp-calendar {
+  position: relative;
+  width: 100%;
+}
+#wp-calendar caption {
+  background: inherit;
+  font-size: 14px;
+  padding: 10px 0 15px;
+  text-align: right;
+}
+#wp-calendar caption,
+#wp-calendar th {
+  font-weight: bold;
+}
+#wp-calendar th,
+#wp-calendar td {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+#wp-calendar thead {
+  color: #ff0033;
+}
+#wp-calendar tbody a {
+  background: #ff0033;
+  color: #fff;
+  display: block;
+}
+#wp-calendar tfoot {
+  border-radius: 3px;
+  font-size: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+#wp-calendar tfoot td {
+  height: auto;
+  line-height: normal;
+  width: auto;
+}
+#wp-calendar tfoot a {
+  background: #FFF;
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  width: 25px;
+}
+#wp-calendar #prev a:before,
+#wp-calendar #next a:before {
+  border-style: solid;
+  border-width: 5px;
+  content: "";
+  margin-top: -5px;
+  position: absolute;
+  top: 50%;
+}
+#wp-calendar #prev {
+  padding-right: 1px;
+}
+#wp-calendar #prev a:before {
+  border-color: transparent #eee transparent transparent;
+  left: 50%;
+  margin-left: -8px;
+}
+#wp-calendar #next a:before {
+  border-color: transparent transparent transparent #eee;
+  margin-right: -8px;
+  right: 50%;
+}
+
 .list > * {
   float: left;
 }
@@ -2007,6 +2117,17 @@ code {
 
 .g-example .thumbnail {
   display: block;
+}
+
+.g-widgets > * {
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 30px;
+  width: 45%;
+}
+.g-widgets > *:nth-child(odd) {
+  clear: both;
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=ghost.css.map */

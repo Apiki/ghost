@@ -128,6 +128,11 @@
                     "name": "Comments",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
                     "template": "templates/comments"
+                },
+                {
+                    "name": "Widgets",
+                    "description": "Widgets Padrões do WordPress",
+                    "template": "templates/widgets"
                 }
             ]
         }

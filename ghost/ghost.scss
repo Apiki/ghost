@@ -496,3 +496,21 @@ $gSizeIcon: 72px;
 .g-example .thumbnail {
 	display: block;
 }
+
+// Widgets
+// ----------------------------------------------------------------------------
+.g-widgets {
+	@extend %clearFix;
+
+	> * {
+		float: left;
+		margin-left: 10%;
+		margin-bottom: 30px;
+		width: 45%;
+
+		&:nth-child(odd) {
+			clear: both;
+			margin-left: 0;
+		}
+	}
+}
