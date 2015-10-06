@@ -32,6 +32,26 @@
 	}
 }
 
+@mixin listFixed(
+		$_listClass 	: box,
+		$_boxNumberLine : 4,
+		$_boxWrap 		: $container,
+		$_boxWidth 		: 300px,
+		$_boxMargin 	: $colMargin
+	) {
+
+	.list-#{$_listClass} > * {
+		margin-bottom: $_boxMargin;
+		margin-left: perc( $_boxMargin, $_boxWrap );
+		width: perc( $_boxWidth, $_boxWrap );
+
+		&:nth-child(#{$_boxNumberLine}n+1) {
+			clear: both;
+			margin-left: 0;
+		}
+	}
+}
+
 .list {
 	@extend %clearFix;
 
