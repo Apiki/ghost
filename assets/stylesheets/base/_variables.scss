@@ -1,43 +1,47 @@
+// Grid
 // ----------------------------------------------------------------------------
-// Variables > Grid
-// ----------------------------------------------------------------------------
-$container 			: 1170px;
-$mobile 			: 480px;
-$tablet 			: 768px;
-$desktop 			: 1024px;
-$content            : 600px;
-$sidebar            : 200px;
-$colWidth 			: 70px;
-$colMargin 			: 30px;
+$desktop			: 1024px;
+$tablet				: 768px;
+$mobile				: 480px;
+$container			: 1170px;
+$content			: false;
+$sidebar			: false;
+$colMargin			: 30px;
+$colWidth			: 70px;
+$padding			: 10px;
+$borderR			: 5px;
 
-// ----------------------------------------------------------------------------
-// Variables > Colors
-// ----------------------------------------------------------------------------
-$colorPrimary		: #ff0033;
-$colorSecondary		: #13131E;
-$colorTertiary		: false;
-$colorTitle 		: #2b2b2b;
-$colorText 			: #797979;
-$colorDetail		: #eee;
-$colorAlert			: #ff9d27;
-$colorError			: #ff5656;
-$colorSuccess		: #48ab54;
-$colorDisabled		: false;
 
+// Colors
 // ----------------------------------------------------------------------------
-// Variables > Fonts
+$colorPrimary 		: #000;
+$colorSecondary		: #000;
+$colorTertiary		: #000;
+$colorText			: #000;
+$colorTitle			: #000;
+$colorLink			: #000;
+$colorSucess		: #000;
+$colorAlert			: #000;
+$colorError			: #000;
+$colorDetail		: #000;
+$colorDisabled		: #000;
+
+
+// Font Family
 // ----------------------------------------------------------------------------
-$fontPrimary		: arial, sans-serif;
-$fontPrimaryBold	: false;
+$fontPrimary		: false;
+$fontPrimaryBold 	: false;
 $fontSecondary		: false;
 $fontSecondaryBold	: false;
-$fontIcon 			: "icomoon";
+$fontTertiary		: false;
+$fontTertiaryBold	: false;
+$fontIcon			: false;
 
+
+// Font Size
 // ----------------------------------------------------------------------------
-// Variables > Font Size
-// ----------------------------------------------------------------------------
-$fontSizeDefault 	: 16px;
-$fontSizeSmall 	    : 12px;
-$fontSizeMedium 	: 14px;
-$fontSizeLarge 	    : 18px;
-$fontSizeXLarge	    : 24px;
+$fontSizeDefault	: 16px;
+$fontSizeSmall		: 12px;
+$fontSizeMedium		: 14px;
+$fontSizeLarge		: 18px;
+$fontSizeXLarge		: 20px;
