@@ -23,6 +23,10 @@ html {
 	line-height: 1;
 }
 
+body {
+	color: $colorText;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -49,6 +53,21 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 a img {
 	border: none;
+}
+
+a {
+	color: $colorLink;
+	text-decoration: none;
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+em,
+i {
+	font-style: italic;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {

@@ -1,0 +1,15 @@
+table {
+
+	tr {
+		border-bottom: 1px solid $colorDetail;
+	}
+
+	td,
+	th {
+		padding: 10px;
+	}
+
+	th {
+		font-weight: bold;
+	}
+}

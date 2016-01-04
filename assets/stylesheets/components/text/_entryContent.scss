@@ -1,0 +1,26 @@
+.entry-content {
+	font-size: em($fontSizeDefault);
+
+	p,
+	table,
+	ul,
+	ol,
+	blockquote {
+		margin-bottom: 30px;
+	}
+
+	p,
+	ul,
+	ol {
+		line-height: 1.8;
+	}
+
+	code {
+		background: #eee;
+		padding: 2px 5px;
+	}
+
+	img {
+		@extend %img;
+	}
+}

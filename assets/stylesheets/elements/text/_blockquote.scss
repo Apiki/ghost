@@ -1,13 +1,16 @@
 blockquote {
-	border-left: 5px solid lighten( $colorDetail, 3% );
-	clear: both;
-	color: $colorText;
-	font-style: italic;
-	line-height: 1.4;
-	margin-left: 30px;
-	padding: 10px 0 10px 30px;
+	border-left: 3px solid $colorDetail;
+	padding-left: 20px;
 
-	p:last-child {
-		margin: 0;
+	cite {
+		font-size: em($fontSizeSmall);
+
+		&:before {
+			background: $colorDetail;
+			content: "";
+			display: block;
+			height: 1px;
+			width: 5%;
+		}
 	}
 }

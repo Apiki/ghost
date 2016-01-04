@@ -1,0 +1,14 @@
+.alignleft {
+	float: left;
+	margin: 5px $colMargin $colMargin 0;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 $colMargin $colMargin;
+}
+
+.aligncenter {
+	clear: both;
+	margin: 5px auto $colMargin;
+}

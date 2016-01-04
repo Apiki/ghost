@@ -1,101 +1,19 @@
-// Base
-// ----------------------------------------------------------------------------
+@import "base/variables";
+@import "base/fonts";
+@import "base/reset";
+@import "base/functions";
+@import "base/helpers";
+@import "base/mixins";
 
 
+@import "components/text/entryContent";
+@import "components/text/wpCaption";
 
 
+@import "elements/img/wpImage";
 
-
-
-
-
-
-
-
-
-
-
-
-
-// // BASE
-// // Configurações basicas do projeto
-// // ----------------------------------------------------------------------------
-// @import "base/variables";
-// @import "base/functions";
-// @import "base/mixins";
-// @import "base/reset";
-// @import "base/fonts";
-// @import "base/helpers";
-//
-//
-// // ELEMENTS
-// // Classes individuais e elementos pequenos e reutilizáveis
-// // ----------------------------------------------------------------------------
-// // -- Images
-// @import "elements/images/icons";
-//
-// // -- Buttons
-// @import "elements/buttons/btn";
-// @import "elements/buttons/btnGroup";
-// @import "elements/buttons/btnSecondary";
-// @import "elements/buttons/btnShare";
-// @import "elements/buttons/btnHamburger";
-//
-// // -- Forms
-// @import "elements/forms/input";
-// @import "elements/forms/label";
-// @import "elements/forms/select";
-// @import "elements/forms/submit";
-// @import "elements/forms/textarea";
-//
-// // -- Text
-// @import "elements/text/blockquote";
-// @import "elements/text/loading";
-// @import "elements/text/messages";
-// @import "elements/text/tooltip";
-// @import "elements/text/code";
-//
-//
-// // COMPONENTS
-// // Criar um elemento 'pai' para modificar os elements
-// // ----------------------------------------------------------------------------
-// // -- Js
-// @import "components/js/slider";
-// @import "components/js/chosen";
-// @import "components/js/icheck";
-// @import "components/js/lightbox";
-//
-// // -- Navigation
-// @import "components/navigation/breadcrumb";
-// @import "components/navigation/navigation";
-// @import "components/navigation/pagination";
-//
-// // -- Text
-// @import "components/text/theContent";
-// @import "components/text/newsItem";
-// @import "components/text/comments";
-//
-// // -- Widgets
-// @import "components/widgets/widgets";
-// @import "components/widgets/tags";
-// @import "components/widgets/calendar";
-//
-//
-// // TEMPLATES
-// // Estruturas maiores do projeto, que podem modificar element e components
-// // ----------------------------------------------------------------------------
-// @import "templates/list";
-//
-//
-// // LAYOUTS
-// // Sistemas de grids e alinhamentos de templates
-// // ----------------------------------------------------------------------------
-// @import "layouts/grid";
-// @import "layouts/container";
-//
-//
-// // PAGES
-// // Estiliza páginas individualmente
-// // ----------------------------------------------------------------------------
-// // @import "pages/home";
-// // @import "pages/contact";
+@import "elements/text/table";
+@import "elements/text/unordered";
+@import "elements/text/ordered";
+@import "elements/text/blockquote";
+@import "elements/text/heading";
