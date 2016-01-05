@@ -1,0 +1,7 @@
+textarea {
+	@extend %styleForm;
+	display: block;
+	height: 100px;
+	overflow: hidden;
+	resize: none;
+}

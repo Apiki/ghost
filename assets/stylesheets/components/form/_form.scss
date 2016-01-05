@@ -1,0 +1,15 @@
+form > ul,
+.entry-content form > ul {
+	line-height: 1;
+	list-style: none;
+	margin-bottom: 0;
+
+	> li {
+		display: block;
+		margin-top: 20px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

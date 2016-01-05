@@ -1,0 +1,23 @@
+%styleForm {
+	border: 1px solid $colorDetail;
+	color: $colorText;
+	font-family: $fontPrimary;
+	padding: $formInputPadding;
+	width: 100%;
+
+	@if $formInputRadius != false {
+		border-radius: $formInputRadius;
+	}
+}
+
+%clearStyleForm {
+	height: auto;
+	margin: 0;
+	padding: initial;
+	width: auto;
+}
+
+input {
+	@extend %styleForm;
+	height: $formInputHeight;
+}

@@ -5,7 +5,8 @@
 	table,
 	ul,
 	ol,
-	blockquote {
+	blockquote,
+	form {
 		margin-bottom: 30px;
 	}
 
@@ -22,5 +23,13 @@
 
 	img {
 		@extend %img;
+	}
+
+	.gallery {
+		margin-bottom: 30px !important;
+
+		img {
+			margin: 0 auto;
+		}
 	}
 }
