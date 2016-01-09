@@ -29,7 +29,7 @@
 
 // -- icon
 %icon {
-	font-family: $fontIcon;
+	font-family: $font-icon;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -37,33 +37,33 @@
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;	
+	-moz-osx-font-smoothing: grayscale;
 }
 
 // -- align center
 %alignCenterV {
 	top: 50%;
 	-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);	
+			transform: translateY(-50%);
 }
 
 %alignCenterH {
 	left: 50%;
 	-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);	
+			transform: translateX(-50%);
 }
 
 %alignCenter {
 	left: 50%;
 	top: 50%;
 	-webkit-transform: translate3d(-50%, -50%, 0);
-			transform: translate3d(-50%, -50%, 0);	
+			transform: translate3d(-50%, -50%, 0);
 }
 
 // -- columns
 %column {
 	float: left;
-	margin-left: perc($colMargin, $container);
+	margin-left: perc($col-margin, $container);
 
 	&:first-child {
 		margin-left: 0;

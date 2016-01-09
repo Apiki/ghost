@@ -4,3 +4,22 @@
 	::-moz-placeholder 			{ @content; }
 	:-ms-input-placeholder 		{ @content; }
 }
+
+/*
+	** Hsl Bg Hover
+	Ultilizado para escurecer ou clarear o background do elemento na
+	ação hover
+
+	---------------------------------------------------------------------------
+	** Parametros
+	- $color	= cor de sua preferência
+	- $hsl		= opção escura (darken) ou a clara (lighten)
+	- $perc		= porcentagem da variação da cor.
+ */
+@mixin hsl-bg-hover($color, $hsl:darken, $perc:$color-hsl-perc) {
+	@if $color-hsl == $hsl {
+		background: darken($color, $perc);
+	} @else {
+		background: lighten($color, $perc);
+	}
+}

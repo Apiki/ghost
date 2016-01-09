@@ -6,49 +6,51 @@ $mobile				: 480px;
 $container			: 1170px;
 $content			: false;
 $sidebar			: false;
-$colMargin			: 30px;
-$colWidth			: 70px;
+$col-margin			: 30px;
+$col-width			: 70px;
 $padding			: 10px;
-$borderR			: 5px;
+$border-r			: 5px;
 
 
 // Colors
 // ----------------------------------------------------------------------------
-$colorPrimary 		: #000;
-$colorSecondary		: #000;
-$colorTertiary		: #000;
-$colorText			: #555;
-$colorTitle			: #000;
-$colorLink			: #000;
-$colorSucess		: #000;
-$colorAlert			: #000;
-$colorError			: #000;
-$colorDetail		: #d1d1d1;
-$colorDisabled		: #000;
+$color-primary 		: #556270;
+$color-secondary	: #C7F464;
+$color-tertiary		: #dce9be;
+$color-text			: #555;
+$color-title		: #000;
+$color-link			: #000;
+$color-sucess		: #000;
+$color-alert		: #000;
+$color-error		: #000;
+$color-detail		: #efffcd;
+$color-disabled		: #f1f1f1;
+$color-hsl			: darken;	// darken, lighten
+$color-hsl-perc 	: 10%;		// percentage
 
 
 // Font Family
 // ----------------------------------------------------------------------------
-$fontPrimary		: false;
-$fontPrimaryBold 	: false;
-$fontSecondary		: false;
-$fontSecondaryBold	: false;
-$fontTertiary		: false;
-$fontTertiaryBold	: false;
-$fontIcon			: false;
+$font-primary		: false;
+$font-primary-bold 	: false;
+$font-secondary		: false;
+$font-secondary-bold: false;
+$font-tertiary		: false;
+$font-tertiary-bold	: false;
+$font-icon			: false;
 
 
 // Font Size
 // ----------------------------------------------------------------------------
-$fontSizeDefault	: 16px;
-$fontSizeSmall		: 12px;
-$fontSizeMedium		: 14px;
-$fontSizeLarge		: 18px;
-$fontSizeXLarge		: 30px;
+$font-size-default	: 16px;
+$font-size-small	: 12px;
+$font-size-medium	: 14px;
+$font-size-large	: 18px;
+$font-size-x-large	: 30px;
 
 
 // Form
 // ----------------------------------------------------------------------------
-$formInputHeight	: 35px;
-$formInputRadius	: false;
-$formInputPadding	: 5px;
+$form-input-height	: 35px;
+$form-input-radius	: false;
+$form-input-padding	: 5px;

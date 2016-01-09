@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Html - WP Ghost</title>
-    <link rel="stylesheet" href="../ghost.css">
-    <link rel="apple-touch-icon-precomposed" href="favicon-apple.png">
-    <link rel="shortcut icon" href="../assets/images/favicon.ico?v=2" type="image/x-icon" />
+	<meta charset="UTF-8">
+	<title>HTML Ghost</title>
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../ghost.css">
 </head>
 <body>
 
-    <div id="g-wrapper" data-component="wrapper">
-        <div id="g-sidebar">
-            <div class="g-icons">
-                <span class="btn-menu" data-action="open-menu">
-                    <button class="btn-hamburger">
-                        <span class="line"></span>
-                    </button>
-                </span>
-                <a href="https://github.com/Apiki/wp-ghost" target="_blank" class="icon-github"></a>
-            </div>
+	<div id="g-wrapper">
+		<div id="g-content">
 
-            <nav class="g-navigation" data-component="menu"></nav>
-        </div>
+			<div class="g-box">
+				<h2 class="g-box-title"><span>Buttons</span></h2>
+				<div class="g-box-info">
+					Variações de estilo de botões padrão do site
+				</div>
+				<div class="g-box-example many">
+					<a href="" class="btn">Btn</a>
+					<a href="" class="btn btn-primary">Primary</a>
+					<a href="" class="btn btn-secondary">Secondary</a>
+					<a href="" class="btn btn-disabled">Disabled</a>
+					<a href="" class="btn btn-ghost">Ghost</a>
+					<a href="" class="btn btn-ghost-primary">Ghost Primary</a>
+					<a href="" class="btn btn-ghost-secondary">Ghost Secondary</a>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;a href="" class="btn">Btn&lt;/a>
+							&lt;a href="" class="btn btn-primary">Primary&lt;/a>
+							&lt;a href="" class="btn btn-secondary">Secondary&lt;/a>
+							&lt;a href="" class="btn btn-disabled">Disabled&lt;/a>
+							&lt;a href="" class="btn btn-ghost">Ghost&lt;/a>
+							&lt;a href="" class="btn btn-ghost-primary">Ghost Primary&lt;/a>
+							&lt;a href="" class="btn btn-ghost-secondary">Ghost Secondary&lt;/a>
+						</code>
+					</pre>
+				</div>
+				<h3 class="g-box-subtitle">Tamanhos</h3>
+				<div class="g-box-info">
+					Diversos tamanhos que podem ser aplicados aos botões, válido também para todos os estilos acima.
+				</div>
+				<div class="g-box-example line">
+					<a href="" class="btn btn-primary small">Small</a>
+					<br>
+					<a href="" class="btn btn-primary large">Large</a>
+					<br>
+					<a href="" class="btn btn-primary xlarge">Xlarge</a>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;a href="" class="btn btn-primary small">Small&lt;/a>
+							&lt;a href="" class="btn btn-primary large">Large&lt;/a>
+							&lt;a href="" class="btn btn-primary xlarge">Xlarge&lt;/a>
+						</code>
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <div id="g-content" data-component="components"></div>
-    </div>
-
-    <!-- js -->
-    <script src="assets/javascripts/built.js"></script>
-</body>
+	<script src="prism.js"></script>
 </html>

@@ -1,12 +1,12 @@
 blockquote {
-	border-left: 3px solid $colorDetail;
+	border-left: 3px solid $color-detail;
 	padding-left: 20px;
 
 	cite {
-		font-size: em($fontSizeSmall);
+		font-size: em($font-size-small);
 
 		&:before {
-			background: $colorDetail;
+			background: $color-detail;
 			content: "";
 			display: block;
 			height: 1px;

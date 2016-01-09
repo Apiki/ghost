@@ -1,0 +1,516 @@
+// @import "../assets/stylesheets/style.scss";
+//
+//
+// // ****************************************************************************
+// // STYLE GHOST
+// // ****************************************************************************
+//
+// // -- font
+// @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+//
+//
+// // -- variables
+// $gColorPrimary		: #007674;
+// $gColorText			: #535353;
+// $gColorSecondary	: #eee;
+//
+// $gFontPrimary 		: 'Roboto Condensed', sans-serif;
+//
+// // -- wrapper
+// #g-wrapper {
+// 	font-family: $gFontPrimary;
+// }
+//
+//
+// // -- navigation
+// .g-navigation {
+// 	background: #555;
+// 	bottom: 0;
+// 	left: 0;
+// 	overflow: hidden;
+// 	overflow-y: auto;
+// 	position: absolute;
+// 	right: 100px;
+// 	top: 0;
+//
+// 	a {
+// 		border-top: 1px solid lighten( #555, 10% );
+// 		color: #fff;
+// 		display: block;
+// 		padding: 20px 20px;
+// 		text-decoration: none;
+// 	}
+//
+// 	ul ul {
+// 		border-top: 1px solid lighten( #555, 10% );
+// 	}
+//
+// 	ul ul a {
+// 		border: none;
+// 		color: rgba( #fff, .6 );
+// 		font-size: 14px;
+// 		padding: 10px 20px;
+// 	}
+//
+// 	&:before {
+// 		box-shadow: 0 0 10px 0 #000;
+// 		bottom: 0;
+// 		content: "";
+// 		position: absolute;
+// 		right: 0;
+// 		top: 0;
+// 		width: 1px;
+// 	}
+// }
+//
+//
+// #g-sidebar .btn-menu .btn-hamburger {
+// 	background: none;
+// 	left: 50%;
+// 	position: absolute;
+// 	top: 50%;
+// 	-webkit-transition: background .2s;
+// 			transition: background .2s;
+// 	-webkit-transform: translate3d(-50%, -50%, 0);
+// 			transform: translate3d(-50%, -50%, 0);
+//
+// 	.line,
+// 	&:before,
+// 	&:after {
+// 		background: #555;
+// 		-webkit-transition: background .2s;
+// 				transition: background .2s;
+// 	}
+// }
+//
+//
+// // -- navigation icon
+// .g-icons {
+// 	float: right;
+// 	width: 100px;
+// }
+//
+//
+// .g-icons .btn-menu,
+// .g-icons a {
+// 	border-bottom: 1px solid #e5e5e5;
+// 	color: #555;
+// 	cursor: pointer;
+// 	display: block;
+// 	font-size: 36px;
+// 	height: 100px;
+// 	line-height: 100px;
+// 	position: relative;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	-webkit-transition: color .2s;
+// 			transition: color .2s;
+//
+// 	&:hover {
+// 		color: #ff2841;
+// 	}
+// }
+//
+// .active .g-icons span {
+// 	background: #555;
+// 	color: #fff;
+// }
+//
+//
+// // -- sidebar
+// #g-sidebar {
+// 	background: #fff;
+// 	bottom: 0;
+// 	border-right: 1px solid #e5e5e5;
+// 	left: 0;
+// 	position: fixed;
+// 	top: 0;
+// 	width: 300px;
+// 	z-index: 10;
+// 	-webkit-transition: transform .5s;
+// 			transition: transform .5s;
+// 	-webkit-transform: translateX( -200px );
+// 			transform: translateX( -200px );
+//
+// 	.active-menu & {
+// 		-webkit-transform: translateX( 0 );
+// 				transform: translateX( 0 );
+// 	}
+// }
+//
+//
+// // -- content
+// #g-content {
+// 	margin: 100px 0 100px 100px;
+// }
+//
+//
+// // -- container
+// .g-container,
+// .g-title-section {
+// 	margin: 0 auto;
+// 	padding: 0 20px;
+// 	max-width: 800px;
+//
+// 	> p {
+// 		color: $gColorText;
+// 		font-size: 16px;
+// 		line-height: 1.2;
+// 	}
+//
+// 	> hr {
+// 		background: #e5e5e5;
+// 		border: none;
+// 		height: 1px;
+// 	}
+// }
+//
+//
+// // -- box
+// .g-box {
+// 	color: $gColorText;
+// 	margin-top: 50px;
+//
+// 	&:first-child {
+// 		margin-top: 0;
+// 	}
+// }
+//
+//
+// // -- example
+// .g-example {
+// 	margin: 30px 0;
+// }
+//
+// .g-example > table {
+// 	width: 100%;
+//
+// 	tr {
+// 		border-top: 1px solid $gColorSecondary;
+// 	}
+//
+// 	td {
+// 		padding: 15px 0;
+// 	}
+// }
+//
+// .g-header-font code {
+// 	padding: 1px 10px;
+// }
+//
+//
+// // -- title
+// .g-title {
+// 	color: $gColorText;
+// 	font-size: 30px;
+// 	margin-bottom: 10px;
+// 	text-transform: uppercase;
+// }
+//
+// // -- title section
+// .g-title-section {
+// 	border-bottom: 2px solid #e5e5e5;
+// 	border-top: 2px solid #e5e5e5;
+// 	color: #555;
+// 	font-size: 40px;
+// 	margin: 120px auto 20px;
+// 	padding: 20px;
+// 	text-transform: uppercase;
+// }
+//
+//
+// // -- tooltip
+// %tooltip {
+// 	cursor: default;
+// 	position: relative;
+//
+// 	&:after {
+// 		background: #797979;
+// 		border-radius: 5px;
+// 		color: #fff;
+// 		content: attr(data-tooltip);
+// 		display: block;
+// 		font-size: 12px;
+// 		left: -999em;
+// 		opacity: 0;
+// 		padding: 5px;
+// 		position: absolute;
+// 		top: 110%;
+// 		white-space: nowrap;
+//
+// 		-webkit-transform: translateX( -50% );
+// 				transform: translateX( -50% );
+// 		-webkit-transition: opacity .2s;
+// 				transition: opacity .2s;
+// 	}
+//
+// 	&:hover:after {
+// 		left: 50%;
+// 		opacity: 1;
+// 		z-index: 3;
+// 	}
+// }
+//
+//
+// // COLOR LIST
+// // ----------------------------------------------------------------------------
+// @mixin color( $class, $color ) {
+// 	&.#{$class}:before {
+// 		background: $color;
+// 		content: "#{$color}";
+// 	}
+//
+// 	@if( $color == false ) {
+// 		&.#{$class} {
+// 			display: none;
+// 		}
+// 	}
+// }
+//
+// .g-color-listing li {
+// 	@extend %tooltip;
+// 	$sizeColor: 55px;
+//
+// 	color: #fff;
+// 	display: inline-block;
+// 	font-size: 11px;
+// 	margin-left: 5px;
+// 	text-shadow: 0 0 10px #000;
+//
+// 	&:first-child {
+// 		margin-left: 0;
+// 	}
+//
+// 	&:before {
+// 		border-radius: 100%;
+// 		display: block;
+// 		height: $sizeColor;
+// 		line-height: $sizeColor;
+// 		text-align: center;
+// 		width: $sizeColor;
+// 	}
+//
+// 	@include color( color-primary, $colorPrimary );
+// 	@include color( color-secondary, $colorSecondary );
+// 	@include color( color-tertiary, $colorTertiary );
+// 	@include color( color-title, $colorTitle );
+// 	@include color( color-text, $colorText );
+// 	@include color( color-detail, $colorDetail );
+// 	@include color( color-alert, $colorAlert );
+// 	@include color( color-error, $colorError );
+// 	@include color( color-success, $colorSuccess );
+// 	@include color( color-disabled, $colorDisabled );
+// }
+//
+//
+// // ICON LIST
+// // ----------------------------------------------------------------------------
+// $gSizeIcon: 72px;
+//
+// .g-icon-listing {
+// 	@extend %clearFix;
+// 	position: relative;
+// 	right: 2px;
+// }
+//
+// .g-icon-listing li {
+// 	@extend %tooltip;
+// 	background: $gColorSecondary;
+// 	border-radius: 5px;
+// 	display: inline-block;
+// 	float: left;
+// 	height: $gSizeIcon;
+// 	margin: 2px;
+// 	text-align: center;
+// 	width: $gSizeIcon;
+// }
+//
+// .g-icon-listing i {
+// 	display: inline-block;
+// 	color: $gColorText;
+// 	line-height: $gSizeIcon;
+// 	font-size: 30px;
+// }
+//
+//
+// // GRID
+// // ----------------------------------------------------------------------------
+// .g-grid .row {
+// 	margin-top: 10px;
+//
+// 	&:first-child {
+// 		margin-top: 0;
+// 	}
+// }
+//
+// .g-grid .row div {
+// 	background: $gColorSecondary;
+// 	border-radius: 5px;
+// 	color: $gColorText;
+// 	padding: 10px;
+// 	text-align: center;
+// }
+//
+//
+// // FONT FAMILY
+// // ----------------------------------------------------------------------------
+// @mixin font( $class, $variable ) {
+//
+// 	.#{$class} {
+// 		font-family: $variable;
+//
+// 		.g-font:before {
+// 			content: "#{$variable}";
+// 		}
+// 	}
+//
+// 	@if( $variable == false ) {
+// 		.#{$class} {
+// 			display: none;
+// 		}
+// 	}
+// }
+//
+// @include font( font-primary, $fontPrimary );
+// @include font( font-primary-bold, $fontPrimaryBold );
+// @include font( font-secondary, $fontSecondary );
+// @include font( font-secondary-bold, $fontSecondaryBold );
+//
+// // Essential Box
+// // ----------------------------------------------------------------------------
+// .essetial-box {
+// 	@extend %clearFix;
+//
+// 	img {
+// 		@extend %img;
+// 	}
+//
+// 	> * {
+// 		float: left;
+// 		margin-right: 20px;
+// 		margin-bottom: 20px;
+// 	}
+//
+// 	strong {
+// 		background: #eee;
+// 		border-radius: 5px;
+// 		display: inline-block;
+// 		font-size: 13px;
+// 		margin-bottom: 10px;
+// 		padding: 5px;
+// 	}
+//
+// 	.screenshot {
+// 		max-width: 400px;
+// 	}
+// }
+//
+// .g-font-listing strong {
+// 	display: inline-block;
+// 	width: 30%;
+// }
+//
+// .g-box-font {
+// 	margin-top: 50px;
+//
+// 	&:first-child {
+// 		margin-top: 0;
+// 	}
+// }
+//
+// .g-header-font {
+// 	border-bottom: 1px solid $gColorSecondary;
+// 	border-top: 3px solid $gColorSecondary;
+// 	font-family: $gFontPrimary;
+// 	margin-bottom: 10px;
+// 	padding: 20px 0;
+//
+// 	div {
+// 		display: inline-block;
+// 		margin-right: 20px;
+// 	}
+//
+// 	div:first-child {
+// 		font-weight: bold;
+// 	}
+// }
+//
+// .g-list-letters {
+// 	color: $gColorText;
+// 	margin-top: 10px;
+// 	overflow: hidden;
+// 	position: relative;
+// 	right: 2px;
+//
+// 	span {
+// 		background: $gColorSecondary;
+// 		border-radius: 5px;
+// 		display: inline-block;
+// 		float: left;
+// 		margin: 2px;
+// 		line-height: 30px;
+// 		height: 30px;
+// 		text-align: center;
+// 		width: 30px;
+// 	}
+// }
+//
+// .g-example-text {
+// 	line-height: 1.2;
+// }
+//
+//
+// // BUTTONS
+// // ----------------------------------------------------------------------------
+// .g-example > [class^="btn"] {
+// 	margin: 5px 10px 5px 0;
+// }
+//
+//
+// // FORM
+// // ----------------------------------------------------------------------------
+// .g-form > li {
+// 	margin-top: 15px;
+//
+// 	&:first-child {
+// 		margin-top: 0;
+// 	}
+// }
+//
+// .g-form .g-group-icheck label {
+// 	margin-right: 40px;
+// }
+//
+//
+// // Tooltip
+// // ----------------------------------------------------------------------------
+// .g-example .tooltip:before,
+// .g-example .tooltip:after {
+// 	opacity: 1;
+// 	left: 50%;
+// }
+//
+//
+// // Thumbnail
+// // ----------------------------------------------------------------------------
+// .g-example .thumbnail {
+// 	display: block;
+// }
+//
+// // Widgets
+// // ----------------------------------------------------------------------------
+// .g-widgets {
+// 	@extend %clearFix;
+//
+// 	> * {
+// 		float: left;
+// 		margin-left: 10%;
+// 		margin-bottom: 30px;
+// 		width: 45%;
+//
+// 		&:nth-child(odd) {
+// 			clear: both;
+// 			margin-left: 0;
+// 		}
+// 	}
+// }

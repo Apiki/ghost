@@ -1,0 +1,51 @@
+// Placehold
+// ----------------------------------------------------------------------------
+%btnGhost {
+	background: none;
+	border-style: solid;
+	border-width: 1px;
+
+	&:hover {
+		background: none;
+	}
+}
+
+// Mixins
+// ----------------------------------------------------------------------------
+@mixin btn-ghost($class, $color, $hsl:$color-hsl, $perc:$color-hsl-perc ) {
+	.btn-ghost-#{$class} {
+		@extend %btnGhost;
+		border-color: $color;
+		color: $color;
+
+		&:hover {
+			@if $hsl == darken {
+				border-color: darken($color, $perc);
+				color: darken($color, $perc);
+			} @else {
+				border-color: lighten($color, $perc);
+				color: lighten($color, $perc);
+			}
+		}
+	}
+}
+
+
+.btn-ghost {
+	@extend %btnGhost;
+	border-color :$color-text;
+	color: $color-text;
+
+	&:hover {
+		@if $color-hsl == darken {
+			border-color: darken($color-text, $color-hsl-perc);
+			color: darken($color-text, $color-hsl-perc);
+		} @else {
+			border-color: lighten($color-text, $color-hsl-perc);
+			color: lighten($color-text, $color-hsl-perc);
+		}
+	}
+}
+
+@include btn-ghost(primary, $color-primary);
+@include btn-ghost(secondary, $color-secondary);

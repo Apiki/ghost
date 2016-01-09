@@ -1,0 +1,63 @@
+// Variables
+// ----------------------------------------------------------------------------
+$btn-bg-default	: #f5f5f5;
+$btn-padding 	: 5px;
+$btn-radius		: 3px;		// number(px), false
+
+
+// Mixins
+// ----------------------------------------------------------------------------
+@mixin btn-size($class, $size, $padding) {
+	&.#{$class} {
+		font-size: em($size, $font-size-default);
+		padding: $padding;
+	}
+}
+
+
+// Btn
+// ----------------------------------------------------------------------------
+.btn {
+	background: $btn-bg-default;
+	color: $color-text;
+	display: inline-block;
+	padding: $btn-padding + 3;
+	-webkit-transition: .2s background;
+		-ms-transition: .2s background;
+			transition: .2s background;
+
+	@if $btn-radius != false {
+		border-radius: $btn-radius;
+	}
+
+	@include btn-size(small, $font-size-small, $btn-padding);
+	@include btn-size(large, $font-size-large, $btn-padding * 2);
+	@include btn-size(xlarge, $font-size-x-large, $btn-padding * 3);
+
+	&:hover {
+		@include hsl-bg-hover($btn-bg-default);
+	}
+}
+
+.btn-primary,
+.btn-secondary {
+	color: #fff;
+}
+
+// -- Btn Primary
+.btn-primary {
+	background: $color-primary;
+
+	&:hover {
+		@include hsl-bg-hover($color-primary);
+	}
+}
+
+// -- Btn Secondary
+.btn-secondary {
+	background: $color-secondary;
+
+	&:hover {
+		@include hsl-bg-hover($color-secondary);
+	}
+}

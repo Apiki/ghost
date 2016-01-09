@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: false;
   src: url("assets/fonts/icomoon.eot");
@@ -103,6 +104,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+	** Hsl Bg Hover
+	Ultilizado para escurecer ou clarear o background do elemento na
+	ação hover
+
+	---------------------------------------------------------------------------
+	** Parametros
+	- $color	= cor de sua preferência
+	- $hsl		= opção escura (darken) ou a clara (lighten)
+	- $perc		= porcentagem da variação da cor.
+ */
 .alignleft {
   float: left;
   margin: 5px 30px 30px 0;
@@ -120,7 +132,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 table tr {
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid #efffcd;
 }
 table td,
 table th {
@@ -139,14 +151,14 @@ ol {
 }
 
 blockquote {
-  border-left: 3px solid #d1d1d1;
+  border-left: 3px solid #efffcd;
   padding-left: 20px;
 }
 blockquote cite {
   font-size: 0.75em;
 }
 blockquote cite:before {
-  background: #d1d1d1;
+  background: #efffcd;
   content: "";
   display: block;
   height: 1px;
@@ -189,7 +201,7 @@ h6 {
 }
 
 input, textarea, select {
-  border: 1px solid #d1d1d1;
+  border: 1px solid #efffcd;
   color: #555;
   font-family: false;
   padding: 5px;
@@ -217,6 +229,94 @@ textarea {
 select {
   background: #fff;
   height: 35px;
+}
+
+.btn {
+  background: #f5f5f5;
+  color: #555;
+  display: inline-block;
+  padding: 8px;
+  -webkit-transition: .2s background;
+  -ms-transition: .2s background;
+  transition: .2s background;
+  border-radius: 3px;
+}
+.btn.small {
+  font-size: 0.75em;
+  padding: 5px;
+}
+.btn.large {
+  font-size: 1.125em;
+  padding: 10px;
+}
+.btn.xlarge {
+  font-size: 1.875em;
+  padding: 15px;
+}
+.btn:hover {
+  background: gainsboro;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #fff;
+}
+
+.btn-primary {
+  background: #556270;
+}
+.btn-primary:hover {
+  background: #3f4953;
+}
+
+.btn-secondary {
+  background: #C7F464;
+}
+.btn-secondary:hover {
+  background: #b6f134;
+}
+
+.btn-ghost, .btn-ghost-primary, .btn-ghost-secondary {
+  background: none;
+  border-style: solid;
+  border-width: 1px;
+}
+.btn-ghost:hover, .btn-ghost-primary:hover, .btn-ghost-secondary:hover {
+  background: none;
+}
+
+.btn-ghost {
+  border-color: #555;
+  color: #555;
+}
+.btn-ghost:hover {
+  border-color: #3c3c3c;
+  color: #3c3c3c;
+}
+
+.btn-ghost-primary {
+  border-color: #556270;
+  color: #556270;
+}
+.btn-ghost-primary:hover {
+  border-color: #3f4953;
+  color: #3f4953;
+}
+
+.btn-ghost-secondary {
+  border-color: #C7F464;
+  color: #C7F464;
+}
+.btn-ghost-secondary:hover {
+  border-color: #b6f134;
+  color: #b6f134;
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+  background: #f1f1f1;
+  color: #a2a2a2;
+  cursor: default;
 }
 
 .entry-content {
@@ -261,6 +361,114 @@ select {
   right: 10px;
 }
 
+.tabs ul {
+  background: #fff;
+  list-style: none;
+}
+
+.tabs-list,
+.tabs-title,
+.tabs-menu-item {
+  padding: 10px;
+}
+
+.tabs-list,
+.tabs-title,
+.tabs-menu {
+  border: 1px solid #efffcd;
+}
+
+.tabs-menu {
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.1);
+  border-top: none;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 100%;
+}
+
+.tabs-title {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tabs-menu-item {
+  width: 200px;
+}
+
+.tabs-content {
+  line-height: 1.4;
+}
+
+.tabs-header {
+  position: relative;
+  top: 1px;
+}
+
+.tabs-active {
+  background: rgba(239, 255, 205, 0.3);
+}
+
+.tabs-menu-active .tabs-title {
+  border-bottom-color: #fff;
+}
+.tabs-menu-active .tabs-menu {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .tabs-header {
+    overflow: hidden;
+  }
+
+  .tabs-title {
+    display: none;
+  }
+
+  .tabs-menu,
+  .tabs-menu-item {
+    float: left;
+  }
+
+  .tabs-menu {
+    border: none;
+    box-shadow: initial;
+    display: inline-block;
+    position: static;
+  }
+
+  .tabs-menu-item {
+    border: 1px solid #efffcd;
+    margin-left: -1px;
+    width: auto;
+  }
+  .tabs-menu-item:first-child {
+    position: relative;
+    margin-left: 0;
+  }
+  .tabs-menu-item:first-child:before {
+    background: #efffcd;
+    bottom: -1px;
+    content: "";
+    height: 2px;
+    left: -1px;
+    position: absolute;
+    width: 1px;
+  }
+
+  .tabs-active {
+    background: #fff;
+    border-bottom: none;
+  }
+
+  .tabs-list {
+    clear: both;
+  }
+}
 form > ul,
 .entry-content form > ul {
   line-height: 1;
@@ -275,6 +483,33 @@ form > ul > li,
 form > ul > li:first-child,
 .entry-content form > ul > li:first-child {
   margin-top: 0;
+}
+
+.navigation a {
+  display: block;
+}
+.navigation ul {
+  list-style: none;
+}
+.navigation li {
+  display: inline-block;
+  position: relative;
+}
+.navigation li:hover > .sub-menu {
+  display: block;
+}
+.navigation .sub-menu {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 100%;
+}
+.navigation .sub-menu a {
+  width: 150px;
+}
+.navigation .sub-menu .sub-menu {
+  left: 100%;
+  top: 0;
 }
 
 .container {

@@ -1,12 +1,12 @@
 %styleForm {
-	border: 1px solid $colorDetail;
-	color: $colorText;
-	font-family: $fontPrimary;
-	padding: $formInputPadding;
+	border: 1px solid $color-detail;
+	color: $color-text;
+	font-family: $font-primary;
+	padding: $form-input-padding;
 	width: 100%;
 
-	@if $formInputRadius != false {
-		border-radius: $formInputRadius;
+	@if $form-input-radius != false {
+		border-radius: $form-input-radius;
 	}
 }
 
@@ -19,5 +19,5 @@
 
 input {
 	@extend %styleForm;
-	height: $formInputHeight;
+	height: $form-input-height;
 }

@@ -15,7 +15,7 @@ $hx : 0;
 @for $hi from 1 through 6 {
 
 	h#{$hi} {
-		font-size: em($fontSizeXLarge - $hx);
+		font-size: em($font-size-x-large - $hx);
 	}
 
 	$hi: $hi - 1;

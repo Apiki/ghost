@@ -10,14 +10,17 @@
 
 // Elements
 // ----------------------------------------------------------------------------
+// -- img
 @import "elements/img/wpImage";
 
+// -- text
 @import "elements/text/table";
 @import "elements/text/unordered";
 @import "elements/text/ordered";
 @import "elements/text/blockquote";
 @import "elements/text/heading";
 
+// -- form
 @import "elements/form/input";
 @import "elements/form/textarea";
 @import "elements/form/select";
@@ -25,13 +28,24 @@
 @import "elements/form/checkbox";
 @import "elements/form/submit";
 
+// -- buttons
+@import "elements/buttons/btn";
+@import "elements/buttons/btnGhost";
+@import "elements/buttons/btnDisabled";
+
 
 // Components
 // ----------------------------------------------------------------------------
+// text
 @import "components/text/entryContent";
 @import "components/text/wpCaption";
+@import "components/text/tab";
 
+// -- form
 @import "components/form/form";
+
+// -- navigation
+@import "components/navigation/navigation";
 
 
 // Layouts
