@@ -64,7 +64,7 @@ a img {
 }
 
 a {
-  color: #000;
+  color: false;
   text-decoration: none;
 }
 
@@ -114,6 +114,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 	- $color	= cor de sua preferência
 	- $hsl		= opção escura (darken) ou a clara (lighten)
 	- $perc		= porcentagem da variação da cor.
+ */
+/*
+	** Transition
+	Ultilizado para uma transição mais suave
  */
 .alignleft {
   float: left;
@@ -201,11 +205,50 @@ h6 {
 }
 
 input, textarea, select {
-  border: 1px solid #efffcd;
+  -webkit-transition: border-color 0.2s;
+  -ms-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  border: 1px solid #eee;
   color: #555;
   font-family: false;
   padding: 5px;
   width: 100%;
+}
+input:focus, textarea:focus, select:focus, input:hover, textarea:hover, select:hover {
+  border-color: #d5d5d5;
+  outline: none;
+}
+
+.error-info {
+  -webkit-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  background: #ff8877;
+  border-radius: 3px;
+  color: #fff;
+  padding: 8px 5px 5px;
+  position: relative;
+  top: -3px;
+}
+@media (min-width: 768px) {
+  .error-info {
+    font-size: 0.75em;
+    left: 0;
+    margin-top: 10px;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+  }
+  .error-info:before {
+    border-color: transparent transparent #ff8877 transparent;
+    border-style: solid;
+    border-width: 5px;
+    bottom: 100%;
+    content: "";
+    left: 10px;
+    position: inherit;
+  }
 }
 
 input[type="radio"], input[type="checkbox"], input[type="submit"] {
@@ -215,8 +258,24 @@ input[type="radio"], input[type="checkbox"], input[type="submit"] {
   width: auto;
 }
 
+.field {
+  position: relative;
+}
+.field:hover .error-info {
+  opacity: 1;
+  visibility: visible;
+}
+
 input {
   height: 35px;
+  position: relative;
+  z-index: 1;
+}
+.error input {
+  border-color: #ff8877;
+}
+.error input:hover {
+  border-color: #ff5b44;
 }
 
 textarea {
@@ -229,6 +288,13 @@ textarea {
 select {
   background: #fff;
   height: 35px;
+}
+
+label {
+  color: #555;
+  display: inline-block;
+  font-size: 0.875em;
+  margin-bottom: 5px;
 }
 
 .btn {
@@ -270,7 +336,7 @@ select {
 }
 
 .btn-secondary {
-  background: #C7F464;
+  background: #c7f464;
 }
 .btn-secondary:hover {
   background: #b6f134;
@@ -304,8 +370,8 @@ select {
 }
 
 .btn-ghost-secondary {
-  border-color: #C7F464;
-  color: #C7F464;
+  border-color: #c7f464;
+  color: #c7f464;
 }
 .btn-ghost-secondary:hover {
   border-color: #b6f134;

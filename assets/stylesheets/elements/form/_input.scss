@@ -1,12 +1,51 @@
+// Placehold
+// ----------------------------------------------------------------------------
 %styleForm {
-	border: 1px solid $color-detail;
+	@include transition(border-color);
+	border: 1px solid #eee;
 	color: $color-text;
 	font-family: $font-primary;
 	padding: $form-input-padding;
 	width: 100%;
 
+	&:focus,
+	&:hover {
+		border-color: darken(#eee, $color-hsl-perc);
+		outline: none;
+	}
+
 	@if $form-input-radius != false {
 		border-radius: $form-input-radius;
+	}
+}
+
+%error-info {
+	@include transition(opacity);
+	background: $color-error;
+	border-radius: 3px;
+	color: #fff;
+	padding: 8px 5px 5px;
+	position: relative;
+	top: -3px;
+
+	@media (min-width: $tablet) {
+		font-size: em($font-size-small, $font-size-default);
+		left: 0;
+		margin-top: 10px;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		visibility: hidden;
+
+		&:before {
+			border-color: transparent transparent $color-error transparent;
+			border-style: solid;
+			border-width: 5px;
+			bottom: 100%;
+			content: "";
+			left: 10px;
+			position: inherit;
+		}
 	}
 }
 
@@ -17,7 +56,31 @@
 	width: auto;
 }
 
+.field {
+	position: relative;
+
+	&:hover .error-info {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
 input {
 	@extend %styleForm;
 	height: $form-input-height;
+	position: relative;
+	z-index: 1;
+
+	.error & {
+		border-color: $color-error;
+
+		&:hover {
+			border-color: darken($color-error, $color-hsl-perc);
+		}
+	}
+}
+
+.error-info {
+	@extend %error-info;
 }

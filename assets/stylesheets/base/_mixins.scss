@@ -23,3 +23,14 @@
 		background: lighten($color, $perc);
 	}
 }
+
+
+/*
+	** Transition
+	Ultilizado para uma transição mais suave
+ */
+@mixin transition($property:all, $time:.2s){
+	-webkit-transition: $property $time;
+		-ms-transition: $property $time;
+			transition: $property $time;
+}

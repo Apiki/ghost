@@ -15,14 +15,14 @@ $border-r			: 5px;
 // Colors
 // ----------------------------------------------------------------------------
 $color-primary 		: #556270;
-$color-secondary	: #C7F464;
+$color-secondary	: #c7f464;
 $color-tertiary		: #dce9be;
 $color-text			: #555;
-$color-title		: #000;
-$color-link			: #000;
-$color-sucess		: #000;
-$color-alert		: #000;
-$color-error		: #000;
+$color-title		: $color-primary;
+$color-link			: false;
+$color-sucess		: false;
+$color-alert		: false;
+$color-error		: #ff8877;
 $color-detail		: #efffcd;
 $color-disabled		: #f1f1f1;
 $color-hsl			: darken;	// darken, lighten

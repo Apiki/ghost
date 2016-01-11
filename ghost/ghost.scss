@@ -8,6 +8,15 @@ $g-color-primary	: #4ecdc4;
 
 $g-font-primary		: "source_sans_prolight";
 
+
+// Placehold
+// ----------------------------------------------------------------------------
+%before {
+	color: #555;
+	font-size: 14px;
+}
+
+
 // Fonts
 // ----------------------------------------------------------------------------
 @font-face {
@@ -162,6 +171,14 @@ pre[class*="language-"] {
 	margin: 0 auto;
 	max-width: 700px;
 	padding: 0 15px;
+
+	> * {
+		margin-top: 50px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 }
 
 
@@ -227,7 +244,7 @@ pre[class*="language-"] {
 	margin-bottom: 20px;
 }
 
-// -- box example
+// -- Box example
 .g-box-example {
 	padding-bottom: 15px;
 
@@ -240,7 +257,7 @@ pre[class*="language-"] {
 	}
 
 	&.line > * {
-		margin-top: 5px;
+		margin-top: 10px;
 
 		&:first-child {
 			margin-top: 0;
@@ -251,6 +268,16 @@ pre[class*="language-"] {
 		display: block;
 		margin: 2px 0;
 	}
+
+	code {
+		background: #f1f1f1;
+		border: 1px solid darken(#f1f1f1, 10%);
+		border-radius: 3px;
+		color: darken(#f1f1f1, 50%);
+		font-size: 14px;
+		padding: 2px 4px;
+		white-space: nowrap;
+	}
 }
 
 .g-box-example > table {
@@ -259,10 +286,21 @@ pre[class*="language-"] {
 	thead tr {
 		border-bottom-width: 3px;
 		font-family: $g-font-primary;
+
+		&:hover {
+			background: none;
+		}
 	}
 
 	tr {
+		@include transition(background);
 		border-color: $g-color-detail;
+		color: #555;
+		font-size: 14px;
+
+		&:hover {
+			background: rgba($g-color-detail, .4);
+		}
 	}
 
 	td:first-child,
@@ -271,3 +309,73 @@ pre[class*="language-"] {
 		width: 180px;
 	}
 }
+
+
+// Colors
+// ----------------------------------------------------------------------------
+@mixin g-color($class, $color) {
+	@if $color == false {
+		.g-line-color.color-#{$class} {
+			display: none;
+		}
+	} @else {
+		.g-line-color.color-#{$class} {
+			.g-color {
+				background: $color;
+			}
+
+			.g-color-hex:before {
+				content: "#{$color}";
+			}
+		}
+	}
+}
+
+.g-color {
+	border-radius: 3px;
+	box-shadow: 0 2px 0 0 rgba(#000, .2) inset;
+	display: inline-block;
+	height: 20px;
+	width: 40px;
+}
+
+@include g-color(primary, $color-primary);
+@include g-color(secondary, $color-secondary);
+@include g-color(tertiary, $color-tertiary);
+@include g-color(text, $color-text);
+@include g-color(title, $color-title);
+@include g-color(link, $color-link);
+@include g-color(sucess, $color-sucess);
+@include g-color(alert, $color-alert);
+@include g-color(error, $color-error);
+@include g-color(detail, $color-detail);
+@include g-color(detail, $color-detail);
+@include g-color(disabled, $color-disabled);
+
+
+// Grid
+// ----------------------------------------------------------------------------
+@mixin g-grid($class, $variable) {
+	@if $variable == false {
+		.g-line-grid.g-#{$class} {
+			display: none;
+		}
+	} @else {
+		.g-line-grid.g-#{$class} .g-grid-size:before {
+			content: "#{$variable}";
+		}
+	}
+}
+
+@include g-grid(container, $container);
+@include g-grid(desktop, $desktop);
+@include g-grid(tablet, $tablet);
+@include g-grid(mobile, $mobile);
+@include g-grid(content, $content);
+@include g-grid(sidebar, $sidebar);
+@include g-grid(col-margin, $col-margin);
+@include g-grid(col-width, $col-width);
+@include g-grid(padding, $padding);
+@include g-grid(border-r, $border-r);
+
+
