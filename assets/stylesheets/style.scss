@@ -1,9 +1,22 @@
+// SETTINGS
+// Configuração do projeto quando a cores, tipografia e grid
+// ----------------------------------------------------------------------------
+@import "settings/gridSystem";
+@import "settings/typography";
+@import "settings/colors";
+
+// FUNCTIONS
+// Todas as funções globais do Ghost virão aqui.
+// ----------------------------------------------------------------------------
+@import "functions/private";
+
+
 // BASE
 // Configurações basicas do projeto
 // ----------------------------------------------------------------------------
 
-@import "base/variables";
-@import "base/functions";
+// @import "base/variables";
+// @import "base/functions";
 @import "base/mixins";
 @import "base/reset";
 @import "base/fonts";
@@ -71,8 +84,14 @@
 @import "templates/list";
 
 
+// GRID SYSTEM
+// Sistemas de grids
+// ----------------------------------------------------------------------------
+@import "grid/functions";
+
+
 // LAYOUTS
-// Sistemas de grids e alinhamentos de templates
+// Alinhamentos de templates
 // ----------------------------------------------------------------------------
 @import "layouts/grid";
 @import "layouts/container";

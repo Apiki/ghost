@@ -1,0 +1,36 @@
+// Simple Functions
+// Functions that is a complement to do something
+// ----------------------------------------------------------------------------
+@function is_even($n) {
+	@return $n % 2 == 0;  // Verify if a number is even
+}
+
+// Complex functions
+// Functions to make great things will come here
+// ----------------------------------------------------------------------------
+
+@function remove-unit($number) {
+	$unit: unit($number);
+	$one: 1;
+
+	@if $unit == "px" { $one: 1px; }
+	@if $unit == "em" { $one: 1px; }
+	@if $unit == "%"  { $one: 1px; }
+
+	@return $number / $one;
+}
+
+@function flex($target, $context, $unit: "em") {
+	$size: remove-unit($target) / remove-unit($context);
+
+	@if $unit == "em" 	{ @return #{$size}em; }	
+	@if $unit == "%" 	{ @return percentage($size); }	
+}
+ 
+@function perc ($target, $context) { 
+	@return flex($target, $context, "%"); // Return a percentage to $target from the $context
+}
+
+@function em ($target, $context:$fontSizeDefault) { 
+	@return flex($target, $context, "em"); // Return a relative size 'em' to $target from the $context
+}

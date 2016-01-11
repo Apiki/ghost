@@ -1,0 +1,21 @@
+// Variables
+// -------------------------------------------------------
+$oneColumnWidth		: $colWidth;
+$columnGutter		: $colMargin;
+$gridNumber			: $gridColumns;
+
+// Functions
+// Related to grid system
+// -------------------------------------------------------
+@function flexible_grid($columns, $nGrid: $gridNumber) {
+	$theColumnWidth : $columns * $oneColumnWidth + ($columns - 1) * $columnGutter;
+	$theContainerWidth : $nGrid * $oneColumnWidth + ($nGrid - 1) * $columnGutter;
+
+	@return perc($theColumnWidth, $theContainerWidth);
+}
+
+@function flexible_gutter($nGrid: $gridNumber, $columnGutter: $columnGutter) {
+	$theContainerWidth : $nGrid * $oneColumnWidth + ($nGrid - 1) * $columnGutter;
+
+	@return perc($columnGutter, $theContainerWidth);
+}
