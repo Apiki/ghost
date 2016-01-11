@@ -34,3 +34,12 @@
 		-ms-transition: $property $time;
 			transition: $property $time;
 }
+
+/*
+	** Transform
+ */
+@mixin transform($property) {
+	-webkit-transform: $property;
+		-ms-transform: $property;
+			transform: $property;
+}

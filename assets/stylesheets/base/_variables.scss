@@ -1,56 +1,60 @@
 // Grid
 // ----------------------------------------------------------------------------
-$desktop			: 1024px;
-$tablet				: 768px;
-$mobile				: 480px;
-$container			: 1170px;
-$content			: false;
-$sidebar			: false;
-$col-margin			: 30px;
-$col-width			: 70px;
-$padding			: 10px;
-$border-r			: 5px;
+$desktop						: 1024px;
+$tablet							: 768px;
+$mobile							: 480px;
+$container						: 1170px;
+$content						: false;
+$sidebar						: false;
+$col-margin						: 30px;
+$col-width						: 70px;
+$padding						: 10px;
+$border-r						: 5px;
 
 
 // Colors
 // ----------------------------------------------------------------------------
-$color-primary 		: #556270;
-$color-secondary	: #c7f464;
-$color-tertiary		: #dce9be;
-$color-text			: #555;
-$color-title		: $color-primary;
-$color-link			: false;
-$color-sucess		: false;
-$color-alert		: false;
-$color-error		: #ff8877;
-$color-detail		: #efffcd;
-$color-disabled		: #f1f1f1;
-$color-hsl			: darken;	// darken, lighten
-$color-hsl-perc 	: 10%;		// percentage
+$color-primary 					: #556270;
+$color-secondary				: #c7f464;
+$color-tertiary					: #dce9be;
+$color-text						: #555;
+$color-title					: $color-primary;
+$color-link						: false;
+$color-sucess					: false;
+$color-alert					: false;
+$color-error					: #ff8877;
+$color-detail					: #efffcd;
+$color-disabled					: #f1f1f1;
+$color-hsl						: darken;	// darken, lighten
+$color-hsl-perc 				: 10%;		// percentage
 
 
 // Font Family
 // ----------------------------------------------------------------------------
-$font-primary		: false;
-$font-primary-bold 	: false;
-$font-secondary		: false;
-$font-secondary-bold: false;
-$font-tertiary		: false;
-$font-tertiary-bold	: false;
-$font-icon			: false;
+$font-primary					: false;
+$font-primary-bold 				: false;
+$font-secondary					: false;
+$font-secondary-bold			: false;
+$font-tertiary					: false;
+$font-tertiary-bold				: false;
+$font-icon						: false;
 
 
 // Font Size
 // ----------------------------------------------------------------------------
-$font-size-default	: 16px;
-$font-size-small	: 12px;
-$font-size-medium	: 14px;
-$font-size-large	: 18px;
-$font-size-x-large	: 30px;
+$font-size-default				: 16px;
+$font-size-small				: 12px;
+$font-size-medium				: 14px;
+$font-size-large				: 18px;
+$font-size-x-large				: 30px;
 
 
 // Form
 // ----------------------------------------------------------------------------
-$form-input-height	: 35px;
-$form-input-radius	: false;
-$form-input-padding	: 5px;
+$form-input-height				: 35px;
+$form-input-radius				: false;
+$form-input-padding				: 5px;
+$form-field-class 				: "field";
+$form-field-class-error			: "field-error";
+$form-field-class-error-text	: "form-error";
+$form-field-class-info-text		: "form-info";

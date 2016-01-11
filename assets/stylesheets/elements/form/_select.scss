@@ -1,5 +1,5 @@
 select {
-	@extend %style-form;
+	@extend %form-style;
 	background: #fff;
 	height: $form-input-height;
 }
