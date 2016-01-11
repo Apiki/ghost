@@ -1,4 +1,4 @@
-%clearFix {
+%clear-fix {
 	&:after {
 		clear: both;
 		content: '';
@@ -15,7 +15,7 @@
 	white-space: nowrap;
 }
 
-%imageReplacement {
+%image-replacement {
 	overflow: hidden;
 	text-indent: 101%;
 	white-space: nowrap;
@@ -41,19 +41,19 @@
 }
 
 // -- align center
-%alignCenterV {
+%align-center-v {
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 			transform: translateY(-50%);
 }
 
-%alignCenterH {
+%align-center-h {
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 			transform: translateX(-50%);
 }
 
-%alignCenter {
+%align-center {
 	left: 50%;
 	top: 50%;
 	-webkit-transform: translate3d(-50%, -50%, 0);

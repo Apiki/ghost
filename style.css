@@ -219,7 +219,7 @@ input:focus, textarea:focus, select:focus, input:hover, textarea:hover, select:h
   outline: none;
 }
 
-.error-info {
+.error-form {
   -webkit-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -231,7 +231,7 @@ input:focus, textarea:focus, select:focus, input:hover, textarea:hover, select:h
   top: -3px;
 }
 @media (min-width: 768px) {
-  .error-info {
+  .error-form {
     font-size: 0.75em;
     left: 0;
     margin-top: 10px;
@@ -240,7 +240,7 @@ input:focus, textarea:focus, select:focus, input:hover, textarea:hover, select:h
     top: 100%;
     visibility: hidden;
   }
-  .error-info:before {
+  .error-form:before {
     border-color: transparent transparent #ff8877 transparent;
     border-style: solid;
     border-width: 5px;
@@ -261,7 +261,7 @@ input[type="radio"], input[type="checkbox"], input[type="submit"] {
 .field {
   position: relative;
 }
-.field:hover .error-info {
+.field:hover .error-form {
   opacity: 1;
   visibility: visible;
 }

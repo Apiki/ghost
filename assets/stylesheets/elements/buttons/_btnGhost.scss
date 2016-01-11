@@ -1,6 +1,6 @@
 // Placehold
 // ----------------------------------------------------------------------------
-%btnGhost {
+%btn-ghost {
 	background: none;
 	border-style: solid;
 	border-width: 1px;
@@ -14,7 +14,7 @@
 // ----------------------------------------------------------------------------
 @mixin btn-ghost($class, $color, $hsl:$color-hsl, $perc:$color-hsl-perc ) {
 	.btn-ghost-#{$class} {
-		@extend %btnGhost;
+		@extend %btn-ghost;
 		border-color: $color;
 		color: $color;
 
@@ -32,7 +32,7 @@
 
 
 .btn-ghost {
-	@extend %btnGhost;
+	@extend %btn-ghost;
 	border-color :$color-text;
 	color: $color-text;
 

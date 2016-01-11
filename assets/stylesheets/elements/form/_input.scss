@@ -1,6 +1,6 @@
 // Placehold
 // ----------------------------------------------------------------------------
-%styleForm {
+%style-form {
 	@include transition(border-color);
 	border: 1px solid #eee;
 	color: $color-text;
@@ -19,7 +19,7 @@
 	}
 }
 
-%error-info {
+%error-form {
 	@include transition(opacity);
 	background: $color-error;
 	border-radius: 3px;
@@ -49,7 +49,7 @@
 	}
 }
 
-%clearStyleForm {
+%clear-style-form {
 	height: auto;
 	margin: 0;
 	padding: initial;
@@ -59,7 +59,7 @@
 .field {
 	position: relative;
 
-	&:hover .error-info {
+	&:hover .error-form {
 		opacity: 1;
 		visibility: visible;
 	}
@@ -67,7 +67,7 @@
 
 
 input {
-	@extend %styleForm;
+	@extend %style-form;
 	height: $form-input-height;
 	position: relative;
 	z-index: 1;
@@ -81,6 +81,6 @@ input {
 	}
 }
 
-.error-info {
-	@extend %error-info;
+.error-form {
+	@extend %error-form;
 }
