@@ -1,0 +1,18 @@
+$ltr : left;
+$rtl : right;
+
+@function get_direction($direction) {
+	@if to-upper-case($direction) == "LTR" {
+		@return $ltr;
+	}@else if to-upper-case($direction) == "RTL" {
+		@return $rtl;
+	}
+}
+
+@function get_opposite_direction($direction) {
+	@if to-upper-case($direction) == "LTR" {
+		@return $rtl;
+	}@else if to-upper-case($direction) == "RTL" {
+		@return $ltr;
+	}
+}

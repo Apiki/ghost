@@ -7,15 +7,27 @@ $gridNumber			: $gridColumns;
 // Functions
 // Related to grid system
 // -------------------------------------------------------
-@function flexible_grid($columns, $nGrid: $gridNumber) {
-	$theColumnWidth : $columns * $oneColumnWidth + ($columns - 1) * $columnGutter;
-	$theContainerWidth : $nGrid * $oneColumnWidth + ($nGrid - 1) * $columnGutter;
+@function container_col($gridContainer : $col) {
+	@if length($gridContainer) == 3 {
+		$gridContainer : nth($gridContainer, 3);
+		@return $gridContainer;
+	}@else if length($gridContainer) == 2 {
+		$gridContainer : nth($gridContainer, 2);
+		@return $gridContainer;
+	}
 
-	@return perc($theColumnWidth, $theContainerWidth);
+	@return $gridColumns;
+}
+	
+@function flexible_grid($columns, $nGrid: $gridNumber) {
+	$columnWidth : $columns * $oneColumnWidth + (($columns - 1) * $columnGutter);
+	$containerWidth : $nGrid * $oneColumnWidth + (($nGrid - 1) * $columnGutter)	;
+
+	@return perc($columnWidth, $containerWidth);
 }
 
 @function flexible_gutter($nGrid: $gridNumber, $columnGutter: $columnGutter) {
-	$theContainerWidth : $nGrid * $oneColumnWidth + ($nGrid - 1) * $columnGutter;
+	$containerWidth : $nGrid * $oneColumnWidth + ($nGrid - 1) * $columnGutter;
 
-	@return perc($columnGutter, $theContainerWidth);
+	@return perc($columnGutter, $containerWidth);
 }

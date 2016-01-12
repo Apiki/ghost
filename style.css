@@ -1684,4 +1684,13 @@ code {
   }
 }
 
+.teste {
+  float: left;
+  margin-right: 3.8961%;
+  width: 100%;
+}
+.teste:last-child {
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

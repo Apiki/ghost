@@ -1685,6 +1685,15 @@ code {
   }
 }
 
+.teste {
+  float: left;
+  margin-right: 3.8961%;
+  width: 100%;
+}
+.teste:last-child {
+  margin-right: 0;
+}
+
 #g-wrapper {
   font-family: "Roboto Condensed", sans-serif;
 }

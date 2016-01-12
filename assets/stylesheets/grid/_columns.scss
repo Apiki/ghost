@@ -1,0 +1,23 @@
+// Mixin para inserir colunas, passando como argumento o número de colunas desejado.
+@mixin columns($col: $columns of $gridContainer, $display: default) {
+	$columns			: nth($col, 1);
+	$gridContainer		: container_col($col);
+	$direction			: get_direction($layoutDirection);
+	$oppositeDirection 	: get_opposite_direction($layoutDirection);
+
+	float: #{$oppositeDirection};
+
+	@if $display == collapse {
+		width: flexible_grid($columns, $gridContainer) + flexible_gutter($gridContainer);
+	}@else if $display == wrapper {
+		padding-#{$direction}: flexible_gutter($gridContainer);
+		width: flexible_grid($columns, $gridContainer);
+
+		&:last-child{ padding-#{$direction}: 0; }
+	}@else {
+		margin-#{$direction}: flexible_gutter($gridContainer);
+		width: flexible_grid($columns, $gridContainer);
+
+		&:last-child{ margin-#{$direction}: 0; }
+	}
+}
