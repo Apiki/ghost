@@ -9,6 +9,8 @@
 	@media (min-width: $tablet) {
 		@include transform(translateY(-10px));
 		left: 0;
+		line-height: 1;
+		margin-top: 10px;
 		opacity: 0;
 		position: absolute;
 		top: 100%;

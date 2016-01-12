@@ -202,15 +202,299 @@
 				<div class="g-box-info">
 					Elementos de formulário
 				</div>
+				<h3 class="g-box-subtitle">Input Text</h3>
 				<div class="g-box-example line">
-					<input type="text" placeholder="Input Text">
+					<input type="text" placeholder="Qual é o seu nome?">
 					<div class="field field-error">
-						<label for="error">Input Text Error</label>
-						<input id="error" type="text" placeholder="Input Text Error">
+						<label for="name">Qual é o seu nome?</label>
+						<input id="name" type="text">
 						<div class="form-error form-info">
-							Lorem ipsum dolor sit amet.
+							não pode conter números
 						</div>
 					</div>
+					<div class="field">
+						<label for="name">Campo de texto com descrição</label>
+						<input id="name" type="text">
+						<div class="form-info">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus vitae saepe dolore assumenda dolor similique, voluptatem beatae hic modi illo.
+						</div>
+					</div>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;input type="text" placeholder="Input Text">
+
+							&lt;div class="field field-error">
+								&lt;label for="error">Input Text Error&lt;/label>
+								&lt;input id="error" type="text" placeholder="Input Text Error">
+								&lt;div class="form-error form-info">
+									Lorem ipsum dolor sit amet.
+								&lt;/div>
+							&lt;/div>
+
+							&lt;div class="field">
+								&lt;label for="name">Campo de texto com descrição&lt;/label>
+								&lt;input id="name" type="text">
+								&lt;div class="form-info">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus vitae saepe dolore assumenda dolor similique, voluptatem beatae hic modi illo.
+								&lt;/div>
+							&lt;/div>
+						</code>
+					</pre>
+				</div>
+				<h3 class="g-box-subtitle">Select</h3>
+				<div class="g-box-example line">
+					<select name="name" id="">
+						<option value="option">Lorem</option>
+						<option value="option">Ipsum</option>
+						<option value="option">Dolor</option>
+					</select>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;select name="name" id="name">
+								&lt;option value="option">Lorem&lt;/option>
+								&lt;option value="option">Ipsum&lt;/option>
+								&lt;option value="option">Dolor&lt;/option>
+							&lt;/select>
+						</code>
+					</pre>
+				</div>
+				<h3 class="g-box-subtitle">Textarea</h3>
+				<div class="g-box-example">
+					<textarea name="name" id="" cols="30" rows="10"></textarea>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;textarea name="name" id="" cols="30" rows="10">&lt;/textarea>
+						</code>
+					</pre>
+				</div>
+				<h3 class="g-box-subtitle">Alinhamento</h3>
+				<div class="g-box-info">
+					Basta definir a classe que está definida no placeholder no elemento pai do input
+				</div>
+				<div class="g-box-example">
+					<form action="">
+						<ul>
+							<li class="field left-half">
+								<input type="text" placeholder="left-half">
+							</li>
+							<li class="field right-half">
+								<input type="text" placeholder="right-half">
+							</li>
+
+							<li class="field left-third">
+								<input type="text" placeholder="left-third">
+							</li>
+							<li class="field middle-third">
+								<input type="text" placeholder="middle-third">
+							</li>
+							<li class="field right-third">
+								<input type="text" placeholder="right-third">
+							</li>
+
+							<li class="field field-full-mobile left-half">
+								<input type="text" placeholder="field-full-mobile left-half">
+							</li>
+							<li class="field field-full-mobile right-half">
+								<input type="text" placeholder="field-full-mobile right-half">
+							</li>
+
+							<li class="field">
+								<input type="text" placeholder="field">
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;form action="">
+								&lt;ul>
+									&lt;li class="field left-half">
+										&lt;input type="text" placeholder="left-half">
+									&lt;/li>
+									&lt;li class="field right-half">
+										&lt;input type="text" placeholder="right-half">
+									&lt;/li>
+
+									&lt;li class="field left-third">
+										&lt;input type="text" placeholder="left-third">
+									&lt;/li>
+									&lt;li class="field middle-third">
+										&lt;input type="text" placeholder="middle-third">
+									&lt;/li>
+									&lt;li class="field right-third">
+										&lt;input type="text" placeholder="right-third">
+									&lt;/li>
+
+									&lt;li class="field field-full-mobile left-half">
+										&lt;input type="text" placeholder="field-full-mobile left-half">
+									&lt;/li>
+									&lt;li class="field field-full-mobile right-half">
+										&lt;input type="text" placeholder="field-full-mobile right-half">
+									&lt;/li>
+								&lt;/ul>
+							&lt;/form>
+						</code>
+					</pre>
+				</div>
+				<h3 class="g-box-subtitle">Alinhamento linha</h3>
+				<div class="g-box-info">
+					Para incluir o grid conforme a sua necessidade basta incluir a classe na <code>li</code> como nos exemplos abaixo
+				</div>
+				<div class="g-box-example">
+					<form action="">
+						<ul>
+							<li class="field list-col-two">
+								<label>Lista com duas colunas <code>.list-col-two</code></label>
+								<ul>
+									<li>
+										<input name="name" type="radio" id="atrox">
+										<label for="atrox">Atrox</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="ahri">
+										<label for="ahri">Ahri</label>
+									</li>
+								</ul>
+							</li>
+							<li class="field list-col-three">
+								<label>Lista com três colunas <code>.list-col-three</code></label>
+								<ul>
+									<li>
+										<input name="name" type="radio" id="akali">
+										<label for="akali">Akali</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="alistar">
+										<label for="alistar">Alistar</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="amumu">
+										<label for="amumu">Amumu</label>
+									</li>
+								</ul>
+							</li>
+							<li class="field list-col-four">
+								<label>Lista com quatro colunas <code>.list-col-four</code></label>
+								<ul>
+									<li>
+										<input name="name" type="radio" id="anivia">
+										<label for="anivia">Anivia</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="annie">
+										<label for="annie">Annie</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="ashe">
+										<label for="ashe">Ashe</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="azir">
+										<label for="azir">Azir</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="blitzcrank">
+										<label for="blitzcrank">Blitzcrank</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="brand">
+										<label for="brand">Brand</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="braum">
+										<label for="braum">Braum</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="caitlyn">
+										<label for="caitlyn">Caitlyn</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="cassiopeia">
+										<label for="cassiopeia">Cassiopeia</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="corki">
+										<label for="corki">Corki</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="darius">
+										<label for="darius">Darius</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="diana">
+										<label for="diana">Diana</label>
+									</li>
+								</ul>
+							</li>
+							<li class="field list-inline">
+								<label>Lista inline <code>.list-inline</code></label>
+								<ul>
+									<li>
+										<input name="name" type="radio" id="draven">
+										<label for="draven">Draven</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="ekko">
+										<label for="ekko">Ekko</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="elise">
+										<label for="elise">Elise</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="evelynn">
+										<label for="evelynn">Evelynn</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="ezreal">
+										<label for="ezreal">Ezreal</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="fiddlesticks">
+										<label for="fiddlesticks">Fiddlesticks</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="fiora">
+										<label for="fiora">Fiora</label>
+									</li>
+									<li>
+										<input name="name" type="radio" id="fizz">
+										<label for="fizz">Fizz</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="g-box-code">
+					<pre class="language-markup">
+						<code class="language-markup">
+							&lt;form action="">
+								&lt;ul>
+									&lt;li class="field list-col-two">
+										&lt;label>Lista com duas colunas&lt;/label>
+										&lt;ul>
+											&lt;li>
+												&lt;input name="name" type="radio" id="atrox">
+												&lt;label for="atrox">Atrox&lt;/label>
+											&lt;/li>
+											&lt;li>
+												&lt;input name="name" type="radio" id="ahri">
+												&lt;label for="ahri">Ahri&lt;/label>
+											&lt;/li>
+										&lt;/ul>
+									&lt;/li>
+								&lt;/ul>
+							&lt;/form>
+						</code>
+					</pre>
 				</div>
 			</div>
 

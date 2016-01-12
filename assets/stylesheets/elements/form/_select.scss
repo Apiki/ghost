@@ -1,5 +1,6 @@
 select {
 	@extend %form-style;
 	background: #fff;
+	cursor: pointer;
 	height: $form-input-height;
 }

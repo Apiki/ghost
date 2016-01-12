@@ -1,8 +1,5 @@
 input[type="submit"] {
 	@extend %form-style-clear;
-	@extend .btn;
-	@extend .btn-primary;
-	@extend .btn.large;
-	border: none;
+	@extend %btn;
 	cursor: pointer;
 }

@@ -1,8 +1,15 @@
 // Placehold
 // ----------------------------------------------------------------------------
+%form-style-clear {
+	height: auto;
+	margin: 0;
+	padding: initial;
+	width: auto;
+}
+
 %form-style {
 	@include transition(border-color);
-	border: 1px solid #eee;
+	border: 1px solid #c5c5c5;
 	color: $color-text;
 	font-family: $font-primary;
 	padding: $form-input-padding;
@@ -10,20 +17,13 @@
 
 	&:focus,
 	&:hover {
-		border-color: darken(#eee, $color-hsl-perc);
+		border-color: darken(#c5c5c5, $color-hsl-perc);
 		outline: none;
 	}
 
 	@if $form-input-radius != false {
 		border-radius: $form-input-radius;
 	}
-}
-
-%form-style-clear {
-	height: auto;
-	margin: 0;
-	padding: initial;
-	width: auto;
 }
 
 input {

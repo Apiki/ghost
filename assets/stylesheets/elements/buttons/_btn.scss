@@ -15,11 +15,9 @@ $btn-radius		: 3px;		// number(px), false
 }
 
 
-// Btn
+// Placehold
 // ----------------------------------------------------------------------------
-.btn {
-	background: $btn-bg-default;
-	color: $color-text;
+%btn {
 	display: inline-block;
 	padding: $btn-padding + 3;
 	-webkit-transition: .2s background;
@@ -29,10 +27,18 @@ $btn-radius		: 3px;		// number(px), false
 	@if $btn-radius != false {
 		border-radius: $btn-radius;
 	}
+}
 
+
+// Btn
+// ----------------------------------------------------------------------------
+.btn {
+	@extend %btn;
 	@include btn-size(small, $font-size-small, $btn-padding);
 	@include btn-size(large, $font-size-large, $btn-padding * 2);
 	@include btn-size(xlarge, $font-size-x-large, $btn-padding * 3);
+	background: $btn-bg-default;
+	color: $color-text;
 
 	&:hover {
 		@include hsl-bg-hover($btn-bg-default);

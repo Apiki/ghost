@@ -16,6 +16,17 @@ $g-font-primary		: "source_sans_prolight";
 	font-size: 14px;
 }
 
+%code {
+	background: #f1f1f1;
+	border: 1px solid darken(#f1f1f1, 10%);
+	border-radius: 3px;
+	color: darken(#f1f1f1, 50%);
+	font-size: 14px;
+	font-weight: normal;
+	padding: 2px 4px;
+	white-space: nowrap;
+}
+
 
 // Fonts
 // ----------------------------------------------------------------------------
@@ -53,9 +64,9 @@ pre[class*="language-"] {
 	word-wrap: normal;
 	line-height: 1.5;
 
-	-moz-tab-size: 1;
-	-o-tab-size: 1;
-	tab-size: 1;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
 
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
@@ -84,7 +95,8 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-	overflow: auto;
+	// overflow: auto;
+	overflow: hidden;
 }
 
 /* Inline code */
@@ -201,7 +213,7 @@ pre[class*="language-"] {
 
 	code {
 		font-size: 12px;
-		left: -40px;
+		left: -200px;
 		position: relative;
 	}
 }
@@ -240,8 +252,16 @@ pre[class*="language-"] {
 	}
 }
 
+.g-box-subtitle {
+	font-size: 20px;
+}
+
 .g-box-info {
 	margin-bottom: 20px;
+
+	code {
+		@extend %code;
+	}
 }
 
 // -- Box example
@@ -270,13 +290,7 @@ pre[class*="language-"] {
 	}
 
 	code {
-		background: #f1f1f1;
-		border: 1px solid darken(#f1f1f1, 10%);
-		border-radius: 3px;
-		color: darken(#f1f1f1, 50%);
-		font-size: 14px;
-		padding: 2px 4px;
-		white-space: nowrap;
+		@extend %code;
 	}
 }
 
