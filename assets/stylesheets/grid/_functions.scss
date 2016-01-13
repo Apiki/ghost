@@ -1,33 +1,33 @@
 // Variables
 // -------------------------------------------------------
-$oneColumnWidth		: $colWidth;
-$columnGutter		: $colMargin;
-$gridNumber			: $gridColumns;
+$one-column-width		: $col-width;
+$column-gutter			: $col-margin;
+$grid-number			: $grid-columns;
 
 // Functions
 // Related to grid system
 // -------------------------------------------------------
-@function container_col($gridContainer : $col) {
-	@if length($gridContainer) == 3 {
-		$gridContainer : nth($gridContainer, 3);
-		@return $gridContainer;
-	}@else if length($gridContainer) == 2 {
-		$gridContainer : nth($gridContainer, 2);
-		@return $gridContainer;
+@function container_col($col: $col) {
+	@if length($col) == 3 {
+		$grid-container : nth($col, 3);
+		@return $grid-container;
+	}@else if length($col) == 2 {
+		$grid-container : nth($col, 2);
+		@return $grid-container;
 	}
 
-	@return $gridColumns;
+	@return $grid-columns;
 }
 	
-@function flexible_grid($columns, $nGrid: $gridNumber) {
-	$columnWidth : $columns * $oneColumnWidth + (($columns - 1) * $columnGutter);
-	$containerWidth : $nGrid * $oneColumnWidth + (($nGrid - 1) * $columnGutter)	;
+@function flexible_grid($columns, $n-grid: $grid-number) {
+	$column-width : $columns * $one-column-width + (($columns - 1) * $column-gutter);
+	$container-width : $n-grid * $one-column-width + (($n-grid - 1) * $column-gutter)	;
 
-	@return perc($columnWidth, $containerWidth);
+	@return perc($column-width, $container-width);
 }
 
-@function flexible_gutter($nGrid: $gridNumber, $columnGutter: $columnGutter) {
-	$containerWidth : $nGrid * $oneColumnWidth + ($nGrid - 1) * $columnGutter;
+@function flexible_gutter($n-grid: $grid-number, $column-gutter: $column-gutter) {
+	$container-width : $n-grid * $one-column-width + ($n-grid - 1) * $column-gutter;
 
-	@return perc($columnGutter, $containerWidth);
+	@return perc($column-gutter, $container-width);
 }

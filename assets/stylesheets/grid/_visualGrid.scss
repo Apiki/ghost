@@ -1,0 +1,49 @@
+@mixin visual-grid-gradient($values...) {
+	background-image: unquote("linear-gradient(to left, #{$values})");
+}
+
+@mixin grid-visual($columns) {
+
+	&:before {
+	    @include visual-grid-gradient(visual_gradient($columns));
+	    content: "";
+	    display: inline-block;
+	    height: 100%;
+	    left: 0;
+	    opacity: $visual-grid-opacity;
+	    pointer-events: none;
+	    position: fixed;
+	    right: 0;
+	    width: 100%;		    
+	}
+
+	@if $visual-grid-index == back {
+    	z-index: -1;
+    } @else {
+    	z-index: 999;
+    }
+}
+
+body {
+	@if $visual-grid == true or $visual-grid == yes {
+		&:before {
+		    @include visual-grid-gradient(visual_gradient($grid-columns));
+		    content: "";
+		    display: inline-block;
+		    height: 100%;
+		    left: 0;
+		    margin: 0 auto;
+		    max-width: $container;
+		    opacity: $visual-grid-opacity;
+		    pointer-events: none;
+		    position: fixed;
+		    right: 0;		    
+		}
+
+		@if $visual-grid-index == back {
+	    	z-index: -1;
+	    } @else {
+	    	z-index: 999;
+	    }
+	}
+}

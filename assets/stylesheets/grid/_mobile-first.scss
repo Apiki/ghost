@@ -1,0 +1,13 @@
+@mixin mob($device){
+	@if $device == mobile {
+		@media(min-width: $mobile){ @content }
+	}@else if $device == tablet {
+		@media(min-width: $tablet){ @content }
+	}@else if $device == desktop {
+		@media(min-width: $desktop){ @content }
+	}@else if $device == container {
+		@media(min-width: $container){ @content }
+	}@else {
+		@warn "Device not defined, please check device name, by default is 'mobile', 'tablet', 'desktop' and 'container'.";
+	}
+}

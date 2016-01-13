@@ -9,7 +9,6 @@
 // Todas as funções globais do Ghost virão aqui.
 // ----------------------------------------------------------------------------
 @import "functions/private";
-@import "functions/layoutDirection";
 
 
 // BASE
@@ -88,7 +87,12 @@
 // Sistemas de grids
 // ----------------------------------------------------------------------------
 @import "grid/functions";
+@import "grid/mobile-first";
+@import "grid/responsive";
+@import "grid/row";
 @import "grid/columns";
+@import "grid/oocss";
+@import "grid/visualGrid";
 
 
 // LAYOUTS

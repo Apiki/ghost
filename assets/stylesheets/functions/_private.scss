@@ -5,6 +5,18 @@
 	@return $n % 2 == 0;  // Verify if a number is even
 }
 
+@function get_direction($layout) {
+	$direction : left;
+	@if $layout == RTL { $direction: right; }
+	@return $direction;
+}
+
+@function get_opposite_direction($layout) {
+	$opposite-direction : right;
+	@if $layout == RTL { $opposite-direction: left; }
+	@return $opposite-direction;
+}
+
 // Complex functions
 // Functions to make great things will come here
 // ----------------------------------------------------------------------------
@@ -33,4 +45,26 @@
 
 @function em ($target, $context:$fontSizeDefault) { 
 	@return flex($target, $context, "em"); // Return a relative size 'em' to $target from the $context
+}
+
+@function visual_gradient($grid-columns, $color: $visual-grid-color) {
+	$transparent 	: transparent;
+	$column-width 	: flexible_grid(1, $grid-columns);
+	$column-gutter 	: flexible_gutter($grid-columns);
+	$column-offset 	: $column-width;
+	$out 			: ($transparent 0, $color 0);
+
+	@for $column from 1 to $grid-columns * 2 {
+		@if is_even($column) {
+			$out			: append($out, $transparent $column-offset, comma);
+			$out			: append($out, $color $column-offset, comma);
+			$column-offset 	: $column-offset + $column-width;		
+		} @else {
+			$out			: append($out, $color $column-offset, comma);
+			$out			: append($out, $transparent $column-offset, comma);
+			$column-offset 	: $column-offset + $column-gutter;
+		}
+	}
+
+	@return $out;
 }

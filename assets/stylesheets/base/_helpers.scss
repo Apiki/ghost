@@ -63,7 +63,7 @@
 // -- columns
 %column {
 	float: left;
-	margin-left: perc($colMargin, $container);
+	margin-left: perc($col-margin, $container);
 
 	&:first-child {
 		margin-left: 0;

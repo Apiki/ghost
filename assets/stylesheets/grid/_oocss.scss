@@ -1,0 +1,24 @@
+// Classes
+// .columns-12-fz sufixo {fz} full size
+// .columns-12-dk sufixo {dk} desktop
+// .columns-12-tb sufixo {tb} tablet
+// .columns-12-sm sufixo {sm} smartphone
+
+@if $grid-oocss == true {
+	// Variables
+	$columns: $grid-columns;
+	$direction : get_direction($layout-direction);
+	$opposite-direction : get_opposite_direction($layout-direction);
+	
+	// Mixins
+	%column-property {		
+		float: #{$direction};
+		min-height: 1px;
+	}
+
+	%column-width {
+		margin-#{$opposite-direction}: flexible_gutter($grid-columns);
+		width: flexible_grid($columns);
+		&:last-child{ margin-#{$opposite-direction}: 0; }
+	}
+}

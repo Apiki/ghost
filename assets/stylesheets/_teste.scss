@@ -1,3 +1,30 @@
-.teste {
-	@include columns(8 de 8);
+.container {
+	@extend %row;
+	margin: 0 auto;
+}
+
+.content {
+	@include columns(9);
+	@include resp(tablet) {
+		@include columns(12);
+	}
+
+	.form-1,
+	.form-2 {
+		@include columns(4 de 9);
+		@include resp(mobile) {
+			@include columns(12 de 12)
+		}
+	}
+
+	> div {
+		margin: 20px 0;	
+	}
+}
+
+.sidebar {
+	@include columns(3);
+	@include resp(tablet) {
+		@include columns(12);
+	}
 }

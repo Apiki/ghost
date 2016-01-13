@@ -31,7 +31,7 @@ $_commentImageSize     : 55px;
 .comment,
 .comment-respond,
 .comment-form {
-    margin-top: $colMargin;
+    margin-top: $col-margin;
 }
 
 // -- Comment
@@ -42,7 +42,7 @@ $_commentImageSize     : 55px;
 // -- List > Comment
 .comment-list > .comment {
     border-bottom: 1px solid $_commentColorDetail;
-    padding-bottom: $colMargin;
+    padding-bottom: $col-margin;
 }
 
 // -- Body

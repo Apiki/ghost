@@ -2,7 +2,7 @@
 // Mixin > Col
 // ----------------------------------------------------------------------------
 @mixin col($col) {
-	width: perc(($colWidth * $col) + (($col - 1) * $colMargin), $container);
+	width: perc(($col-width * $col) + (($col - 1) * $col-margin), $container);
 }
 
 @media ( min-width: $mobile ) {
@@ -17,7 +17,7 @@
 	.column,
 	.columns {
 		float: left;
-		margin-left: perc($colMargin, $container);
+		margin-left: perc($col-margin, $container);
 
 		&:first-child {
 			margin-left: 0;

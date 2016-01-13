@@ -1604,6 +1604,29 @@ code {
   float: left;
 }
 
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  z-index: -1;
+}
+body:before {
+  background-image: linear-gradient(to left, transparent 0, #07a 0, #07a 5.98291%, transparent 5.98291%, transparent 8.54701%, #07a 8.54701%, #07a 14.52991%, transparent 14.52991%, transparent 17.09402%, #07a 17.09402%, #07a 23.07692%, transparent 23.07692%, transparent 25.64103%, #07a 25.64103%, #07a 31.62393%, transparent 31.62393%, transparent 34.18803%, #07a 34.18803%, #07a 40.17094%, transparent 40.17094%, transparent 42.73504%, #07a 42.73504%, #07a 48.71795%, transparent 48.71795%, transparent 51.28205%, #07a 51.28205%, #07a 57.26496%, transparent 57.26496%, transparent 59.82906%, #07a 59.82906%, #07a 65.81197%, transparent 65.81197%, transparent 68.37607%, #07a 68.37607%, #07a 74.35897%, transparent 74.35897%, transparent 76.92308%, #07a 76.92308%, #07a 82.90598%, transparent 82.90598%, transparent 85.47009%, #07a 85.47009%, #07a 91.45299%, transparent 91.45299%, transparent 94.01709%, #07a 94.01709%, #07a 100%, transparent 100%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1170px;
+  opacity: 0.3;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+}
+
 @media (min-width: 480px) {
   .row:after {
     content: "";
@@ -1685,13 +1708,77 @@ code {
   }
 }
 
-.teste {
-  float: left;
-  margin-right: 3.8961%;
-  width: 100%;
+.container {
+  margin: 0 auto;
 }
-.teste:last-child {
+
+.content {
+  float: left;
+  min-height: 1px;
+  margin-right: 2.5641%;
+  width: 74.35897%;
+}
+.content:last-child {
   margin-right: 0;
+}
+@media (max-width: 768px) {
+  .content {
+    float: left;
+    min-height: 1px;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  .content:last-child {
+    margin-right: 0;
+  }
+}
+.content .form-1,
+.content .form-2 {
+  float: left;
+  min-height: 1px;
+  margin-right: 3.44828%;
+  width: 42.52874%;
+}
+.content .form-1:last-child,
+.content .form-2:last-child {
+  margin-right: 0;
+}
+@media (max-width: 480px) {
+  .content .form-1,
+  .content .form-2 {
+    float: left;
+    min-height: 1px;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  .content .form-1:last-child,
+  .content .form-2:last-child {
+    margin-right: 0;
+  }
+}
+.content > div {
+  margin: 20px 0;
+}
+
+.sidebar {
+  float: left;
+  min-height: 1px;
+  margin-right: 2.5641%;
+  width: 23.07692%;
+}
+.sidebar:last-child {
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    float: left;
+    min-height: 1px;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  .sidebar:last-child {
+    margin-right: 0;
+  }
 }
 
 #g-wrapper {

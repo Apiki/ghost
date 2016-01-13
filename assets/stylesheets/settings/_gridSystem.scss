@@ -11,7 +11,12 @@ $sidebar            : 200px;
 // ----------------------------------------------------------------------------
 // Settings > Grid
 // ----------------------------------------------------------------------------
-$layoutDirection	: RTL;
-$gridColumns		: 12;
-$colWidth 			: 70px;
-$colMargin 			: 30px; 
+$layout-direction	: LTR;		// Values 'LTR' or 'RTL'.
+$grid-columns		: 12;		// The number of grid, I think that maximum number is 32, by default is 12.
+$col-width 			: 70px;		// The width of column, the sum of $col-width width $col-margin must be 100.
+$col-margin 		: 30px;		// The gutter between columns, the sum of $col-width width $col-margin must be 100.
+$grid-oocss			: true;	// Values 'true' or 'false'.
+$visual-grid		: true; 	// Values 'true' or 'false'.
+$visual-grid-color 	: #07a; 	// Any value hexadecimal to set grid color, this only have effect if $visual-grid has passed like 'true'.
+$visual-grid-opacity: .3;		// The opacity value must be between 0 and 1, like 0.1, 0.2 ...
+$visual-grid-index	: back; 	// Valuse 'back' or 'front'
