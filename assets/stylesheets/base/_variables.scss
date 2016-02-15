@@ -9,7 +9,7 @@ $sidebar						: false;
 $col-margin						: 30px;
 $col-width						: 70px;
 $padding						: 10px;
-$border-r						: 5px;
+$border-r						: 3px;
 
 
 // Colors
@@ -19,9 +19,9 @@ $color-secondary				: #c7f464;
 $color-tertiary					: #dce9be;
 $color-text						: #555;
 $color-title					: $color-primary;
-$color-link						: false;
-$color-sucess					: false;
-$color-alert					: false;
+$color-link						: #000;
+$color-sucess					: #a4de5e;
+$color-alert					: #ffc200;
 $color-error					: #ff8877;
 $color-detail					: #efffcd;
 $color-disabled					: #f1f1f1;

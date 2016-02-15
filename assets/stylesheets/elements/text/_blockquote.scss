@@ -1,16 +1,38 @@
 blockquote {
 	border-left: 3px solid $color-detail;
+	font-style: italic;
+	font-size: em($font-size-default, $font-size-default);
 	padding-left: 20px;
 
+	p {
+		line-height: 1.2;
+		margin-top: 10px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
 	cite {
-		font-size: em($font-size-small);
+		display: inline-block;
+		font-size: em($font-size-small, $font-size-default);
+		margin-top: 10px;
 
 		&:before {
 			background: $color-detail;
 			content: "";
 			display: block;
 			height: 1px;
-			width: 5%;
+			margin-bottom: 10px;
+			width: 90%;
+		}
+	}
+
+	.entry-content & {
+
+		p {
+			line-height: 1.2;
+			margin-bottom: 0;
 		}
 	}
 }

@@ -295,6 +295,7 @@ pre[class*="language-"] {
 }
 
 .g-box-example > table {
+	@extend %table;
 	width: 100%;
 
 	thead tr {
@@ -315,6 +316,10 @@ pre[class*="language-"] {
 		&:hover {
 			background: rgba($g-color-detail, .4);
 		}
+	}
+
+	td {
+		padding: 10px 0;
 	}
 
 	td:first-child,
@@ -393,3 +398,28 @@ pre[class*="language-"] {
 @include g-grid(border-r, $border-r);
 
 
+// Fonts
+// ----------------------------------------------------------------------------
+@mixin g-font($class, $variable) {
+	@if $variable == false {
+		.g-font-#{$class} {
+			display: none;
+		}
+	} @else {
+		.g-font-#{$class} {
+
+			p {
+				font-family: $variable;
+			}
+
+			.g-font-name:before {
+				content: "#{$variable}";
+			}
+		}
+	}
+}
+
+@include g-font(primary, $font-primary);
+@include g-font(primary-bold, $font-primary-bold);
+@include g-font(secondary, $font-secondary);
+@include g-font(secondary-bold, $font-secondary-bold);

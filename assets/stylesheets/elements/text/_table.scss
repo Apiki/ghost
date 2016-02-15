@@ -1,4 +1,6 @@
-table {
+%table {
+	font-size: em($font-size-default);
+	width: 100%;
 
 	tr {
 		border-bottom: 1px solid $color-detail;
@@ -6,10 +8,19 @@ table {
 
 	td,
 	th {
-		padding: 10px;
+		padding: 15px 10px;
 	}
 
 	th {
+		font-size: em($font-size-large, $font-size-default);
 		font-weight: bold;
+	}
+
+	p {
+		line-height: 1;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

@@ -64,7 +64,7 @@ a img {
 }
 
 a {
-  color: false;
+  color: #000;
   text-decoration: none;
 }
 
@@ -462,15 +462,27 @@ input[type="submit"], .btn {
   cursor: default;
 }
 
-table tr {
+.entry-content table, .g-box-example > table {
+  font-size: 1em;
+  width: 100%;
+}
+.entry-content table tr, .g-box-example > table tr {
   border-bottom: 1px solid #efffcd;
 }
-table td,
-table th {
-  padding: 10px;
+.entry-content table td, .g-box-example > table td,
+.entry-content table th,
+.g-box-example > table th {
+  padding: 15px 10px;
 }
-table th {
+.entry-content table th, .g-box-example > table th {
+  font-size: 1.125em;
   font-weight: bold;
+}
+.entry-content table p, .g-box-example > table p {
+  line-height: 1;
+}
+.entry-content table p:last-child, .g-box-example > table p:last-child {
+  margin-bottom: 0;
 }
 
 ul {
@@ -483,17 +495,33 @@ ol {
 
 blockquote {
   border-left: 3px solid #efffcd;
+  font-style: italic;
+  font-size: 1em;
   padding-left: 20px;
 }
+blockquote p {
+  line-height: 1.2;
+  margin-top: 10px;
+}
+blockquote p:first-child {
+  margin-top: 0;
+}
 blockquote cite {
+  display: inline-block;
   font-size: 0.75em;
+  margin-top: 10px;
 }
 blockquote cite:before {
   background: #efffcd;
   content: "";
   display: block;
   height: 1px;
-  width: 5%;
+  margin-bottom: 10px;
+  width: 90%;
+}
+.entry-content blockquote p {
+  line-height: 1.2;
+  margin-bottom: 0;
 }
 
 h1,
@@ -504,7 +532,7 @@ h5,
 h6 {
   font-weight: bold;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 h1 {
@@ -531,11 +559,42 @@ h6 {
   font-size: 1.25em;
 }
 
-.error {
-  background: #ff8877;
+.message-info,
+.message-info-line {
+  font-size: 0.875em;
+}
+.entry-content .message-info p, .entry-content
+.message-info-line p {
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.message-info {
+  background: #f8f8f8;
+  padding: 8px;
+  border-radius: 3px;
+}
+.message-info.alert, .message-info.error, .message-info.sucess {
   color: #fff;
-  padding: 10px;
-  margin-bottom: 20px;
+}
+.message-info.alert {
+  background: #ffc200;
+}
+.message-info.error {
+  background: #ff8877;
+}
+.message-info.sucess {
+  background: #a4de5e;
+}
+
+.message-info-line.alert strong {
+  color: #ffc200;
+}
+.message-info-line.error strong {
+  color: #ff8877;
+}
+.message-info-line.sucess strong {
+  color: #a4de5e;
 }
 
 .entry-content {
@@ -547,12 +606,23 @@ h6 {
 .entry-content ol,
 .entry-content blockquote,
 .entry-content form {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
   line-height: 1.8;
+}
+.entry-content ul,
+.entry-content ol {
+  list-style-position: inside;
+}
+.entry-content ul ul,
+.entry-content ul ol,
+.entry-content ol ul,
+.entry-content ol ol {
+  margin-bottom: 0;
+  margin-left: 20px;
 }
 .entry-content code {
   background: #eee;
@@ -1020,6 +1090,9 @@ pre[class*="language-"] {
 .g-box-example > table tr:hover {
   background: rgba(241, 241, 241, 0.4);
 }
+.g-box-example > table td {
+  padding: 10px 0;
+}
 .g-box-example > table td:first-child,
 .g-box-example > table th:first-child {
   padding-left: 0;
@@ -1069,16 +1142,25 @@ pre[class*="language-"] {
   content: "#556270";
 }
 
-.g-line-color.color-link {
-  display: none;
+.g-line-color.color-link .g-color {
+  background: #000;
+}
+.g-line-color.color-link .g-color-hex:before {
+  content: "#000";
 }
 
-.g-line-color.color-sucess {
-  display: none;
+.g-line-color.color-sucess .g-color {
+  background: #a4de5e;
+}
+.g-line-color.color-sucess .g-color-hex:before {
+  content: "#a4de5e";
 }
 
-.g-line-color.color-alert {
-  display: none;
+.g-line-color.color-alert .g-color {
+  background: #ffc200;
+}
+.g-line-color.color-alert .g-color-hex:before {
+  content: "#ffc200";
 }
 
 .g-line-color.color-error .g-color {
@@ -1146,7 +1228,26 @@ pre[class*="language-"] {
 }
 
 .g-line-grid.g-border-r .g-grid-size:before {
-  content: "5px";
+  content: "3px";
+}
+
+.g-font-primary p {
+  font-family: arial;
+}
+.g-font-primary .g-font-name:before {
+  content: "arial";
+}
+
+.g-font-primary-bold {
+  display: none;
+}
+
+.g-font-secondary {
+  display: none;
+}
+
+.g-font-secondary-bold {
+  display: none;
 }
 
 /*# sourceMappingURL=ghost.css.map */

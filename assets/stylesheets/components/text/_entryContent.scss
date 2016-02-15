@@ -7,13 +7,24 @@
 	ol,
 	blockquote,
 	form {
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 
 	p,
 	ul,
 	ol {
 		line-height: 1.8;
+	}
+
+	ul,
+	ol {
+		list-style-position: inside;
+
+		ul,
+		ol {
+			margin-bottom: 0;
+			margin-left: 20px;
+		}
 	}
 
 	code {
@@ -23,6 +34,10 @@
 
 	img {
 		@extend %img;
+	}
+
+	table {
+		@extend %table;
 	}
 
 	.gallery {
