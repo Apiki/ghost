@@ -1,9 +1,0 @@
-.#{$form-field-class-info-text} {
-	font-size: em($font-size-small, $font-size-default);
-	line-height: 1.4;
-
-	@media (min-width: $tablet) {
-		margin-top: 5px;
-		z-index: 2;
-	}
-}
