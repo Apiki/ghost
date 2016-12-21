@@ -58,3 +58,6 @@ jspm_packages
 *.css.map
 
 # End of https://www.gitignore.io/api/sass
+
+### Zip ###
+ghost*.zip
