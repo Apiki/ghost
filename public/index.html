@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Ghost</title>
-	<link rel="stylesheet" href="../ghost.css">
+	<link rel="stylesheet" href="ghost.css">
 </head>
 <body>
 	<header id="gh-header">
@@ -14,13 +14,13 @@
 					<li><a href="#" title="components">Components</a></li>
 					<li><a href="#" title="getting started">Getting started</a></li>
 					<li><a href="#" title="styleguide">styleguide</a></li>
-				</ul>				
+				</ul>
 			</div>
 
 			<div class="gh-col gh-branding">
 				<h1>
 					ghost
-				</h1>				
+				</h1>
 			</div>
 
 			<div class="gh-col gh-header-buttons">
@@ -28,10 +28,12 @@
 			</div>
 		</div>
 	</header>
-	
+
 	<div class="gh-wrapper gh-container">
 		<div class="gh-icons" data-component="icons"></div>
-		
+
+		<icons />
+
 		<div class="gh-colors data-colors" data-component="data-json" data-template="colors"></div>
 
 		<div class="gh-fonts data-fonts" data-component="data-json" data-template="fonts"></div>
@@ -39,18 +41,16 @@
 
 	<div class="gh-wrapper gh-components">
 		<div class="gh-container">
-			<iframe src="components.html" frameborder="0" width="100%" onload="resizeIframe(this)"></iframe>		
+			<iframe src="components.html" frameborder="0" width="100%" onload="resizeIframe(this)"></iframe>
 		</div>
 	</div>
-
-	<div class="gh-message-wrap" data-component="messages"></div>
 
     <script>
         function resizeIframe(obj) {
             obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
         }
-    </script>		
+    </script>
 
-	<script src="assets/javascripts/built.js"></script>
+	<script src="ghost.js"></script>
 </body>
 </html>
