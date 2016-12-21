@@ -10,7 +10,7 @@ module.exports = {
 			'<%= paths.js %>/custom/*.js',
 			'<%= paths.js %>/boot.js'
 		],
-		dest: 'ghost/ghost.js',
+		dest: 'public/ghost.js',
 	},
 	dist: {
 		src: [
@@ -19,6 +19,6 @@ module.exports = {
 			'<%= paths.js %>/custom/*.js',
 			'<%= paths.js %>/boot.js'
 		],
-		dest: 'ghost/ghost.js',
+		dest: 'public/ghost.js',
 	}
 };

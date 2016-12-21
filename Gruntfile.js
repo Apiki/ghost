@@ -14,6 +14,6 @@ module.exports = function(grunt) {
 	require('load-grunt-config')(grunt, options);
 
 	grunt.registerTask('default', ['concurrent:dev']);
-	grunt.registerTask('deploy', ['concurrent:dist', 'uglify']);
+	grunt.registerTask('deploy', ['concurrent:dist', 'uglify', 'zip']);
 	grunt.registerTask('dev', ['browserSync', 'watch']);
 };
