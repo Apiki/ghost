@@ -1,0 +1,47 @@
+$colors : (
+	primary : (
+		base  		: #ee8622,
+		lighten 	: lighten( #ee8622, 10% ),
+		darken 		: darken( #ee8622, 10% ),
+	),
+
+	secondary : (
+		base  		: #26abdc,
+		lighten 	: lighten( #26abdc, 10% ),
+		darken 		: darken( #26abdc, 10% ),
+	),
+	
+	tertiary : (
+		base  		: #4a4a4a,
+		lighten 	: lighten( #4a4a4a, 10% ),
+		darken 		: darken( #4a4a4a, 10% ),		
+	),	
+
+	text : (
+		base 		: #858484,
+		title 		: #676767,
+		link 		: #ee8622,
+	),
+
+	detail : (
+		base  		: #e6e6e6,
+		background  : #fafafa,
+		disabled 	: #eaeaea,
+	),
+	
+	message : (
+		alert 		: #FFD92E,
+		error 		: #fc6666,
+		success 	: #56e747,
+	),
+
+	social : (
+		facebook 	: #4367BD,
+		twitter  	: #00ACF0,
+		google-plus : #d13f1a,
+		youtube  	: #bb0000,
+		linkedin 	: #0073B4,
+		whatsapp 	: #4dc247,
+		pinterest 	: #FF0021,
+	),
+);

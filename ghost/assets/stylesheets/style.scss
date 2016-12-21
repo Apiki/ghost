@@ -1,0 +1,48 @@
+/*!
+	Theme Name: Style Guide Ghost
+	Theme URI: https://github.com/guilhermessantos
+	Author: Guilherme Souza
+	Description:
+	Version: 1.0.0
+*/
+
+// :: SASS TO JS
+// -- Exports variables to js
+// -- Don't remove
+@import "sass_to_js/sass-to-js";
+
+
+// :: BASE
+// -- All standard configuration of the project
+// -- ex ( fonts, reset, variables )
+@import "base/base";
+
+
+// :: ELEMENTS
+// -- Small useful elements to compose the components
+// -- ex ( button, input, title )
+@import "elements/elements";
+
+
+// :: COMPONENTS
+// -- Groups of elements with the intention of building standards in components
+// -- ex ( form, card, block news )
+@import "components/components";
+
+
+// :: TEMPLATES
+// -- Group of components
+// -- ex ( list card, header page, comments )
+@import "templates/templates";
+
+
+// :: LAYOUTS
+// -- Structure and skeleton
+// -- ex ( grid, header, sidebar )
+@import "layouts/layouts";
+
+
+// :: PAGES
+// -- Essential for styling specific pages by modifying templates and component
+// -- ex ( home, contact, product )
+@import "pages/pages";

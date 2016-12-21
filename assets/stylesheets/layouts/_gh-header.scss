@@ -1,0 +1,31 @@
+#gh-header {
+	background: #fff;
+	border-bottom: 1px solid $g-color-line;
+	height: 70px;	
+}
+
+.gh-header-container {
+	align-items: center;
+	display: flex;
+	height: inherit;	
+	justify-content: space-between;
+
+	.gh-col {
+		flex: 1;
+	}
+
+	.gh-branding {
+		flex: initial;
+		padding: 0 20px;
+	}
+}
+
+.gh-header-buttons {
+	font-size: 22px;
+	text-align: right;
+
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+}

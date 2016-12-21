@@ -1,0 +1,21 @@
+.navigation-bar {
+	align-items: center;
+	background: #fff;
+	border-top: 1px solid color( detail );
+	bottom: 0;
+	box-shadow: 0 -2px 20px 0 rgba( #000, .1 );
+	color: color( text, title );
+	display: flex;
+	font-size: 20px;
+	height: 50px;
+	justify-content: space-between;
+	left: 0;
+	padding: 0 20px;
+	position: fixed;
+	right: 0;
+	z-index: 5;
+
+	.active {
+		color: color( primary );
+	}
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Ghost Framework</title>
+    <link rel="stylesheet" href="../ghost.css">
+    
+    <style>
+        body {
+           overflow: hidden; 
+        }
+    </style>
+</head>
+<body> 
+    <h2 class="gh-title gh-title-component">
+        COMPONENTS
+    </h2>   
+    
+	{{> body}}
+
+    <script src="assets/javascripts/built.js"></script>    
+
+    <script>
+        $( '.gh-components' ).masonry({
+            gutter: '.gh-gutter',           
+            itemSelector: '.gh-box',
+            percentPosition: true
+        });
+    </script>       
+</body>
+</html>

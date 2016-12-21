@@ -1,0 +1,17 @@
+@mixin resp( $size ) {
+	@media ( min-width: grid( $size ) ) {
+		@content;
+	}
+}
+
+@mixin resp-max( $size ) {
+	@media ( max-width: grid( $size ) - 1px ) {
+		@content;
+	}
+}
+
+@mixin resp-and( $min, $max ) {
+	@media ( min-width: grid( $min ) ) and ( max-width: grid( $max ) - 1px ) {
+		@content;
+	} 
+}

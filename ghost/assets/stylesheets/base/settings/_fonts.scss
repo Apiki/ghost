@@ -1,0 +1,28 @@
+// -- TYPOGRAPHY
+// :: ex ( Arial, Helvetica, Times )
+$fonts : (
+	primary : (
+		base 	: "robotoregular",
+		italic 	: false,
+		bold 	: "robotobold",
+		bold-ex : false
+	),
+
+	secondary : (
+		base 	: "Arial",
+		italic 	: false,
+		bold 	: "Arial Black",
+		bold-ex : false
+	),
+
+	tertiary : (
+		base 	: "Trebuchet MS",
+		italic 	: false,
+		bold 	: false,
+		bold-ex : false
+	),
+
+	icon : (
+		base 	: "ghost-icomoon"
+	),
+);

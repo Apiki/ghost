@@ -1,0 +1,42 @@
+.gh-box:not(.gh-featured) {
+	background: #fff;
+	border-radius: 3px;
+	margin-bottom: 25px;
+	padding: 25px;
+}
+
+.gh-box {
+	width: 100%;
+
+	> *:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	.gh-list > * {
+		margin-top: 25px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&.gh-featured {
+		margin-bottom: 25px;
+	}
+
+	@media ( min-width: $g-container ) {
+		width: perc( 276.25px, $g-container );
+
+		&.gh-medium {
+			width: perc( 577.5px, $g-container );
+		}
+
+		&.gh-full {
+			width: 100%;		
+		}
+	}
+}
+
+.gh-gutter {
+	width: perc( 25px, $g-container );
+}

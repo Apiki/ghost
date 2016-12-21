@@ -1,0 +1,8 @@
+.title {
+	color: color( primary );
+	font: 20px/1.4 font( primary, bold );
+
+	@include resp( desktop ) {
+		font-size: 30px;
+	}
+}

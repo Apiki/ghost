@@ -1,0 +1,27 @@
+.gh-color-list {
+	color: $g-color-text;
+	display: flex;
+	flex-wrap: wrap;
+	font: 11px $g-font-primary;
+	justify-content: space-between;
+
+	li {
+		border-radius: 2px;
+		display: flex;
+		margin-top: 15px;
+		overflow: hidden;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.gh-label {
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.gh-color {
+		width: 100px;
+	}
+}

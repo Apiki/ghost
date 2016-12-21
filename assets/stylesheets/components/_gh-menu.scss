@@ -1,0 +1,24 @@
+.gh-menu {
+	font: 14px $g-font-primary-bold;
+	text-transform: uppercase;
+
+	li {
+		display: inline-block;
+		margin-left: 15px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	a {
+		color: $g-color-text;
+		display: block;
+		text-decoration: none;
+		transition: .3s color;
+
+		&:hover {
+			color: $g-color-primary;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+
+.gh-message-wrap {
+	background: rgba( $g-color-primary, .9 );
+	bottom: 0;
+	color: #fff;
+	font-size: 12px;
+	font-family: $g-font-primary;
+	left: 0;
+	padding: 20px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	transition: .5s transform;
+	transform: translateY( 100% );
+
+	&.active {
+		transform: translateY( 0 );
+	}
+}

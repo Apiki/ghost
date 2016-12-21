@@ -1,0 +1,15 @@
+.data-colors::before {
+    content: sassToJs($colors);
+	display: none;
+}
+
+.data-grid::before {
+    content: sassToJs($grid);
+	display: none;
+}
+
+
+.data-fonts::before {
+    content: sassToJs($fonts);
+	display: none;
+}

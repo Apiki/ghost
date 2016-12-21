@@ -1,0 +1,19 @@
+.gh-fonts-list {
+	color: $g-color-text;
+	display: flex;
+	flex-wrap: wrap; 
+	font: 11px $g-font-primary;
+	justify-content: space-between;
+
+	strong {
+		font-weight: bold;
+	}
+
+	.gh-font-info {
+		margin-top: 15px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

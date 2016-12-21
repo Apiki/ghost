@@ -1,0 +1,78 @@
+@function remove-unit( $number ) {
+	$unit: unit( $number );
+	$one: 1;
+
+	@if $unit == "px" { $one: 1px; }
+	@if $unit == "em" { $one: 1px; }
+	@if $unit == "%"  { $one: 1px; }
+
+	@return $number / $one;
+}
+
+@function flex( $target, $context, $unit: "em" ) {
+	$size: remove-unit( $target ) / remove-unit( $context );
+
+	@if $unit == "em" {
+		@return #{$size}em;
+	}
+
+	@if $unit == "%" {
+		@return percentage( $size );
+	}
+}
+
+@function perc( $target, $context ) {
+	@return flex( $target, $context, "%" );
+}
+
+@function em( $target, $context: 16px ) {
+	@return flex( $target, $context, "em" );
+}
+
+// -- Grid
+// -- ex : grid( desktop, content )
+@function grid( $grid-size, $attr : base, $_grid : $grid ) {
+	$item : map-get( $_grid, $grid-size );
+
+	@if type-of( $item ) == map {
+	 	@return grid( $attr, null, $item );
+	}
+
+	@return $item;
+}
+
+// -- Fonts Size
+// -- ex : font-size( mobile )
+@function font-size( $font-size, $attr : base, $_font-size : $sizes ) {
+	$item : map-get( $_font-size, $font-size );
+
+	@if type-of( $item ) == map {
+	 	@return font-size( $attr, null, $item );
+	}
+
+	@return $item;
+}
+
+// -- Fonts Family
+// -- ex : font-family( primary, bold )
+@function font( $font-family, $attr : base, $_font-family : $fonts ) {
+	$item : map-get( $_font-family, $font-family );
+
+	@if type-of( $item ) == map {
+	 	@return font( $attr, null, $item );
+	}
+
+	@return $item;
+}
+
+// -- Color
+// -- ex : color( primary, hover )
+@function color( $color, $attr : base, $_color : $colors ) {
+	$item : map-get( $_color, $color );
+
+	@if type-of( $item ) == map {
+	 	@return color( $attr, null, $item );
+	}
+
+	@return $item;
+}

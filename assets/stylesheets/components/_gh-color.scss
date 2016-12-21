@@ -1,0 +1,19 @@
+.gh-color-info {
+	background: #f7f7f7;
+	border-radius: 2px;
+	flex: 1;
+	overflow: hidden;
+	padding: 5px 10px;
+}
+
+.gh-color-name {
+	// @extend %ellipsis;
+}
+
+.gh-color-hex {
+	text-transform: uppercase;
+}
+
+.gh-color-background {
+	width: 20px;
+}

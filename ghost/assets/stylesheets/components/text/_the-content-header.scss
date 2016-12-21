@@ -1,0 +1,32 @@
+.the-content-header {
+	margin-bottom: 15px;
+	text-align: center;
+
+	.the-content-top,
+	.title {
+		margin-bottom: 15px;
+	}	
+
+	.social-share,
+	.the-content-summary {
+		margin-bottom: 20px;
+	}
+}
+
+.the-content-summary {
+	color: color( text );
+	font-size: 15px;
+	padding-top: 15px;
+	position: relative;
+
+	&::before {
+		background: color( detail );
+		content: "";
+		height: 1px;
+		left: 50%;
+		position: absolute;
+		top: 0;
+		transform: translateX( -50% );
+		width: 100px;
+	}
+}

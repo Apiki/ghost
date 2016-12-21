@@ -1,0 +1,57 @@
+.social-share {
+	$size: 15px;
+
+	color: color( text );
+	font-size: $size;
+	position: relative;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0 15px;
+		vertical-align: middle;
+	}
+
+	a {
+		color: inherit;
+		display: block;
+		text-decoration: none;
+	}
+
+	.google-plus {
+		font-size: $size + 4px;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.social-share.footer {	
+	text-align: left;
+
+	li {
+		margin: 0 7px;
+	}	
+
+	.social-share-text {
+		color: color( primary );
+		font: 13px font( primary, bold );
+		margin-right: 20px;
+		position: relative;
+
+		&::before {
+			background: color( detail );
+			content: "";
+			height: 1px;
+			left: 100%;
+			margin-left: 10px;
+			position: absolute;
+			top: 50%;
+			transform: translateY( -50% );
+			width: 15px;
+		}		
+	}
+
+	.social-share-list {
+		display: inline-block;
+	}
+}
