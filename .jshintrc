@@ -12,16 +12,7 @@
 	"sub": true,
 	"globals": {
 		"jQuery": true,
-		"Module": true,
-		"Dispatcher": true,
-		"MONKEY": true,
-		"Handlebars" : true,
 		"console" : true,
-		"Toastr" : true,
-		"wp" : true,
-		"google" : true,
-		"ga" : true,
-		"MarkerClusterer" : true,
 		"riot" : true
 	}
 }
