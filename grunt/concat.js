@@ -4,7 +4,6 @@ module.exports = {
 	},
 	dev: {
 		src: [
-			'<%= paths.js %>/vendor/*.js',
 			'<%= paths.js %>/templates/*.js',
 			'<%= paths.js %>/custom/*.js',
 			'<%= paths.js %>/boot.js'
@@ -13,7 +12,6 @@ module.exports = {
 	},
 	dist: {
 		src: [
-			'<%= paths.js %>/vendor/*.js',
 			'<%= paths.js %>/templates/*.js',
 			'<%= paths.js %>/custom/*.js',
 			'<%= paths.js %>/boot.js'
