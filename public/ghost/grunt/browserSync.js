@@ -1,7 +1,7 @@
 module.exports = function (grunt, options) {
 	var opts = {
 		proxy: 'localhost/ghost/public/ghost/',
-		files: ['../style.css', '<%= paths.js %>/built.js', '../**/*.php'],
+		files: ['index.html', '../style.css', '../built.js', '../**/*.php'],
 		watchTask: true,
 		logConnections: true,
 		notify: true,
