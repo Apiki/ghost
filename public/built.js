@@ -8699,7 +8699,7 @@ else if (typeof define === 'function' && define.amd) {
     if (!exported) {
         window.sassToJs = sassToJs;
     }
-})(window);;;;riot.tag2('chosen-multiple', '<select ref="select" multiple><yield></yield></select>', '', '', function(opts) {
+})(window);;riot.tag2('chosen-multiple', '<select ref="select" multiple><yield></yield></select>', '', '', function(opts) {
 		this.on( 'mount', function() {
 			jQuery( this.refs.select ).chosen( opts.attr );
 		});
