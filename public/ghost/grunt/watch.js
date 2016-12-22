@@ -10,5 +10,9 @@ module.exports =  {
 	scripts: {
 		files: '<%= concat.dev.src %>',
 		tasks: ['jshint', 'concat:dev']
+	},
+	assemble: {
+		files: 'components/**/*.html',
+		tasks: ['assemble']
 	}
 };
