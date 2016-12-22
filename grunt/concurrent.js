@@ -1,8 +1,8 @@
 module.exports = {
 	dist: [
-		'jshint', 'concat:dist', 'sass:dist', 'riot'
+		'concat:dist', 'sass:dist'
 	],
 	dev: [
-		'jshint', 'concat:dev', 'sass:dev', 'riot'
+		'concat:dev', 'sass:dev'
 	]
 };
