@@ -4,7 +4,7 @@ module.exports = {
 			style: 'compressed'
 		},
 		files: {
-			'public/ghost.css': '<%= paths.style %>/style.scss'
+			'public/ghost/ghost.css': '<%= paths.style %>/style.scss'
 		}
 	},
 	dev: {
@@ -12,7 +12,7 @@ module.exports = {
 			style: 'expanded'
 		},
 		files: {
-			'public/ghost.css': '<%= paths.style %>/style.scss'
+			'public/ghost/ghost.css': '<%= paths.style %>/style.scss'
 		}
 	},
 };
