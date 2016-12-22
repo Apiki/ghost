@@ -5,7 +5,8 @@ module.exports = function (grunt, options) {
 		watchTask: true,
 		logConnections: true,
 		notify: true,
-		port: 8080
+		port: 8080,
+		injectChanges: false
 	};
 
 	return {
