@@ -1,0 +1,4 @@
+{
+	"proxy": "localhost/ghost/public/ghost/",
+	"port": 8080
+}
