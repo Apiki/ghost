@@ -4,7 +4,6 @@ module.exports = {
 	},
 	dev: {
 		src: [
-			'<%= paths.js %>/libs/*.js',
 			'<%= paths.js %>/vendor/*.js',
 			'<%= paths.js %>/templates/*.js',
 			'<%= paths.js %>/custom/*.js',

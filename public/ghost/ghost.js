@@ -56,3 +56,12 @@ riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class
 			});
 		}.bind(this)
 });
+;jQuery(function($) {
+	$( '.gh-components' ).masonry({
+		gutter: '.gh-gutter',
+		itemSelector: '.gh-box',
+		percentPosition: true
+	});
+});;jQuery(function($) {
+	riot.mount( '*' );
+});

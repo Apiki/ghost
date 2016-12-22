@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'ghost-icomoon';
+		src:  url('ghost/assets/fonts/ghost-icomoon.eot');
+		src:  url('ghost/assets/fonts/ghost-icomoon.eot#iefix') format('embedded-opentype'),
+		   	  url('ghost/assets/fonts/ghost-icomoon.ttf') format('truetype'),
+			  url('ghost/assets/fonts/ghost-icomoon.woff') format('woff'),
+			  url('ghost/assets/fonts/ghost-icomoon.svg#ghost-icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-g-"],
+[class*=" icon-g-"] {
+	@extend %icon;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('ghost/assets/fonts/roboto-bold.woff2') format('woff2'),
+         url('ghost/assets/fonts/roboto-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('ghost/assets/fonts/roboto-regular.woff2') format('woff2'),
+         url('ghost/assets/fonts/roboto-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

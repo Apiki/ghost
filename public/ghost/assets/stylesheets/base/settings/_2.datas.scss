@@ -1,0 +1,12 @@
+.data-colors::before,
+.data-fonts::before {
+	display: none;
+}
+
+.data-colors::before {
+	content: sassToJs($colors);
+}
+
+.data-fonts::before {
+	content: sassToJs($fonts);
+}

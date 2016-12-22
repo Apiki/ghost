@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Ghost</title>
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="ghost.css">
+</head>
+<body>
+	<header id="gh-header">
+		<div class="gh-container gh-header-container">
+			<div class="gh-col">
+				<ul class="gh-menu">
+					<li><a href="#" title="components">Components</a></li>
+					<li><a href="#" title="getting started">Getting started</a></li>
+					<li><a href="#" title="styleguide">styleguide</a></li>
+				</ul>
+			</div>
+
+			<div class="gh-col gh-branding">
+				<h1>
+					ghost
+				</h1>
+			</div>
+
+			<div class="gh-col gh-header-buttons">
+				<a href="#" title="github"><i class="icon-ghost-github"></i></a>
+			</div>
+		</div>
+	</header>
+
+	<div class="gh-wrapper gh-container">
+		<icons class="gh-icons"></icons>
+
+		<colors class="gh-colors data-colors"></colors>
+
+		<fonts class="gh-fonts data-fonts"></fonts>
+	</div>
+
+	<div class="gh-wrapper gh-components">
+		<div class="gh-container">
+			<div id="components" class="gh-components">
+				<div class="gh-gutter"></div>
+
+				{{glob 'components/*.html'}}
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.0.5/riot.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
+	<script src="../built.js"></script>
+	<script src="ghost.js"></script>
+</body>
+</html>
