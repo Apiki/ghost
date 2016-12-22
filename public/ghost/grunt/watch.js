@@ -12,7 +12,7 @@ module.exports =  {
 		tasks: ['jshint', 'concat:dev']
 	},
 	assemble: {
-		files: 'components/**/*.html',
+		files: ['page/**/*.hbs', 'components/**/*.html'],
 		tasks: ['assemble']
 	}
 };
