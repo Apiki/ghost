@@ -12,6 +12,7 @@
 	text-align: center;
 	transition: .5s transform;
 	transform: translateY( 100% );
+	z-index: 5;
 
 	&.active {
 		transform: translateY( 0 );
