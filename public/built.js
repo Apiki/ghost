@@ -8723,10 +8723,6 @@ riot.tag2('slider', '<div ref="slider" class="swiper-slider"><div class="swiper-
 			}, this.opts.attr || {} );
 		}.bind(this)
 });
-;(function($, window) {
-
-	console.log( 'custom script' );
-
-})( jQuery, window );;jQuery(function($) {
+;jQuery(function($) {
 	riot.mount( '*' );
 });

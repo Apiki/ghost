@@ -15,6 +15,6 @@ module.exports = function(grunt) {
 	require('load-grunt-config')(grunt, options);
 
 	grunt.registerTask('default', ['riot', 'jshint', 'concurrent:dev', 'sass_globbing', 'sass:dev', 'postcss']);
-	grunt.registerTask('deploy', ['riot', 'jshint', 'concurrent:dist', 'uglify', 'sass_globbing', 'sass:dev', 'postcss']);
+	grunt.registerTask('deploy', ['riot', 'jshint', 'concurrent:dist', 'uglify', 'sass_globbing', 'sass:dist', 'postcss', 'cmq', 'cssmin']);
 	grunt.registerTask('dev', ['browserSync', 'watch']);
 };
