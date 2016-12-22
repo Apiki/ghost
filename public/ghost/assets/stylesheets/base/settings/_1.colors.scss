@@ -10,12 +10,12 @@ $colors : (
 		lighten 	: lighten( #26abdc, 10% ),
 		darken 		: darken( #26abdc, 10% ),
 	),
-	
+
 	tertiary : (
 		base  		: #4a4a4a,
 		lighten 	: lighten( #4a4a4a, 10% ),
-		darken 		: darken( #4a4a4a, 10% ),		
-	),	
+		darken 		: darken( #4a4a4a, 10% ),
+	),
 
 	text : (
 		base 		: #858484,
@@ -28,7 +28,7 @@ $colors : (
 		background  : #fafafa,
 		disabled 	: #eaeaea,
 	),
-	
+
 	message : (
 		alert 		: #FFD92E,
 		error 		: #fc6666,
