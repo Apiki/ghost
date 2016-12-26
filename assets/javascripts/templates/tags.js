@@ -18,7 +18,7 @@ riot.tag2('fonts', '<h2 class="gh-title"> FONTS </h2><div class="gh-fonts-list">
 		this.update();
 	}.bind(this)
 });
-riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class="{prefix + icon.properties.name} {active: icon.active}" data-name="{prefix + icon.properties.name}"></i></li></ul><div class="gh-message-wrap {active: message.active}"><div class="gh-message">{message.name}</div></div>', '', '', function(opts) {
+riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class="{prefix + icon.properties.name} {active: icon.active}" data-name="{prefix + icon.properties.name}"></i></li></ul><div class="gh-message-wrap {active: message.active}"><div class="gh-message">{message.name} <button class="btn" data-clipboard-text="{message.name}">Copy!</button></div></div>', '', '', function(opts) {
 		var self = this;
 
 		this.message = {};
@@ -45,6 +45,8 @@ riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class
 
 		this.on( 'mount', function() {
 			this.initData();
+
+			new Clipboard( this.root.querySelector( 'button' ) );
 		});
 
 		this.initData = function() {

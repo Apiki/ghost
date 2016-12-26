@@ -6,7 +6,7 @@
 	</ul>
 
 	<div class="gh-message-wrap { active: message.active }">
-		<div class="gh-message">{ message.name }</div>
+		<div class="gh-message">{ message.name } <button class="btn" data-clipboard-text={ message.name }>Copy!</button></div>
 	</div>
 
 	<script>
@@ -36,6 +36,8 @@
 
 		this.on( 'mount', function() {
 			this.initData();
+			//ref is causing problems
+			new Clipboard( this.root.querySelector( 'button' ) );
 		});
 
 		initData() {
