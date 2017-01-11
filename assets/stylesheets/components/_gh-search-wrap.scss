@@ -1,0 +1,23 @@
+.gh-search-wrap {
+	overflow: hidden;
+
+	button {
+		background: $g-color-secondary;
+		border: none;
+		border-radius: 3px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 10px;
+		text-transform: uppercase;
+		width: 200px;
+	}
+
+	&.gh-search-wrap {
+		background: $g-color-primary;
+
+		.gh-search {
+			display: flex;
+		}
+	}
+}
+

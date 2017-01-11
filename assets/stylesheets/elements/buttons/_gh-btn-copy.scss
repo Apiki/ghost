@@ -11,8 +11,7 @@
 	transition: .3s;
 
 	&:hover {
-		box-shadow: 0 0 5px 2px $g-color-secondary;
-		color: $g-color-primary;
+		box-shadow: 0 0 5px 2px $g-color-tertiary;
 	}
 
 	&:active {
