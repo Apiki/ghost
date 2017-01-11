@@ -1,13 +1,9 @@
-.gh-wrapper > * {
-	display: block;
-	padding: 30px 0;
-}
-
 .gh-wrapper {
 	background: #fff;
-}
 
-.gh-wrapper.gh-components {
-	background: none;
-	padding-bottom: 50px;
+	> .gh-container > * {
+		display: block;
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
 }

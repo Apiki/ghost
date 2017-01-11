@@ -1,7 +1,33 @@
 #gh-header {
 	background: #fff;
 	border-bottom: 1px solid $g-color-line;
-	height: 70px;	
+	height: 70px;
+
+	.gh-menu {
+		display: none;
+	}
+
+	@media ( min-width: 978px ) {
+		.gh-btn-hamburger {
+			display: none;
+		}
+
+		.gh-menu {
+			display: block;
+		}
+
+		.gh-col {
+			flex: 1;
+		}
+
+		.middle {
+			flex: initial;
+		}
+
+		.right {
+			text-align: right;
+		}
+	}
 }
 
 .gh-header-container {
@@ -9,15 +35,6 @@
 	display: flex;
 	height: inherit;	
 	justify-content: space-between;
-
-	.gh-col {
-		flex: 1;
-	}
-
-	.gh-branding {
-		flex: initial;
-		padding: 0 20px;
-	}
 }
 
 .gh-header-buttons {
@@ -26,6 +43,5 @@
 
 	a {
 		color: #000;
-		text-decoration: none;
 	}
 }

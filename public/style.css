@@ -27,6 +27,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 article,
 aside,
 details,
@@ -39,10 +43,6 @@ menu,
 nav,
 section {
   display: block;
-}
-
-body {
-  line-height: 1;
 }
 
 ol,
@@ -62,8 +62,14 @@ q:after {
   content: "";
 }
 
+a,
+button {
+  cursor: pointer;
+  outline: none;
+}
+
 a {
-  outline: 0;
+  text-decoration: none;
 }
 
 table {
@@ -979,10 +985,6 @@ a.comment-reply-link::before {
 
 /* generated with grunt-sass-globbing */
 /* generated with grunt-sass-globbing */
-body {
-  font: 16px "robotoregular";
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
