@@ -294,6 +294,10 @@ textarea {
   content: "\e933";
 }
 
+.icon-g-copy-file:before {
+  content: "\e917";
+}
+
 .icon-g-newspaper:before {
   content: "\e900";
 }

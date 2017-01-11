@@ -1,0 +1,21 @@
+.gh-btn-copy {
+	background: #fff;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 0 0 0 0 $g-color-secondary;
+	color: $g-color-text;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 3px 12px; 
+	text-transform: uppercase;
+	transition: .3s;
+
+	&:hover {
+		box-shadow: 0 0 5px 2px $g-color-secondary;
+		color: $g-color-primary;
+	}
+
+	&:active {
+		opacity: .5;
+	}
+}

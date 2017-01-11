@@ -33,6 +33,26 @@
   bottom: -8px;
 }
 
+.gh-btn-copy {
+  background: #fff;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 0 0 #bb95f5;
+  color: #737373;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 12px;
+  text-transform: uppercase;
+  transition: .3s;
+}
+.gh-btn-copy:hover {
+  box-shadow: 0 0 5px 2px #bb95f5;
+  color: #8e8ec5;
+}
+.gh-btn-copy:active {
+  opacity: .5;
+}
+
 .gh-branding {
   color: #8e8ec5;
   cursor: default;
@@ -230,6 +250,9 @@
 }
 .gh-message-wrap.active {
   transform: translateY(0);
+}
+.gh-message-wrap .gh-btn-copy {
+  margin-left: 5px;
 }
 
 .gh-color-list {
