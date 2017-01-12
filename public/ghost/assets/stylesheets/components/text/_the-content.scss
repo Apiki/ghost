@@ -1,6 +1,6 @@
 .the-content {
 	color: color( text );
-	font-size: 15px;
+	font-size: font-size( text );
 	line-height: 1.6;
 
 	p,
@@ -66,23 +66,23 @@
 	}
 
 	h1 {
-		font-size: 30px;
+		font-size: font-size( h1 );
 	}
 
 	h2 {
-		font-size: 28px;
+		font-size: font-size( h2 );
 	}
 
 	h3 {
-		font-size: 26px;
+		font-size: font-size( h3 );
 	}
 
 	h4 {
-		font-size: 24px;
+		font-size: font-size( h4 );
 	}
 
 	h5,
 	h6 {
-		font-size: 22px;
+		font-size: font-size( h5 );
 	}
 }

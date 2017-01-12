@@ -4,9 +4,14 @@
 @import "mixins";
 @import "reset";
 @import "typography";
+@import "helpers/clear-fix";
+@import "helpers/ellipsis";
+@import "helpers/icon";
+@import "helpers/img";
+@import "helpers/reset-button";
 @import "settings/1.colors";
 @import "settings/1.fonts";
 @import "settings/1.grid";
-@import "settings/1.helpers";
 @import "settings/1.media-queries";
+@import "settings/1.sizes";
 @import "settings/2.datas";

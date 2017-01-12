@@ -13,19 +13,3 @@
 [class*=" icon-g-"] {
 	@extend %icon;
 }
-
-@font-face {
-    font-family: 'robotobold';
-    src: url('ghost/assets/fonts/roboto-bold.woff2') format('woff2'),
-         url('ghost/assets/fonts/roboto-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'robotoregular';
-    src: url('ghost/assets/fonts/roboto-regular.woff2') format('woff2'),
-         url('ghost/assets/fonts/roboto-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}

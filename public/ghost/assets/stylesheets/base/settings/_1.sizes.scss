@@ -1,0 +1,17 @@
+// -- TYPOGRAPHY SIZES
+// :: ex ( 14px, 18em, 99rem )
+
+$sizes : (
+	base 	: 16px,
+	small 	: em( 12px ),
+	medium 	: em( 18px ),
+	large 	: em( 20px ),
+	title 	: em( 22px ),
+	text 	: em( 15px ),
+	h1 		: em( 30px ),
+	h2 		: em( 28px ),
+	h3 		: em( 26px ),
+	h4 		: em( 24px ),
+	h5 		: em( 22px ),
+	h6 		: em( 22px )
+);

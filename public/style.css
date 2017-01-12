@@ -94,18 +94,6 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'robotobold';
-  src: url("ghost/assets/fonts/roboto-bold.woff2") format("woff2"), url("ghost/assets/fonts/roboto-bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'robotoregular';
-  src: url("ghost/assets/fonts/roboto-regular.woff2") format("woff2"), url("ghost/assets/fonts/roboto-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 .comment-body::after {
   clear: both;
   content: "";
@@ -113,12 +101,6 @@ textarea {
   font-size: 0;
   height: 0;
   visibility: hidden;
-}
-
-.comment-body .avatar, .the-content-author img {
-  display: block;
-  height: auto;
-  max-width: 100%;
 }
 
 [class^="icon-g-"],
@@ -132,6 +114,12 @@ textarea {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.comment-body .avatar, .the-content-author img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 .the-content-top-comment {
@@ -906,7 +894,7 @@ a.comment-reply-link::before {
 
 .the-content {
   color: #858484;
-  font-size: 15px;
+  font-size: 0.9375em;
   line-height: 1.6;
 }
 .the-content p,
@@ -971,20 +959,20 @@ a.comment-reply-link::before {
   margin-bottom: 5px;
 }
 .the-content h1 {
-  font-size: 30px;
+  font-size: 1.875em;
 }
 .the-content h2 {
-  font-size: 28px;
+  font-size: 1.75em;
 }
 .the-content h3 {
-  font-size: 26px;
+  font-size: 1.625em;
 }
 .the-content h4 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 .the-content h5,
 .the-content h6 {
-  font-size: 22px;
+  font-size: 1.375em;
 }
 
 /* generated with grunt-sass-globbing */
