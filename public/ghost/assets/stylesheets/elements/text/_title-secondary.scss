@@ -1,8 +1,0 @@
-.title-secondary {
-	color: color( text, title );
-	font: 18px/1.2 font( primary, bold );
-
-	@include resp( tablet ) {
-		font-size: 20px;
-	}
-}
