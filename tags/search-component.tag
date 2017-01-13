@@ -2,10 +2,10 @@
 
 	<div class="gh-wrapper gh-search-wrap">
 		<div class="gh-container">
-			<div class="gh-search">
-				<input type="search" ref="term" onkeyup={ search }>
-				<button onclick={ search }>search component</button>
-			</div>
+			<form class="gh-search">
+				<div class="label">Search Components</div>
+				<input type="search" placeholder="ex: btn, form, table..." ref="term" onkeyup={ search }/>
+			</form>
 		</div>
 	</div>
 

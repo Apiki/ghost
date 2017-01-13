@@ -1,23 +1,29 @@
-.gh-search-wrap {
+.gh-search-wrap {	
+	font: 14px $g-font-primary;
 	overflow: hidden;
 
-	button {
-		background: $g-color-secondary;
+	input[type="search"],
+	input[type="text"] {
 		border: none;
-		border-radius: 3px;
-		color: #fff;
-		font-weight: bold;
-		margin-left: 10px;
-		text-transform: uppercase;
-		width: 200px;
+		font: 14px $g-font-primary;
+		height: 45px;
 	}
 
-	&.gh-search-wrap {
-		background: $g-color-primary;
+	.label {
+		color: #fff;
+		margin-right: 20px;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+	&.gh-wrapper {
+		background: $g-color-primary;		
 
 		.gh-search {
+			align-items: center;
 			display: flex;
 		}
 	}
 }
+
 

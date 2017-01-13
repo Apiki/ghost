@@ -63,5 +63,17 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>
 	<script src="../built.js"></script>
 	<script src="ghost.js"></script>
+
+	<script>
+		$( window ).load( function() {
+			jQuery( '.gh-btn-copy' ).on( 'click', function() {
+				$( this ).addClass( 'active' );
+			});
+
+			jQuery( '.gh-btn-copy' ).mouseleave( function() {
+				$( this ).removeClass( 'active' );
+			});
+		})
+	</script>
 </body>
 </html>

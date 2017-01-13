@@ -58,7 +58,7 @@ riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class
 			});
 		}.bind(this)
 });
-riot.tag2('search-component', '<div class="gh-wrapper gh-search-wrap"><div class="gh-container"><div class="gh-search"><input type="search" ref="term" onkeyup="{search}"><button onclick="{search}">search component</button></div></div></div>', '', '', function(opts) {
+riot.tag2('search-component', '<div class="gh-wrapper gh-search-wrap"><div class="gh-container"><form class="gh-search"><div class="label">Search Components</div><input type="search" placeholder="ex: btn, form, table..." ref="term" onkeyup="{search}"></form></div></div>', '', '', function(opts) {
 		this.search = function(e) {
 			var container = $( '.gh-components' );
 			var filter    = this.refs.term.value;

@@ -52,7 +52,7 @@
 			<div id="components" class="gh-components">
 				<div class="gh-gutter"></div>
 
-				<div class="gh-box">
+				<div class="gh-box" data-filter="btn disabled">
 	<ul class="gh-list">
 		<li>
 			<a class="btn" href="#" title="more info">button</a>
@@ -63,7 +63,7 @@
 		</li>
 	</ul>
 </div>
-<div class="gh-box" data-filter="forms">
+<div class="gh-box" data-filter="forms input select textarea error">
     <ul class="gh-list">
         <li>
             <input type="text" placeholder="Input text">
@@ -94,7 +94,7 @@
         </li>
     </ul>
 </div>
-<div class="gh-box gh-medium the-content">
+<div class="gh-box gh-medium the-content" data-filter="ul ol">
     <ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
         <li>
@@ -123,7 +123,7 @@
         <li>Facere dolore pariatur minima illo nisi, assumenda quod.</li>                        
     </ol>
 </div>
-<div class="gh-box gh-medium">
+<div class="gh-box gh-medium" data-filter="pagination">
     <div class="pagination-wrap">
         <ul class="page-numbers">
             <li><span class="page-numbers current">1</span></li>
@@ -135,7 +135,7 @@
         </ul>
     </div>           
 </div>
-<div class="gh-box gh-medium gh-featured the-content">
+<div class="gh-box gh-medium gh-featured the-content" data-filter="table">
     <table>
         <thead>
             <tr>
@@ -167,7 +167,7 @@
         </tbody>
     </table>            
 </div>
-<div class="gh-box gh-full the-content">
+<div class="gh-box gh-full the-content" data-filter="the-content content p h1 h2 h3 h4 h5 h6 em a strong">
     <p>
         Lorem ipsum dolor <strong>sit amet</strong>, consectetur adipisicing elit. Aliquam praesentium quasi <a href="">maiores harum</a> maxime est blanditiis <em>quidem</em> rem sunt enim.                        
     </p>
@@ -206,5 +206,17 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>
 	<script src="../built.js"></script>
 	<script src="ghost.js"></script>
+
+	<script>
+		$( window ).load( function() {
+			jQuery( '.gh-btn-copy' ).on( 'click', function() {
+				$( this ).addClass( 'active' );
+			});
+
+			jQuery( '.gh-btn-copy' ).mouseleave( function() {
+				$( this ).removeClass( 'active' );
+			});
+		})
+	</script>
 </body>
 </html>
