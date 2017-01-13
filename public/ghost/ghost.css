@@ -12,7 +12,7 @@
 .gh-btn-hamburger .gh-line,
 .gh-btn-hamburger .gh-line::before,
 .gh-btn-hamburger .gh-line::after {
-  background: #8e8ec5;
+  background: #ff6f69;
   border-radius: 4px;
   content: "";
   height: 4px;
@@ -37,7 +37,7 @@
   background: #fff;
   border: none;
   border-radius: 30px;
-  box-shadow: 0 0 0 0 #bb95f5;
+  box-shadow: 0 0 0 0 #ffcc5c;
   color: #737373;
   font-size: 10px;
   font-weight: bold;
@@ -46,15 +46,14 @@
   transition: .3s;
 }
 .gh-btn-copy:hover {
-  box-shadow: 0 0 5px 2px #bb95f5;
-  color: #8e8ec5;
+  box-shadow: 0 0 5px 2px #96ceb4;
 }
 .gh-btn-copy:active {
   opacity: .5;
 }
 
 .gh-branding {
-  color: #8e8ec5;
+  color: #ff6f69;
   cursor: default;
   font: 700 30px/1 "Roboto", sans-serif;
   letter-spacing: -5px;
@@ -169,7 +168,7 @@
   transition: .3s color;
 }
 .gh-menu a:hover {
-  color: #8e8ec5;
+  color: #ff6f69;
 }
 
 .gh-color-info {
@@ -229,12 +228,12 @@
 }
 .gh-icons i.active, .gh-icons i.active:hover {
   background: #fff;
-  border-color: #8e8ec5;
-  color: #8e8ec5;
+  border-color: #96ceb4;
+  color: #96ceb4;
 }
 
 .gh-message-wrap {
-  background: rgba(142, 142, 197, 0.9);
+  background: rgba(150, 206, 180, 0.9);
   bottom: 0;
   color: #fff;
   font-size: 12px;
@@ -253,6 +252,26 @@
 }
 .gh-message-wrap .gh-btn-copy {
   margin-left: 5px;
+}
+
+.gh-search-wrap {
+  overflow: hidden;
+}
+.gh-search-wrap button {
+  background: #ffcc5c;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+  text-transform: uppercase;
+  width: 200px;
+}
+.gh-search-wrap.gh-search-wrap {
+  background: #ff6f69;
+}
+.gh-search-wrap.gh-search-wrap .gh-search {
+  display: flex;
 }
 
 .gh-color-list {
