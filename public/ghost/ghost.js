@@ -45,9 +45,22 @@ riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class
 
 		this.on( 'mount', function() {
 			this.initData();
-
-			new Clipboard( this.root.querySelector( 'button' ) );
+			this.addEventsClipboard();
 		});
+
+		this.addEventsClipboard = function() {
+			var btn = this.root.querySelector( 'button' );
+
+			new Clipboard( btn );
+
+			btn.addEventListener( 'click', function() {
+				this.classList.add( 'active' );
+			});
+
+			btn.addEventListener( 'mouseleave', function() {
+				this.classList.remove( 'active' );
+			});
+		}.bind(this)
 
 		this.initData = function() {
 			$.getJSON( 'assets/fonts/selection.json', function(data) {

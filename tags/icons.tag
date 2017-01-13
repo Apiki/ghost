@@ -36,9 +36,22 @@
 
 		this.on( 'mount', function() {
 			this.initData();
-			//ref is causing problems
-			new Clipboard( this.root.querySelector( 'button' ) );
+			this.addEventsClipboard();
 		});
+
+		addEventsClipboard() {
+			var btn = this.root.querySelector( 'button' );
+
+			new Clipboard( btn );
+
+			btn.addEventListener( 'click', function() {
+				this.classList.add( 'active' );
+			});
+
+			btn.addEventListener( 'mouseleave', function() {
+				this.classList.remove( 'active' );
+			});
+		}
 
 		initData() {
 			$.getJSON( 'assets/fonts/selection.json', function(data) {
