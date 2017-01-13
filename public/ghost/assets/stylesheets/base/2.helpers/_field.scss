@@ -13,8 +13,3 @@
 		box-shadow: none;
 	}
 }
-
-input:not([type="submit"]) {
-	@extend %field;
-	height: 40px;
-}

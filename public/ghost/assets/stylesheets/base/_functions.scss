@@ -46,10 +46,6 @@
 @function font-size( $font-size, $attr : base, $_font-size : $sizes ) {
 	$item : map-get( $_font-size, $font-size );
 
-	@if type-of( $item ) == map {
-	 	@return font-size( $attr, null, $item );
-	}
-
 	@return $item;
 }
 
