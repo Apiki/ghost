@@ -9,27 +9,25 @@
 		</li>
 	</ul>
 
-	<div class="gh-message-wrap { active: message.active }">
-		<div class="gh-message">{ message.name } <button class="gh-btn-copy" data-clipboard-text={ message.name }>Copy!</button></div>
-	</div>
+	<message-text active={ item.active } text={ item.name }></message-text>
 
 	<script>
-		var self = this;
-
-		this.message = {};
+		this.item = {};
 
 		showInfo(e) {
 			if ( e.item.icon.active ) {
-				e.item.icon.active  = false;
-				this.message.active = false;
+				e.item.icon.active = false;
 				return;
 			}
 
 			this.inactiveItems();
+			e.item.icon.active = true;
+			this.setMessage( e.item );
+		}
 
-			e.item.icon.active  = true;
-			this.message.active = true;
-			this.message.name   = this.prefix + e.item.icon.properties.name;
+		setMessage(item) {
+			this.item = item.icon;
+			this.item.name = this.prefix + item.icon.properties.name;
 		}
 
 		inactiveItems() {
@@ -40,24 +38,11 @@
 
 		this.on( 'mount', function() {
 			this.initData();
-			this.addEventsClipboard();
 		});
 
-		addEventsClipboard() {
-			var btn = this.root.querySelector( 'button' );
-
-			new Clipboard( btn );
-
-			btn.addEventListener( 'click', function() {
-				this.classList.add( 'active' );
-			});
-
-			btn.addEventListener( 'mouseleave', function() {
-				this.classList.remove( 'active' );
-			});
-		}
-
 		initData() {
+			var self = this;
+
 			$.getJSON( 'assets/fonts/selection.json', function(data) {
 				self.icons  = data.icons;
 				self.prefix = data.preferences.fontPref.prefix;
