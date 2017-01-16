@@ -1,14 +1,12 @@
 /* generated with grunt-sass-globbing */
 
 @import "functions";
-@import "mixins";
 @import "print";
 @import "reset";
 @import "typography";
 @import "1.settings/1.colors";
 @import "1.settings/1.fonts";
 @import "1.settings/1.grid";
-@import "1.settings/1.media-queries";
 @import "1.settings/1.sizes";
 @import "1.settings/2.datas";
 @import "2.helpers/align-center-x";
@@ -22,3 +20,5 @@
 @import "2.helpers/img";
 @import "2.helpers/reset-button";
 @import "2.helpers/text-overflow";
+@import "3.mixins/media-queries";
+@import "3.mixins/placeholder";
