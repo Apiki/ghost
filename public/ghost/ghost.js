@@ -18,23 +18,23 @@ riot.tag2('fonts', '<h2 class="gh-title"> FONTS </h2><div class="gh-fonts-list">
 		this.update();
 	}.bind(this)
 });
-riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class="{prefix + icon.properties.name} {active: icon.active}" data-name="{prefix + icon.properties.name}"></i></li></ul><div class="gh-message-wrap {active: message.active}"><div class="gh-message">{message.name} <button class="gh-btn-copy" data-clipboard-text="{message.name}">Copy!</button></div></div>', '', '', function(opts) {
-		var self = this;
-
-		this.message = {};
+riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class="{prefix + icon.properties.name} {active: icon.active}" data-name="{prefix + icon.properties.name}"></i></li></ul><message-text active="{item.active}" text="{item.name}"></message-text>', '', '', function(opts) {
+		this.item = {};
 
 		this.showInfo = function(e) {
 			if ( e.item.icon.active ) {
-				e.item.icon.active  = false;
-				this.message.active = false;
+				e.item.icon.active = false;
 				return;
 			}
 
 			this.inactiveItems();
+			e.item.icon.active = true;
+			this.setMessage( e.item );
+		}.bind(this)
 
-			e.item.icon.active  = true;
-			this.message.active = true;
-			this.message.name   = this.prefix + e.item.icon.properties.name;
+		this.setMessage = function(item) {
+			this.item = item.icon;
+			this.item.name = this.prefix + item.icon.properties.name;
 		}.bind(this)
 
 		this.inactiveItems = function() {
@@ -45,30 +45,34 @@ riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class
 
 		this.on( 'mount', function() {
 			this.initData();
-			this.addEventsClipboard();
 		});
 
-		this.addEventsClipboard = function() {
-			var btn = this.root.querySelector( 'button' );
-
-			new Clipboard( btn );
-
-			btn.addEventListener( 'click', function() {
-				this.classList.add( 'active' );
-			});
-
-			btn.addEventListener( 'mouseleave', function() {
-				this.classList.remove( 'active' );
-			});
-		}.bind(this)
-
 		this.initData = function() {
+			var self = this;
+
 			$.getJSON( 'assets/fonts/selection.json', function(data) {
 				self.icons  = data.icons;
 				self.prefix = data.preferences.fontPref.prefix;
 
 				self.update();
 			});
+		}.bind(this)
+});
+riot.tag2('message-text', '<div class="gh-message-wrap {active: opts.active}"><div class="gh-message">{opts.text} <button class="gh-btn-copy {active: message.tooltipActive}" data-clipboard-text="{opts.text}" onclick="{showTooltip}" onmouseleave="{hideTooltip}">Copy!</button></div></div>', '', '', function(opts) {
+		this.message = {
+			tooltipActive: false
+		}
+
+		this.on( 'mount', function() {
+			new Clipboard( this.root.querySelector( '.gh-btn-copy' ) );
+		})
+
+		this.showTooltip = function(e) {
+			this.message.tooltipActive = true;
+		}.bind(this)
+
+		this.hideTooltip = function(e) {
+			this.message.tooltipActive = false;
 		}.bind(this)
 });
 riot.tag2('search-component', '<div class="gh-wrapper gh-search-wrap"><div class="gh-container"><div class="gh-search"><div class="label">Search Components</div><input type="search" placeholder="ex: btn, form, table..." ref="term" onsearch="{search}" onkeyup="{search}"></div></div></div>', '', '', function(opts) {
