@@ -5,7 +5,8 @@
 
 	p,
 	ol,
-	ul {
+	ul,
+	hr {
 		margin-bottom: 15px;
 	}
 }
@@ -61,8 +62,8 @@
 	h6 {
 		color: color( text, title );
 		font-weight: bold;
-		line-height: 1.1;
-		margin-bottom: 5px;
+		line-height: 1.2;
+		margin-bottom: 20px;
 	}
 
 	h1 {

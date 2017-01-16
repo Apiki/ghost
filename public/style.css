@@ -159,7 +159,7 @@ textarea {
 }
 
 .data-colors::before {
-  content: '{"primary":{"base":"#ee8622","lighten":"#f2a051","darken":"#cd6d10"},"secondary":{"base":"#26abdc","lighten":"#52bce3","darken":"#1d8ab2"},"tertiary":{"base":"#4a4a4a","lighten":"#646464","darken":"#313131"},"text":{"base":"#858484","title":"#676767","link":"#ee8622"},"detail":{"base":"#e6e6e6","background":"#fafafa","disabled":"#eaeaea"},"message":{"alert":"#FFD92E","error":"#fc6666","success":"#56e747"},"social":{"facebook":"#4367BD","twitter":"#00ACF0","google-plus":"#d13f1a","youtube":"#bb0000","linkedin":"#0073B4","whatsapp":"#4dc247","pinterest":"#FF0021"}}';
+  content: '{"primary":{"base":"#ee8622","lighten":"#f2a051","darken":"#cd6d10"},"secondary":{"base":"#26abdc","lighten":"#52bce3","darken":"#1d8ab2"},"tertiary":{"base":"#4a4a4a","lighten":"#646464","darken":"#313131"},"text":{"base":"#858484","title":"#676767","link":"#ee8622"},"detail":{"base":"#e6e6e6","background":"#fafafa","disabled":"#eaeaea","border":"#e8e8e8"},"message":{"alert":"#FFD92E","error":"#fc6666","success":"#56e747"},"social":{"facebook":"#4367BD","twitter":"#00ACF0","google-plus":"#d13f1a","youtube":"#bb0000","linkedin":"#0073B4","whatsapp":"#4dc247","pinterest":"#FF0021"}}';
 }
 
 .data-fonts::before {
@@ -192,6 +192,7 @@ input:not([type="submit"]), select, textarea {
   border: 1px solid #e6e6e6;
   color: #858484;
   font: 14px/1.2 arial;
+  height: 40px;
   outline: 0;
   padding-left: 10px;
   padding-right: 10px;
@@ -259,10 +260,6 @@ a.btn {
   border-color: #56e747;
 }
 
-input:not([type="submit"]) {
-  height: 40px;
-}
-
 label {
   color: #676767;
   font-size: 11px;
@@ -270,12 +267,10 @@ label {
   text-transform: uppercase;
 }
 
-select {
-  height: 50px;
-}
-
 textarea {
+  height: auto;
   padding: 10px;
+  resize: none;
 }
 
 .icon-g-arrow-bottom:before {
@@ -474,8 +469,20 @@ textarea {
   content: "\e927";
 }
 
+blockquote {
+  border-left: 3px solid #e8e8e8;
+  padding: 20px 0 20px 50px;
+}
+
+hr {
+  background: #e8e8e8;
+  border: none;
+  height: 1px;
+}
+
 table {
   background: #fff;
+  border: 1px solid #e8e8e8;
   color: #858484;
   font-size: 14px;
   text-align: left;
@@ -485,7 +492,11 @@ table td,
 table th {
   padding: 20px;
 }
+table tr {
+  border-bottom: 1px solid #e8e8e8;
+}
 table thead {
+  background: rgba(232, 232, 232, 0.2);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -559,7 +570,8 @@ ul.page-numbers li:first-child .page-numbers {
 }
 .the-content p,
 .the-content ol,
-.the-content ul {
+.the-content ul,
+.the-content hr {
   margin-bottom: 15px;
 }
 
@@ -615,8 +627,8 @@ ul.page-numbers li:first-child .page-numbers {
 .the-content h6 {
   color: #676767;
   font-weight: bold;
-  line-height: 1.1;
-  margin-bottom: 5px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 .the-content h1 {
   font-size: 1.875em;

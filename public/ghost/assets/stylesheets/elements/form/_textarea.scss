@@ -1,4 +1,6 @@
 textarea {
 	@extend %field;
+	height: auto;
 	padding: 10px;
+	resize: none;
 }

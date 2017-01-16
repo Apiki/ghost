@@ -1,5 +1,6 @@
 table {
 	background: #fff;
+	border: 1px solid color( detail, border );
 	color: color( text );
 	font-size: 14px;
 	text-align: left;
@@ -11,9 +12,11 @@ table {
 	}
 
 	tr {
+		border-bottom: 1px solid color( detail, border );
 	}
 
 	thead {
+		background: rgba( color( detail, border ), .2 );
 		font-weight: bold;
 		text-transform: uppercase;
 	}
