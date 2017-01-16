@@ -1,0 +1,4 @@
+input:not([type="submit"]) {
+	@extend %field;
+	height: 40px;
+}

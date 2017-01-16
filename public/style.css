@@ -6,6 +6,65 @@
 	Version: 1.0.0
 */
 /* generated with grunt-sass-globbing */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -94,19 +153,6 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-g-"],
-[class*=" icon-g-"] {
-  font-family: 'ghost-icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .data-colors::before,
 .data-fonts::before {
   display: none;
@@ -117,10 +163,9 @@ textarea {
 }
 
 .data-fonts::before {
-  content: '{"primary":{"base":"robotoregular","italic":false,"bold":"robotobold","bold-ex":false},"secondary":{"base":"Arial","italic":false,"bold":"Arial Black","bold-ex":false},"tertiary":{"base":"Trebuchet MS","italic":false,"bold":false,"bold-ex":false},"icon":{"base":"ghost-icomoon"}}';
+  content: '{"primary":{"base":"arial","italic":false,"bold":"robotobold","bold-ex":false},"secondary":{"base":"Arial","italic":false,"bold":"Arial Black","bold-ex":false},"tertiary":{"base":"Trebuchet MS","italic":false,"bold":false,"bold-ex":false},"icon":{"base":"ghost-icomoon"}}';
 }
 
-/* generated with grunt-sass-globbing */
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -141,6 +186,35 @@ textarea {
   cursor: default;
 }
 
+input:not([type="submit"]), select, textarea {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  color: #858484;
+  font: 14px/1.2 arial;
+  outline: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+input:focus:not([type="submit"]), select:focus, textarea:focus {
+  box-shadow: none;
+}
+
+[class^="icon-g-"],
+[class*=" icon-g-"] {
+  font-family: 'ghost-icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* generated with grunt-sass-globbing */
 .btn {
   background: #ee8622;
   border: none;
@@ -152,25 +226,6 @@ a.btn {
   height: auto;
   padding-bottom: 12px;
   padding-top: 12px;
-}
-
-input:not([type="submit"]), select, textarea {
-  background: #fff;
-  border-radius: 3px;
-  border: 1px solid #e6e6e6;
-  color: #858484;
-  font: 14px/1.2 "robotoregular";
-  outline: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
-}
-input:focus:not([type="submit"]), select:focus, textarea:focus {
-  box-shadow: none;
-}
-
-input:not([type="submit"]) {
-  height: 40px;
 }
 
 .field-error input,
@@ -202,6 +257,10 @@ input:not([type="submit"]) {
 
 .field-success input {
   border-color: #56e747;
+}
+
+input:not([type="submit"]) {
+  height: 40px;
 }
 
 label {
@@ -461,7 +520,7 @@ ul.page-numbers li:first-child .page-numbers {
   border: 1px solid #e6e6e6;
   border-left: none;
   display: none;
-  font: 14px/30px "robotoregular";
+  font: 14px/30px arial;
   height: 30px;
   padding: 0 10px;
   -webkit-transition: .3s;
@@ -578,6 +637,10 @@ ul.page-numbers li:first-child .page-numbers {
 
 /* generated with grunt-sass-globbing */
 /* generated with grunt-sass-globbing */
+body {
+  font-family: arial;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;

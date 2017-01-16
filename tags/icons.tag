@@ -1,4 +1,8 @@
 <icons>
+	<h2 class="gh-title">
+		ICONS
+	</h2>
+
 	<ul>
 		<li each={ icon in icons } onclick={ showInfo }>
 			<i class="{ prefix + icon.properties.name } { active: icon.active }" data-name={ prefix + icon.properties.name }></i>

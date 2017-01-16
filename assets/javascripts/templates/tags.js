@@ -18,7 +18,7 @@ riot.tag2('fonts', '<h2 class="gh-title"> FONTS </h2><div class="gh-fonts-list">
 		this.update();
 	}.bind(this)
 });
-riot.tag2('icons', '<ul><li each="{icon in icons}" onclick="{showInfo}"><i class="{prefix + icon.properties.name} {active: icon.active}" data-name="{prefix + icon.properties.name}"></i></li></ul><message-text active="{item.active}" text="{item.name}"></message-text>', '', '', function(opts) {
+riot.tag2('icons', '<h2 class="gh-title"> ICONS </h2><ul><li each="{icon in icons}" onclick="{showInfo}"><i class="{prefix + icon.properties.name} {active: icon.active}" data-name="{prefix + icon.properties.name}"></i></li></ul><message-text active="{item.active}" text="{item.name}"></message-text>', '', '', function(opts) {
 		this.item = {};
 
 		this.showInfo = function(e) {
